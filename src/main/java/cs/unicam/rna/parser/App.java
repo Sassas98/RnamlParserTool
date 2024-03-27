@@ -1,4 +1,4 @@
-package marvin.work;
+package cs.unicam.rna.parser;
 
 public class App {
 	
