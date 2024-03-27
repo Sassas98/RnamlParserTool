@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE rnaml SYSTEM "rnaml.dtd">
+<rnaml>
+  <molecule type="rna" id="RNA1">
+    <name>RNA molecola di esempio</name>
+    <description>Questa è una molecola RNA di esempio con varie informazioni.</description>
+    <sequence length="20">AUGCGCUAGCAUCGAUCGUA</sequence>
+    <structure type="2D" id="Structure1">
+      <base-pair-list>
+        <base-pair>
+          <base-id base-id="1">A</base-id>
+          <base-id base-id="19">U</base-id>
+          <orientation>Watson-Crick</orientation>
+        </base-pair>
+        <base-pair>
+          <base-id base-id="2">U</base-id>
+          <base-id base-id="20">A</base-id>
+          <orientation>Watson-Crick</orientation>
+        </base-pair>
+        <!-- Altri accoppiamenti di basi possono essere elencati qui -->
+      </base-pair-list>
+    </structure>
+    <properties>
+      <property name="Molecular weight" unit="Daltons">6200</property>
+      <property name="pH optimum">7.0</property>
+    </properties>
+    <comments>
+      <comment>Questa è una molecola RNA di esempio con una struttura secondaria 2D.</comment>
+    </comments>
+    <references>
+      <reference id="ref1">
+        <citation>Smith, J. et al. (2020) RNA Structure Determination. Nature Reviews Genetics, 10(5), 123-135.</citation>
+        <url>https://www.nature.com/articles/nrg12345</url>
+      </reference>
+    </references>
+    <experimental-data>
+      <experimental-method>Crystallography</experimental-method>
+      <resolution unit="Ångström">2.0</resolution>
+      <experimental-technique>X-ray diffraction</experimental-technique>
+    </experimental-data>
+    <external-references>
+      <external-reference database="PDB" id="1XYZ">
+        <url>https://www.rcsb.org/structure/1XYZ</url>
+      </external-reference>
+    </external-references>
+  </molecule>
+</rnaml>
