@@ -69,7 +69,7 @@ public class RnamlDataLoader {
 	private void loadPair(Element pair, String nodeName) throws RnaParsingException {
 		NodeList positions = pair.getElementsByTagName(nodeName);
         if(positions.getLength() == 2) {
-        	if(positions.item(0).getTextContent().equals("")) {
+        	if(!isNumber(positions.item(0).getTextContent())) {
         		loadPairAlt(pair, nodeName);
         	} else {
             	String first = positions.item(0).getTextContent();
@@ -81,6 +81,16 @@ public class RnamlDataLoader {
         		loadPair(pair, "base-id");
         }
 	}
+
+	private boolean isNumber(String s){
+		if(s == null || s.length() == 0)
+			return false;
+		for(char c : s.toCharArray()){
+			if(c < '0' || c > '9')
+				return false;
+		}
+		return true;
+	}
 	
 	/**
 	 * gestisce i dati nel caso della dicitura alternativa
@@ -89,7 +99,7 @@ public class RnamlDataLoader {
 	 */
 	private void loadPairAlt(Element pair, String nodeName) throws RnaParsingException {
 		NodeList baseList = pair.getElementsByTagName(nodeName);
-		Element base1 = getElement(baseList.item(0)), base2 = getElement(baseList.item(0));
+		Element base1 = getElement(baseList.item(0)), base2 = getElement(baseList.item(1));
 		if(base1 != null && base2 != null) {
 	    	String first = base1.getAttribute("base-id");
 	    	String second = base2.getAttribute("base-id");

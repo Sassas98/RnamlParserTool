@@ -4,17 +4,17 @@
   <molecule type="rna" id="RNA1">
     <name>RNA molecola di esempio</name>
     <description>Questa è una molecola RNA di esempio con varie informazioni.</description>
-    <sequence length="20">AUGCGCUAGCAUCGAUCGUA</sequence>
+    <sequence length="20">AUGCGCUAGCAUCGAUCGAU</sequence>
     <structure type="2D" id="Structure1">
       <base-pair-list>
         <base-pair>
           <base-id base-id="1">A</base-id>
-          <base-id base-id="19">U</base-id>
+          <base-id base-id="20">U</base-id>
           <orientation>Watson-Crick</orientation>
         </base-pair>
         <base-pair>
           <base-id base-id="2">U</base-id>
-          <base-id base-id="20">A</base-id>
+          <base-id base-id="19">A</base-id>
           <orientation>Watson-Crick</orientation>
         </base-pair>
         <!-- Altri accoppiamenti di basi possono essere elencati qui -->

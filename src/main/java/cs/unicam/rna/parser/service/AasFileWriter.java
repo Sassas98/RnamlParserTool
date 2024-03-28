@@ -21,7 +21,7 @@ public class AasFileWriter implements RnaFileWriter {
 	private void writeMolecule(RnaMolecule m) {
 		char[] sequence = m.getSequence().toCharArray();
 		for(int i = 1; i <= sequence.length; i++) {
-			data += sequence[i] + "" + i + " ";
+			data += sequence[i - 1] + "" + i + " ";
 		}
 		for(RnaPair pair : m.getPairs()) {
 			data += "\n" + getIdentifier(pair.getFirst()) + "-" + getIdentifier(pair.getSecond());

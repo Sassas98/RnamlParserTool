@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rnaml SYSTEM "rnaml.dtd">
+<rnaml>
+  <molecule>
+    <sequence>
+      <seq-data>GCUAGC</seq-data>
+    </sequence>
+    <structure>
+      <model>
+        <str-annotation>
+          <base-pair>
+            <base-id-5p>
+              <position>1</position>
+            </base-id-5p>
+            <base-id-3p>
+              <position>6</position>
+            </base-id-3p>
+          </base-pair>
+          <base-pair>
+            <base-id-5p>
+              <position>2</position>
+            </base-id-5p>
+            <base-id-3p>
+              <position>5</position>
+            </base-id-3p>
+          </base-pair>
+        </str-annotation>
+      </model>
+    </structure>
+  </molecule>
+</rnaml>

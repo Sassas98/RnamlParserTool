@@ -25,7 +25,7 @@ public class CtFileWriter implements RnaFileWriter {
 			int pair = pairs.getOrDefault(i, -1);
 			data += i + " " + array[i - 1] + " " 
 					+ (i - 1) + " " + (i == array.length ? 0 : i + 1)
-					+ " " + (pair == -1 ? "0" : pair) + " " + array[i - 1] + "\n";
+					+ " " + (pair == -1 ? "0" : pair) + " " + i + "\n";
 		}
 		data += "\n\n";
 	}

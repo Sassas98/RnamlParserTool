@@ -42,6 +42,7 @@ public class RnamlParserController {
 			loaded = false;
 			return;
 		}
+		loaded = true;
 		NodeList moleculeList = doc.getElementsByTagName("molecule");
 		for (int i = 0; i < moleculeList.getLength(); i++) {
             Node node = moleculeList.item(i);
@@ -49,7 +50,6 @@ public class RnamlParserController {
                 loadMolecule(i, (Element) node);
             }
 		}
-		loaded = true;
 	}
 	
 	
