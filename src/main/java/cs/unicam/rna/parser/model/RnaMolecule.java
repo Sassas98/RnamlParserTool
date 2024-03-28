@@ -64,6 +64,16 @@ public class RnaMolecule implements RnaReceiver, RnaSupplier {
 				.map( r -> new RnaPair(r, r.getPair())).toList());
 	}
 	
+	public Map<Integer, Integer> getPairMap(){
+		Map<Integer, Integer> map = new HashMap<>();
+		List<RnaRibonucleotide> riboList = new ArrayList<>(this.chain.values().stream()
+				.filter( r -> r.getPair() != null).toList());
+		for(RnaRibonucleotide ribo : riboList) {
+			map.put(ribo.getPosition(), ribo.getPair().getPosition());
+		}
+		return map;
+	}
+	
 	private void throwException(int pos) throws RnaParsingException {
 		throw new RnaParsingException(this.moleculeId, pos);
 	}
