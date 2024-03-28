@@ -56,7 +56,7 @@ public class RnamlDataLoader {
         for (int i = 0; i < pairs.getLength(); i++) {
             Element pair = getElement(pairs.item(i));
             if (pair != null) {
-                loadPair(pair);
+                loadPair(pair, "position");
             }
         }
 	}
@@ -66,14 +66,19 @@ public class RnamlDataLoader {
 	 * @param pair
 	 * @throws RnaParsingException
 	 */
-	private void loadPair(Element pair) throws RnaParsingException {
-		NodeList positions = pair.getElementsByTagName("position");
+	private void loadPair(Element pair, String nodeName) throws RnaParsingException {
+		NodeList positions = pair.getElementsByTagName(nodeName);
         if(positions.getLength() == 2) {
-        	String first = positions.item(0).getTextContent();
-        	String second = positions.item(1).getTextContent();
-        	addPair(first, second);
+        	if(positions.item(0).getTextContent().equals("")) {
+        		loadPairAlt(pair, nodeName);
+        	} else {
+            	String first = positions.item(0).getTextContent();
+            	String second = positions.item(1).getTextContent();
+            	addPair(first, second);
+        	}
         } else {
-        	loadPairAlt(pair);
+        	if(!nodeName.equals("base-id"))
+        		loadPair(pair, "base-id");
         }
 	}
 	
@@ -82,8 +87,8 @@ public class RnamlDataLoader {
 	 * @param pair
 	 * @throws RnaParsingException
 	 */
-	private void loadPairAlt(Element pair) throws RnaParsingException {
-		NodeList baseList = pair.getElementsByTagName("base-id");
+	private void loadPairAlt(Element pair, String nodeName) throws RnaParsingException {
+		NodeList baseList = pair.getElementsByTagName(nodeName);
 		Element base1 = getElement(baseList.item(0)), base2 = getElement(baseList.item(0));
 		if(base1 != null && base2 != null) {
 	    	String first = base1.getAttribute("base-id");

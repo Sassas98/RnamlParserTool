@@ -1,4 +1,4 @@
-package cs.unicam.rna.parser.service;
+package cs.unicam.rna.parser.utility;
 
 import java.io.File;
 

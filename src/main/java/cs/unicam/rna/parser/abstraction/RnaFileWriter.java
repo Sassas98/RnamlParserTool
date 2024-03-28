@@ -6,6 +6,6 @@ import cs.unicam.rna.parser.model.RnaMolecule;
 
 public interface RnaFileWriter {
 	
-	public void write(String path, List<RnaMolecule> molecules);
+	public String write(List<RnaMolecule> molecules);
 	
 }
