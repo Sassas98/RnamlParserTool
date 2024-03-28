@@ -1,0 +1,1 @@
+mvn clean install && copy /Y "docs\example1.rnaml" "target\example1.rnaml" && copy /Y "docs\example2.rnaml" "target\example2.rnaml" && copy /Y "docs\rnaml.dtd" "target\rnaml.dtd" && cd target && java -jar RnamlParserLibrary-1.0.0.jar example1.rnaml out00.aas out01.bp out02.ct out03.db && java -jar RnamlParserLibrary-1.0.0.jar example2.rnaml out10.aas out11.bp out12.ct out13.db
