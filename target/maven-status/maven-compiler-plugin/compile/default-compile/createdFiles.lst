@@ -1,13 +1,17 @@
 cs\unicam\rna\parser\abstraction\RnaFileWriter.class
 cs\unicam\rna\parser\App.class
+cs\unicam\rna\parser\service\AasFileWriter.class
 cs\unicam\rna\parser\utility\FileSaver.class
 cs\unicam\rna\parser\controller\RnamlParserController.class
+cs\unicam\rna\parser\service\DbFileWriter.class
 cs\unicam\rna\parser\exception\RnaParsingException.class
 cs\unicam\rna\parser\model\RnaBase.class
 cs\unicam\rna\parser\utility\RnaFileWriterBuilder.class
 cs\unicam\rna\parser\abstraction\RnaReceiver.class
 cs\unicam\rna\parser\model\RnaMolecule.class
 cs\unicam\rna\parser\service\RnamlDataLoader.class
+cs\unicam\rna\parser\service\BpFileWriter.class
+cs\unicam\rna\parser\service\CtFileWriter.class
 cs\unicam\rna\parser\abstraction\RnaSupplier.class
 cs\unicam\rna\parser\utility\XmlDocumentLoader.class
 cs\unicam\rna\parser\model\RnaRibonucleotide.class
