@@ -23,8 +23,7 @@ public class BpFileWriter implements RnaFileWriter {
 		for(int i = 1; i <= array.length; i++) {
 			int pair = pairs.getOrDefault(i, -1);
 			data += i + " " + array[i - 1] + " " 
-					+ (i - 1) + " " + (i == array.length ? 0 : i + 1)
-					+ " " + (pair == -1 ? "0 -" : pair + " " + array[pair - 1]) + "\n";
+					+ (pair == -1 ? "0" : pair) + "\n";
 		}
 		data += "\n\n";
 	}

@@ -5,7 +5,6 @@ import java.util.List;
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.model.RnaPair;
-import cs.unicam.rna.parser.model.RnaRibonucleotide;
 
 public class AasFileWriter implements RnaFileWriter {
 	
@@ -19,18 +18,11 @@ public class AasFileWriter implements RnaFileWriter {
 	}
 
 	private void writeMolecule(RnaMolecule m) {
-		char[] sequence = m.getSequence().toCharArray();
-		for(int i = 1; i <= sequence.length; i++) {
-			data += sequence[i - 1] + "" + i + " ";
-		}
+		data += m.getSequence()+"\n";
 		for(RnaPair pair : m.getPairs()) {
-			data += "\n" + getIdentifier(pair.getFirst()) + "-" + getIdentifier(pair.getSecond());
+			data += "(" + pair.getFirst().getPosition() + "," + pair.getSecond().getPosition() +");";
 		}
 		data += "\n\n";
-	}
-
-	private String getIdentifier(RnaRibonucleotide ribo) {
-		return ribo.toString() + ribo.getPosition();
 	}
 	
 

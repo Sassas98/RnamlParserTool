@@ -9,7 +9,7 @@ public class RnaFileWriterBuilder {
 		String[] parts = path.split("\\.");
 		String extension = parts[parts.length - 1];
 		switch(extension) {
-		case "bp":
+		case "bpseq":
 			return new BpFileWriter();
 		case "ct":
 			return new CtFileWriter();
