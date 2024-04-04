@@ -10,7 +10,7 @@ public class App {
 			System.exit(1);
 		}
 		RnamlParserController controller = new RnamlParserController();
-		controller.loadRnaml(args[0]);
+		controller.loadRna(args[0]);
 		if(!controller.isLoaded()){
 			System.out.println("Data loading failed.");
 			System.exit(1);

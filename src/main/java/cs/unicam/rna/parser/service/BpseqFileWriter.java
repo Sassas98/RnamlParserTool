@@ -6,7 +6,7 @@ import java.util.Map;
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
-public class BpFileWriter implements RnaFileWriter {
+public class BpseqFileWriter implements RnaFileWriter {
 
 	private String data;
 	

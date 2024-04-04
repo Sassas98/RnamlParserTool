@@ -4,10 +4,11 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.abstraction.RnaReceiver;
 import cs.unicam.rna.parser.exception.RnaParsingException;
 
-public class RnamlDataLoader {
+public class RnamlDataLoader implements RnaDataLoader {
 	
 	RnaReceiver receiver;
 	Element moleculeData;
@@ -16,8 +17,8 @@ public class RnamlDataLoader {
 		this.receiver = receiver;
 	}
 
-	public void setMoleculeData(Element moleculeData) {
-		this.moleculeData = moleculeData;
+	public void setMoleculeData(Object moleculeData) {
+		this.moleculeData = (Element) moleculeData;
 	}
 	
 	/**
