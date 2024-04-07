@@ -1,8 +1,7 @@
-package cs.unicam.rna.parser.service;
-
-import java.util.List;
+package cs.unicam.rna.parser.service.writer;
 
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
+import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.model.RnaPair;
 
@@ -11,9 +10,9 @@ public class AasFileWriter implements RnaFileWriter {
 	private String data;
 	
 	@Override
-	public String write(List<RnaMolecule> molecules) {
+	public String write(RnaFileData molecules) {
 		data = "";
-		molecules.stream().forEach( m -> writeMolecule(m));
+		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
 		return data;
 	}
 

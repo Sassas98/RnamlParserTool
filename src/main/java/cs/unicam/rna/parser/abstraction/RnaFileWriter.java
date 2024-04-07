@@ -1,11 +1,9 @@
 package cs.unicam.rna.parser.abstraction;
 
-import java.util.List;
-
-import cs.unicam.rna.parser.model.RnaMolecule;
+import cs.unicam.rna.parser.model.RnaFileData;
 
 public interface RnaFileWriter {
 	
-	public String write(List<RnaMolecule> molecules);
+	public String write(RnaFileData molecules);
 	
 }

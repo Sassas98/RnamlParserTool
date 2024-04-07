@@ -1,11 +1,9 @@
 package cs.unicam.rna.parser.abstraction;
 
-public interface RnaDataLoader {
-    
-    public void setReceiver(RnaReceiver receiver);
+import cs.unicam.rna.parser.model.RnaFileData;
 
-	public void setMoleculeData(Object moleculeData);
-	
-	public boolean loadData();
+public interface RnaDataLoader {
+
+	public RnaFileData getData(String path);
 
 }

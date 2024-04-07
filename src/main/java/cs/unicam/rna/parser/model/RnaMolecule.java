@@ -5,11 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cs.unicam.rna.parser.abstraction.RnaReceiver;
-import cs.unicam.rna.parser.abstraction.RnaSupplier;
 import cs.unicam.rna.parser.exception.RnaParsingException;
 
-public class RnaMolecule implements RnaReceiver, RnaSupplier {
+public class RnaMolecule {
 	
 	private int moleculeId;
 	private Map<Integer, RnaRibonucleotide> chain;

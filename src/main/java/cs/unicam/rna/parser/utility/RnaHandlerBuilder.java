@@ -2,7 +2,16 @@ package cs.unicam.rna.parser.utility;
 
 import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
-import cs.unicam.rna.parser.service.*;
+import cs.unicam.rna.parser.service.loader.AasDataLoader;
+import cs.unicam.rna.parser.service.loader.BpseqDataLoader;
+import cs.unicam.rna.parser.service.loader.CtDataLoader;
+import cs.unicam.rna.parser.service.loader.DbDataLoader;
+import cs.unicam.rna.parser.service.loader.RnamlDataLoader;
+import cs.unicam.rna.parser.service.writer.AasFileWriter;
+import cs.unicam.rna.parser.service.writer.BpseqFileWriter;
+import cs.unicam.rna.parser.service.writer.CtFileWriter;
+import cs.unicam.rna.parser.service.writer.DbFileWriter;
+import cs.unicam.rna.parser.service.writer.RnamlFileWriter;
 
 public class RnaHandlerBuilder {
 	
@@ -10,7 +19,7 @@ public class RnaHandlerBuilder {
 		String extension = getExtension(path);
 		switch(extension) {
 		case "rnaml":
-			return null;
+			return new RnamlFileWriter();
 		case "bpseq":
 			return new BpseqFileWriter();
 		case "ct":
@@ -30,13 +39,13 @@ public class RnaHandlerBuilder {
 		case "rnaml":
 			return new RnamlDataLoader();
 		case "bpseq":
-			return null;
+			return new BpseqDataLoader();
 		case "ct":
-			return null;
+			return new CtDataLoader();
 		case "db":
-			return null;
+			return new DbDataLoader();
 		case "aas":
-			return null;
+			return new AasDataLoader();
 		default:
 			return null;
 		}
