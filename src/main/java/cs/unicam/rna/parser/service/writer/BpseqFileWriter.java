@@ -6,15 +6,13 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
-public class BpseqFileWriter implements RnaFileWriter {
+public class BpseqFileWriter extends TextFileWriter implements RnaFileWriter {
 
-	private String data;
-	
 	@Override
-	public String write(RnaFileData molecules) {
+	public boolean writeAndSave(RnaFileData molecules, String path) {
 		data = "";
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
-		return data;
+		return save(path);
 	}
 
 	private void writeMolecule(RnaMolecule m) {

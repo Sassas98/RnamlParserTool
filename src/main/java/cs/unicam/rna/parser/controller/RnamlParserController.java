@@ -3,20 +3,17 @@ package cs.unicam.rna.parser.controller;
 import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
-import cs.unicam.rna.parser.utility.FileSaver;
 import cs.unicam.rna.parser.utility.RnaHandlerBuilder;
 
 public class RnamlParserController {
 	
 	private RnaFileData molecules;
 	private RnaHandlerBuilder builder;
-	private FileSaver saver;
 	private boolean loaded;
 	
 	
 	public RnamlParserController() {
 		builder = new RnaHandlerBuilder();
-		saver = new FileSaver();
 		loaded = false;
 	}
 	
@@ -38,8 +35,7 @@ public class RnamlParserController {
 			return false;
 		}
 		RnaFileWriter writer = this.builder.buildFileWriter(path);
-		String data = writer.write(molecules);
-		return saver.save(path, data);
+		return writer.writeAndSave(molecules, path);
 	}
 	
 	

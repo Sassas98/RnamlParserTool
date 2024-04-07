@@ -4,7 +4,8 @@ public enum RnaBase {
 	ADENINE,
 	URACIL,
 	CYTOSINE,
-	GUANINE;
+	GUANINE,
+	UNIDENTIFIED;
 	
 	public static RnaBase getBase(String s) {
 		return getBase(s.toUpperCase().charAt(0));
@@ -23,6 +24,8 @@ public enum RnaBase {
 				return CYTOSINE;
 			case 'G':
 				return GUANINE;
+			case 'N':
+				return UNIDENTIFIED;
 			default:
 				throw new IllegalArgumentException();
 		}
@@ -38,6 +41,8 @@ public enum RnaBase {
 				return 'C';
 			case GUANINE:
 				return 'G';
+			case UNIDENTIFIED:
+				return 'N';
 		}
 		return 0;
 	}

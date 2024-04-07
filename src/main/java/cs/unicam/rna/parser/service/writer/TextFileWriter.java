@@ -1,16 +1,18 @@
-package cs.unicam.rna.parser.utility;
+package cs.unicam.rna.parser.service.writer;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileSaver {
+public abstract class TextFileWriter {
+    
+    protected String data = "";
+    public boolean overwrite = true;
 	
-	public boolean overwrite = true;
-	
-	public boolean save(String path, String text) {
+	protected boolean save(String path) {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(path, !overwrite));
-            writer.write(text);
+            writer.write(data);
             writer.close();
             return true;
         } catch (IOException e) {
@@ -18,4 +20,6 @@ public class FileSaver {
             return false;
         }
     }
+
+
 }
