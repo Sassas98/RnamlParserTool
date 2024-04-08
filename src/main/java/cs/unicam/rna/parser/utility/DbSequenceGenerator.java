@@ -45,6 +45,10 @@ public class DbSequenceGenerator {
 				return '{';
 			case 6:
 				return '}';
+			case 7:
+				return '<';
+			case 8:
+				return '>';
             default:
                 return getDbLetter(n);
 		}
@@ -53,7 +57,7 @@ public class DbSequenceGenerator {
     private char getDbLetter(int n){
         return ((char) 
                 ((n % 2 != 0 ? 'A' : 'a')
-                + (n - 7) / 2));
+                + (n - 9) / 2));
     }
     
 }
