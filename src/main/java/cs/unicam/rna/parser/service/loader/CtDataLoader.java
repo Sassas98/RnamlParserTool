@@ -6,6 +6,6 @@ public class CtDataLoader extends TableDataLoader  {
         this.basePosition = 1;
         this.dimension = 6;
         this.pairOnePosition = 0;
-        this.pairTwoPosition = 5;
+        this.pairTwoPosition = 4;
     }
 }
