@@ -11,7 +11,6 @@ public abstract class TextDataLoader {
         try{
             return Files.readAllLines(Paths.get(path)).stream()
                 .map( l ->  Arrays.asList((l.trim().split("\\s+"))))
-                .filter( l -> !l.get(0).equals(""))
                 .toList();
         } catch (Exception e){
             return null;
