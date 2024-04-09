@@ -3,11 +3,11 @@ package cs.unicam.rna.parser.service.writer;
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
-import cs.unicam.rna.parser.utility.DbSequenceGenerator;
+import cs.unicam.rna.parser.utility.DotBracketSequenceGenerator;
 
 public class DbFileWriter extends TextFileWriter implements RnaFileWriter {
 
-	private DbSequenceGenerator sequenceGenerator = new DbSequenceGenerator();
+	private final DotBracketSequenceGenerator sequenceGenerator = new DotBracketSequenceGenerator();
 	
 	@Override
 	public boolean writeAndSave(RnaFileData molecules, String path) {

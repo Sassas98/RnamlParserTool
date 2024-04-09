@@ -3,7 +3,7 @@ package cs.unicam.rna.parser.utility;
 import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.model.RnaPair;
 
-public class DbSequenceGenerator {
+public class DotBracketSequenceGenerator extends DotBracketTranslator {
 
     int [] array;
 
@@ -27,37 +27,6 @@ public class DbSequenceGenerator {
 			array[pair.getFirst().getPosition()-1] = 1 + (count*2);
 			array[pair.getSecond().getPosition()-1] = 2 + (count*2);
 		}
-    }
-
-	private char getDbBracket(int n){
-		if(n <= 0)
-			return '.';
-		switch(n){
-			case 1:
-				return '(';
-			case 2:
-				return ')';
-			case 3:
-				return '[';
-			case 4:
-				return ']';
-			case 5:
-				return '{';
-			case 6:
-				return '}';
-			case 7:
-				return '<';
-			case 8:
-				return '>';
-            default:
-                return getDbLetter(n);
-		}
-	}
-
-    private char getDbLetter(int n){
-        return ((char) 
-                ((n % 2 != 0 ? 'A' : 'a')
-                + (n - 9) / 2));
     }
     
 }
