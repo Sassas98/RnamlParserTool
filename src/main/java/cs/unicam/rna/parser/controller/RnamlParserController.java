@@ -22,6 +22,13 @@ public class RnamlParserController {
 		RnaDataLoader loader = builder.buildDataLoader(path);
 		molecules = loader.getData(path);
 		loaded = molecules != null;
+		if(loaded) {
+			System.out.println("Caricate " + molecules.getMolecules().size() + " molecole.");
+			for(int i = 0; i < molecules.getMolecules().size(); i++ ) {
+				System.out.println("Molecola n." + i + " con " + 
+					molecules.getMolecules().get(i).getLength() + " ribonucleotidi.");
+			}
+		}
 	}
 	
 	
