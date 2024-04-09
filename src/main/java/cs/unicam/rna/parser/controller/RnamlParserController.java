@@ -45,5 +45,16 @@ public class RnamlParserController {
 		return writer.writeAndSave(molecules, path);
 	}
 	
+	public boolean equals(String path1, String path2) {
+		RnaDataLoader loader = builder.buildDataLoader(path1);
+		RnaFileData data1 = loader.getData(path1);
+		loader = builder.buildDataLoader(path2);
+		RnaFileData data2 = loader.getData(path2);
+		if(data1 == null || data2 == null) {
+			System.out.println("Data loading failed.");
+			return false;
+		}
+		return data1.equals(data2);
+	}
 	
 }

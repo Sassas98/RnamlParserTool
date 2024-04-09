@@ -10,14 +10,20 @@ public class App {
 			System.exit(1);
 		}
 		RnamlParserController controller = new RnamlParserController();
-		controller.loadRna(args[0]);
-		if(!controller.isLoaded()){
-			System.out.println("Data loading failed.");
-			System.exit(1);
+		if(args[0].equals("equals") && args.length == 3) {
+			boolean result = controller.equals(args[1], args[2]);
+			System.out.println("Gli RNA " + (result ? "" : "non ") + "sono uguali.");
+		} else {
+			controller.loadRna(args[0]);
+			if(!controller.isLoaded()){
+				System.out.println("Data loading failed.");
+				System.exit(1);
+			}
+			for(int i = 1; i < args.length; i++){
+				controller.SaveLoadedData(args[i]);
+			}
 		}
-		for(int i = 1; i < args.length; i++){
-			controller.SaveLoadedData(args[i]);
-		}
+		
 	}
 	
 }
