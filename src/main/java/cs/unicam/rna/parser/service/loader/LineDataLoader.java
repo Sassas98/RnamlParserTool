@@ -15,7 +15,7 @@ public class LineDataLoader extends TextDataLoader {
     }
 
     private boolean isSequence(String word) {
-        if(word == null || word.length() > 0)
+        if(word == null || word.length() == 0)
             return false;
         word = word.toUpperCase();
         for(char letter : word.toCharArray()) {
