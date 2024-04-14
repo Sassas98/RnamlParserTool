@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import cs.unicam.rna.parser.exception.RnaParsingException;
 
@@ -11,10 +12,12 @@ public class RnaMolecule {
 	
 	private int moleculeId;
 	private Map<Integer, RnaRibonucleotide> chain;
+	private Map<Integer, List<Integer>> pairs;
 	
 	public RnaMolecule(int moleculeId) {
 		this.moleculeId = moleculeId;
 		this.chain = new HashMap<>();
+		this.pairs = new HashMap<>();
 	}
 	
 	public void addRibonucleotide(char c) throws RnaParsingException {
@@ -30,12 +33,21 @@ public class RnaMolecule {
 	
 	public void addPair(int first, int second) throws RnaParsingException {
 		RnaRibonucleotide ribo1 = this.chain.get(first), ribo2 = this.chain.get(second);
-		if( first < 1 || first > getLength() || ribo1 == null || ribo1.getPair() != null)
+		if( first < 1 || first > getLength() || ribo1 == null)
 			throwException(first);
-		if( first == second || second < 1 || second > getLength()|| ribo2 == null || ribo2.getPair() != null)
+		if( first == second || second < 1 || second > getLength()|| ribo2 == null)
 			throwException(second);
-		ribo1.setPair(ribo2);
-		ribo2.setPair(ribo1);
+		addPairToMap(first, second);
+		addPairToMap(second, first);
+	}
+
+	public void addPairToMap(int first, int second) {
+		List<Integer> list = pairs.get(first);
+		if(list == null) {
+			list = new ArrayList<>();
+			pairs.put(first, list);
+		}
+		list.add(second);
 	}
 	
 	public int getLength() {
@@ -51,23 +63,18 @@ public class RnaMolecule {
 		return out;
 	}
 	
-	public List<RnaPair> getPairs(){
-		List<RnaRibonucleotide> riboList = new ArrayList<>(this.chain.values().stream()
-				.filter( r -> r.getPair() != null).toList());
-		for(int i = 0; i < riboList.size(); i++) {
-			RnaRibonucleotide toDelete = riboList.get(i).getPair();
-			riboList.remove(toDelete);
-		}
-		return new ArrayList<>(riboList.stream()
-				.map( r -> new RnaPair(r, r.getPair())).toList());
-	}
-	
 	public Map<Integer, Integer> getPairMap(){
 		Map<Integer, Integer> map = new HashMap<>();
-		List<RnaRibonucleotide> riboList = new ArrayList<>(this.chain.values().stream()
-				.filter( r -> r.getPair() != null).toList());
-		for(RnaRibonucleotide ribo : riboList) {
-			map.put(ribo.getPosition(), ribo.getPair().getPosition());
+		for(Entry<Integer, List<Integer>> pair : pairs.entrySet()) {
+			for(Integer i : pair.getValue()) {
+				Integer x = map.get(pair.getKey());
+				if(x == null) {
+					map.put(pair.getKey(), i);
+				} else {
+					if(map.get(i) == null)
+						map.put(i, pair.getKey());
+				}
+			}
 		}
 		return map;
 	}

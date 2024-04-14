@@ -5,7 +5,6 @@ public class RnaRibonucleotide {
 	private int moleculeId;
 	private int position;
 	private RnaBase base;
-	private RnaRibonucleotide pair;
 
 	public RnaRibonucleotide(int moleculeId, int position, RnaBase base) {
 		this.moleculeId = moleculeId;
@@ -24,20 +23,11 @@ public class RnaRibonucleotide {
 	public RnaBase getBase() {
 		return base;
 	}
-
-	public RnaRibonucleotide getPair() {
-		return pair;
-	}
-
-	public void setPair(RnaRibonucleotide pair) {
-		this.pair = pair;
-	}
+	
 
 	@Override
 	public String toString() {
 		return RnaBase.getBaseLetter(base) + "";
 	}
-	
-	
 	
 }

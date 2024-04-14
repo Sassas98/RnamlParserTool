@@ -62,7 +62,7 @@ public class RnaFileData {
     }
 
     private boolean compareSequence(String sequence1, String sequence2) {
-        if(!sequence1.equals(sequence2)) {
+        if(!RnaBase.maybeEquals(sequence1, sequence2)) {
             System.out.println("Sequenze non corrispondenti a molecola n." + molN );
             if(sequence1.length() != sequence2.length()) {
                 System.out.println("La prima sequenza è lunga: " + sequence1.length());

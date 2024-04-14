@@ -51,8 +51,16 @@ public class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
 	 * @throws RnaParsingException
 	 */
 	private void loadSequence(Element moleculeData, RnaMolecule molecule) throws RnaParsingException {
-		String sequence = moleculeData.getElementsByTagName("sequence")
-				.item(0).getTextContent();
+
+		Element sequenceNode = getElement(moleculeData.getElementsByTagName("sequence")
+				.item(0));
+		NodeList list = sequenceNode.getElementsByTagName("seq-data");
+				
+		String sequence = list.getLength() > 0 ? 
+							getElement(list.item(0)).getTextContent()
+							.replace(" ", "").replace("\n", "")
+							.replace("\t", "").replace("\r", "").toUpperCase() 
+							: sequenceNode.getTextContent();
 		for(char c : sequence.toCharArray()) {
 			molecule.addRibonucleotide(c);
 		}

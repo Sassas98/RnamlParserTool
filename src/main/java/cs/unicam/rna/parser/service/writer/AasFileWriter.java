@@ -1,9 +1,12 @@
 package cs.unicam.rna.parser.service.writer;
 
+import java.util.AbstractMap.SimpleEntry;
+import java.util.List;
+import java.util.Map.Entry;
+
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
-import cs.unicam.rna.parser.model.RnaPair;
 
 public class AasFileWriter extends TextFileWriter implements RnaFileWriter {
 	
@@ -16,8 +19,11 @@ public class AasFileWriter extends TextFileWriter implements RnaFileWriter {
 
 	private void writeMolecule(RnaMolecule m) {
 		data += m.getSequence()+"\n";
-		for(RnaPair pair : m.getPairs()) {
-			data += "(" + pair.getFirst().getPosition() + "," + pair.getSecond().getPosition() +");";
+		List<Entry<Integer, Integer>> list = m.getPairMap().entrySet().stream()
+											.map(x -> x.getKey() < x.getValue() ? x : new SimpleEntry<Integer, Integer>(x.getValue(), x.getKey()))
+											.distinct().toList();
+		for(Entry<Integer, Integer> pair : list) {
+			data += "(" + pair.getKey() + "," + pair.getValue() +");";
 		}
 		data += "\n\n";
 	}

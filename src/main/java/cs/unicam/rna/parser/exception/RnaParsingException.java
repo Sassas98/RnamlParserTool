@@ -8,5 +8,11 @@ public class RnaParsingException extends Exception {
         super("Error in molecule n." + molecule 
         		+ " and ribonucleotide in pos." + ribonucleotide);
     }
+	
+	public RnaParsingException(int molecule, int ribonucleotide1, int ribonucleotide2) {
+        super("Error in molecule n." + molecule 
+		+ ", ribonucleotide in pos." + ribonucleotide1
+		+ " and ribonucleotide in pos." + ribonucleotide2);
+    }
 
 }

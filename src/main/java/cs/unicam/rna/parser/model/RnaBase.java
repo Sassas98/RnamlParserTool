@@ -1,11 +1,28 @@
 package cs.unicam.rna.parser.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public enum RnaBase {
 	ADENINE,
 	URACIL,
 	CYTOSINE,
 	GUANINE,
+	ADENINEorURACIL,
+	ADENINEorCYTOSINE,
+	ADENINEorGUANINE,
+	URACILorCYTOSINE,
+	URACILorGUANINE,
+	CYTOSINEorGUANINE,
+	notADENINE,
+	notURACIL,
+	notCYTOSINE,
+	notGUANINE,
 	UNIDENTIFIED;
+	
+	public static RnaBase getBase(int n) {
+		return getBase("" + ((char) n));
+	}
 	
 	public static RnaBase getBase(String s) {
 		return getBase(s.toUpperCase().charAt(0));
@@ -24,10 +41,28 @@ public enum RnaBase {
 				return CYTOSINE;
 			case 'G':
 				return GUANINE;
-			case 'N':
-				return UNIDENTIFIED;
+			case 'W':
+				return ADENINEorURACIL;
+			case 'M':
+				return ADENINEorCYTOSINE;
+			case 'R':
+				return ADENINEorGUANINE;
+			case 'Y':
+				return URACILorCYTOSINE;
+			case 'K':
+				return URACILorGUANINE;
+			case 'S':
+				return CYTOSINEorGUANINE;
+			case 'B':
+				return notADENINE;
+			case 'V':
+				return notURACIL;
+			case 'D':
+				return notCYTOSINE;
+			case 'H':
+				return notGUANINE;
 			default:
-				throw new IllegalArgumentException();
+				return UNIDENTIFIED;
 		}
 	}
 	
@@ -41,10 +76,71 @@ public enum RnaBase {
 				return 'C';
 			case GUANINE:
 				return 'G';
-			case UNIDENTIFIED:
+			case ADENINEorCYTOSINE:
+				return 'R';
+			case ADENINEorGUANINE:
+				return 'Y';
+			case ADENINEorURACIL:
+				return 'M';
+			case CYTOSINEorGUANINE:
+				return 'B';
+			case URACILorCYTOSINE:
+				return 'K';
+			case URACILorGUANINE:
+				return 'S';
+			case notADENINE:
+				return 'V';
+			case notCYTOSINE:
+				return 'D';
+			case notGUANINE:
+				return 'H';
+			case notURACIL:
+				return 'V';
+			default:
 				return 'N';
 		}
-		return 0;
+	}
+
+	public static boolean maybeEquals(String seq1, String seq2){
+		char [] list1 = seq1.toCharArray(), list2 = seq2.toCharArray();
+		if(list1.length != list2.length)
+			return false;
+		for(int i = 0; i < list1.length; i++){
+			if(!getBase(list1[i]).maybeEquals(getBase(list2[i])))
+				return false;
+		}
+		return true;
+	}
+
+	
+	public boolean maybeEquals(RnaBase other){
+		if(this == UNIDENTIFIED || other == UNIDENTIFIED)
+			return true;
+		List<Character> list1 = getBases(this);
+		List<Character> list2 = getBases(other);
+		for(Character c : list1) {
+			if(list2.contains(c))
+				return true;
+		}
+		return false;
+	}
+
+	private List<Character> getBases(RnaBase base) {
+		List<Character> list = new ArrayList<>();
+		if(base == ADENINE || base == ADENINEorCYTOSINE || base == ADENINEorGUANINE || base == ADENINEorURACIL
+			|| base == notCYTOSINE || base == notGUANINE || base == notURACIL)
+			list.add('A');
+		if(base == URACIL || base == URACILorCYTOSINE || base == URACILorGUANINE || base == ADENINEorURACIL
+			|| base == notCYTOSINE || base == notGUANINE || base == notADENINE)
+			list.add('U');
+		if(base == CYTOSINE || base == ADENINEorCYTOSINE || base == CYTOSINEorGUANINE || base == URACILorCYTOSINE
+			|| base == notADENINE || base == notGUANINE || base == notURACIL)
+			list.add('C');
+		if(base == GUANINE || base == URACILorGUANINE || base == ADENINEorGUANINE || base == CYTOSINEorGUANINE
+			|| base == notCYTOSINE || base == notURACIL || base == notADENINE)
+			list.add('G');
+		return list;
 	}
 	
 }
+
