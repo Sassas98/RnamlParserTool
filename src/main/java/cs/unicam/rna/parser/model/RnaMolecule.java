@@ -19,6 +19,10 @@ public class RnaMolecule {
 		this.chain = new HashMap<>();
 		this.pairs = new HashMap<>();
 	}
+
+	public int getMoleculeId() {
+		return this.moleculeId;
+	}
 	
 	public void addRibonucleotide(char c) throws RnaParsingException {
 		int pos = getLength() + 1;

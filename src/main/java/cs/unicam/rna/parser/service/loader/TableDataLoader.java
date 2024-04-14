@@ -25,7 +25,7 @@ public abstract class TableDataLoader extends TextDataLoader implements RnaDataL
             int until = i + 1 == starts.size() ? lines.size() : starts.get(i + 1);
             List<List<String>> moleculeList = lines.subList(starts.get(i), until).stream()
                                                    .filter(l -> l.size() == dimension).toList();
-            RnaMolecule molecule = getMolecule(moleculeList, new RnaMolecule(i));
+            RnaMolecule molecule = getMolecule(moleculeList, new RnaMolecule(i + 1));
             if(molecule == null)
                 return null; 
             data.addMolecule(molecule);

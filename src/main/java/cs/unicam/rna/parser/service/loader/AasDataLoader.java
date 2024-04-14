@@ -23,7 +23,7 @@ public class AasDataLoader extends LineDataLoader implements RnaDataLoader {
             String sequence = lines.get(i).get(0);
             String pairs = lines.size() > i + 1 && lines.get(i + 1).size() == 1 ? 
                            lines.get(i + 1).get(0) : "";
-            RnaMolecule molecule = getMolecule(i, sequence, pairs);
+            RnaMolecule molecule = getMolecule(i + 1, sequence, pairs);
             if(molecule == null) {
                 return null;
             }

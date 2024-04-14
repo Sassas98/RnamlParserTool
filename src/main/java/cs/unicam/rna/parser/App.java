@@ -1,5 +1,7 @@
 package cs.unicam.rna.parser;
 
+
+
 import cs.unicam.rna.parser.controller.RnamlParserController;
 
 public class App {

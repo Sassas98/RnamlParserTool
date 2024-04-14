@@ -35,7 +35,7 @@ public class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
 	}
 	
 	public RnaMolecule getMolecule(Element moleculeData, int index) {
-		RnaMolecule molecule = new RnaMolecule(index);
+		RnaMolecule molecule = new RnaMolecule(index + 1);
 		try {
 			loadSequence(moleculeData, molecule);
 			this.pairsLoader.loadPairs(moleculeData, molecule);
