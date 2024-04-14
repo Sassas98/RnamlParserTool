@@ -86,7 +86,8 @@ public class RnaFileData {
 
     private boolean comparePairs(Map<Integer, Integer> pairs1, Map<Integer, Integer> pairs2, String focus) {
         for(Entry<Integer, Integer> pair : pairs1.entrySet()) {
-            if(pairs2.get(pair.getKey()).intValue() != pair.getValue().intValue()) {
+            if(!(pair.getValue().equals(pairs2.get(pair.getKey()))
+            || pair.getKey().equals(pairs2.get(pair.getValue())))) {
                 System.out.println("La coppia " + pair.getKey() + " - " + pair.getValue()
                     + " non è presente nella molecola n." + molN + " del " + focus + " file.");
                 System.out.println(pairs2.get(pair.getKey()) + "!=" + pair.getValue());
