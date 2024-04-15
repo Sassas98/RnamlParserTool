@@ -36,6 +36,8 @@ public class XmlFireWriter {
                     new FileOutputStream(xmlFile), "ISO-8859-1"));
             Transformer xformer = TransformerFactory.newInstance().newTransformer();
             xformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "rnaml.dtd");
+            xformer.setOutputProperty(OutputKeys.INDENT, "yes");
+            xformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
             xformer.transform(source, result);
             return true;
         } catch (Exception e) {

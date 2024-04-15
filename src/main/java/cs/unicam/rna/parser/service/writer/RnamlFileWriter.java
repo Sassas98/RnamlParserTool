@@ -28,7 +28,7 @@ public class RnamlFileWriter extends XmlFireWriter implements RnaFileWriter {
         Element seq = xmlDoc.createElement("sequence");
         mol.appendChild(seq);
         Element seq_data = xmlDoc.createElement("seq-data");
-        seq_data.appendChild(xmlDoc.createTextNode(molecule.getSequence()));
+        seq_data.appendChild(xmlDoc.createTextNode(sequenceStyle(molecule.getSequence())));
         seq.appendChild(seq_data);
         Element struct = xmlDoc.createElement("structure");
         mol.appendChild(struct);
@@ -45,6 +45,22 @@ public class RnamlFileWriter extends XmlFireWriter implements RnaFileWriter {
             addBase(base_pair, "base-id-5p", pair.getKey());
             addBase(base_pair, "base-id-3p", pair.getValue());
         }
+    }
+
+    private String sequenceStyle(String sequence) {
+        String result = "\n";
+        int count = 0;
+        for(char c : sequence.toCharArray()) {
+            if(count != 0) {
+                if(count % 60 == 0)
+                    result += '\n';
+                else if(count % 10 == 0)
+                    result += ' ';
+            }
+            result += c;
+            count++;
+        }
+        return result + "\n";
     }
 
     private void addBase(Element base_pair, String id, int pos) {
