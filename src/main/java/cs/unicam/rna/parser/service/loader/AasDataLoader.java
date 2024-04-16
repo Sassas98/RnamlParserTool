@@ -16,6 +16,7 @@ public class AasDataLoader extends LineDataLoader implements RnaDataLoader {
     public RnaFileData getData(String path) {
         this.data = new RnaFileData();
 		List<List<String>> lines = getLines(path);
+        setFileInfo(data, lines);
         List<Integer> starts = getSequencePositions(lines);
         if(starts.isEmpty())
             return null;

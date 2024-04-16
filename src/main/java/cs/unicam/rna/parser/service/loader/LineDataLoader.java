@@ -1,6 +1,7 @@
 package cs.unicam.rna.parser.service.loader;
 
 import java.util.List;
+
 import java.util.ArrayList;
 
 public class LineDataLoader extends TextDataLoader {

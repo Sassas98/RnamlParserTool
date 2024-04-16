@@ -18,6 +18,7 @@ public abstract class TableDataLoader extends TextDataLoader implements RnaDataL
     public RnaFileData getData(String path) {
         this.data = new RnaFileData();
 		List<List<String>> lines = getLines(path);
+        setFileInfo(data, lines);
         List<Integer> starts = getStartLines(lines);
         if(starts.isEmpty())
             return null;

@@ -11,6 +11,7 @@ public class CtFileWriter extends TextFileWriter implements RnaFileWriter {
 	@Override
 	public boolean writeAndSave(RnaFileData molecules, String path) {
 		data = "";
+		setFileInfo(molecules);
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
 		return save(path);
 	}

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
 
 public class RnaFileData {
     
     private List<RnaMolecule> molecules;
+    private String organism, accessionNumber, referenceLink;
     private int molN;
 
     public RnaFileData(){
@@ -23,6 +23,30 @@ public class RnaFileData {
         List<RnaMolecule> list = new ArrayList<>();
         list.addAll(this.molecules);
         return list;
+    }
+
+    public String getOrganism() {
+        return organism;
+    }
+
+    public String getAccessionNumber() {
+        return accessionNumber;
+    }
+
+    public String getReferenceLink() {
+        return referenceLink;
+    }
+
+    public void setOrganism(String organism) {
+        this.organism = organism;
+    }
+
+    public void setAccessionNumber(String accessionNumber) {
+        this.accessionNumber = accessionNumber;
+    }
+
+    public void setReferenceLink(String referenceLink) {
+        this.referenceLink = referenceLink;
     }
 
     @Override
