@@ -10,21 +10,26 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
-public class RnamlFileWriter extends XmlFireWriter implements RnaFileWriter {
+public class RnamlFileWriter extends XmlFileWriter implements RnaFileWriter {
 
     @Override
     public boolean writeAndSave(RnaFileData molecules, String path) {
         createNewDocument();
         for(RnaMolecule molecule : molecules.getMolecules()) {
-            addMolecule(molecule);
+            addMolecule(molecule, molecules.getAccessionNumber(), molecules.getOrganism());
+            setgetReferenceLink(molecules.getReferenceLink(), molecule.getMoleculeId());
         }
         return save(path);
     }
 
-    private void addMolecule(RnaMolecule molecule) {
+    private void addMolecule(RnaMolecule molecule, String accessionNumer, String organism) {
         Element mol = xmlDoc.createElement("molecule");
         mol.setAttribute("id", "" + molecule.getMoleculeId());
+        if(accessionNumer != null){
+            mol.setAttribute("database-ids", accessionNumer);
+        }
         root.appendChild(mol);
+        setIdentity(mol, organism);
         Element seq = xmlDoc.createElement("sequence");
         mol.appendChild(seq);
         Element seq_data = xmlDoc.createElement("seq-data");
@@ -44,6 +49,31 @@ public class RnamlFileWriter extends XmlFireWriter implements RnaFileWriter {
             str_ann.appendChild(base_pair);
             addBase(base_pair, "base-id-5p", pair.getKey());
             addBase(base_pair, "base-id-3p", pair.getValue());
+        }
+    }
+
+    
+
+    private void setgetReferenceLink(String referenceLink, int moleculeId){
+        if(referenceLink != null) {
+            Element reference = xmlDoc.createElement("reference");
+            reference.setAttribute("id", "" + moleculeId);
+            root.appendChild(reference);
+            Element pa = xmlDoc.createElement("path");
+            reference.appendChild(pa);
+            Element url = xmlDoc.createElement("url");
+            url.appendChild(xmlDoc.createTextNode(referenceLink));
+            pa.appendChild(url);
+        }
+    }
+
+    private void setIdentity(Element mol, String organism){
+        if(organism != null){
+            Element identity = xmlDoc.createElement("identity");
+            mol.appendChild(identity);
+            Element name = xmlDoc.createElement("name");
+            name.appendChild(xmlDoc.createTextNode(organism));
+            identity.appendChild(name);
         }
     }
 

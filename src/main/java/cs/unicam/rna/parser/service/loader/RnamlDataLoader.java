@@ -24,16 +24,15 @@ public class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
 		NodeList moleculeList = doc.getElementsByTagName("molecule");
 		for (int i = 0; i < moleculeList.getLength(); i++) {
             Element node = getElement(moleculeList.item(i));
-            if (node != null) {
-				RnaMolecule molecule = getMolecule(node, i);
-				if(molecule == null)
-					return null;
-				data.addMolecule(molecule);
-            }
+			RnaMolecule molecule = getMolecule(node, i);
+			if(molecule == null)
+				return null;
+			data.addMolecule(molecule);
 		}
+		checkInfoData(doc, data);
 		return data;
 	}
-	
+
 	public RnaMolecule getMolecule(Element moleculeData, int index) {
 		RnaMolecule molecule = new RnaMolecule(index + 1);
 		try {
@@ -65,5 +64,28 @@ public class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
 			molecule.addRibonucleotide(c);
 		}
 	}
+
+	
+
+	private void checkInfoData(Document doc, RnaFileData data) {
+		NodeList urls = doc.getElementsByTagName("url");
+		if(urls.getLength() > 0){
+			data.setReferenceLink(urls.item(0).getTextContent());
+		}
+		NodeList moleculeList = doc.getElementsByTagName("molecule");
+		if(moleculeList.getLength() > 0){
+        	Element mol = getElement(moleculeList.item(0));
+			String db = mol.getAttribute("database-ids");
+			if(!"".equals(db)){
+				data.setAccessionNumber(db);
+			}
+			NodeList identities = mol.getElementsByTagName("identity");
+			if(identities.getLength() > 0) {
+				String name = getElement(identities.item(0)).getElementsByTagName("name").item(0).getTextContent();
+				data.setOrganism(name);
+			}
+		}
+	}
+
 	
 }
