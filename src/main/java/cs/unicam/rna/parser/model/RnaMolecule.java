@@ -82,6 +82,17 @@ public class RnaMolecule {
 		}
 		return map;
 	}
+
+	public Map<Integer, Integer> getSimplifiedPairMap(){
+		Map<Integer, Integer> map = new HashMap<>();
+		for(Entry<Integer, List<Integer>> pair : pairs.entrySet()) {
+			if(!(map.containsKey(pair.getKey()) || map.containsKey(pair.getValue().get(0)))){
+				map.put(pair.getKey(), pair.getValue().get(0));
+				map.put(pair.getValue().get(0), pair.getKey());
+			}
+		}
+		return map;
+	}
 	
 	private void throwException(int pos) throws RnaParsingException {
 		throw new RnaParsingException(this.moleculeId, pos);

@@ -27,20 +27,8 @@ public class LineDataLoader extends TextDataLoader {
     }
 
     private boolean isNotSequenceLetter(char letter) {
-        switch(letter){
-            case 'A':
-                return false;
-            case 'C':
-                return false;
-            case 'U':
-                return false;
-            case 'G':
-                return false;
-            case 'N':
-                return false;
-            default:
-                return true;
-        }
+        String l = ("" + letter).toUpperCase();
+        return !"ACUGNWRMYKSBVDH".contains(l);
     }
 
     

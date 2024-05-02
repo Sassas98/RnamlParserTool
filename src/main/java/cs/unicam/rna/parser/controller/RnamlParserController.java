@@ -46,12 +46,24 @@ public class RnamlParserController {
 	}
 	
 	
-	public boolean SaveLoadedData(String path) {
+	public OperationResult SaveLoadedData(String path) {
+		OperationResult result = new OperationResult();
 		if(path == null || (!loaded)) {
-			return false;
+			result.addInfo(path == null ? "Error. Path is null." : "Error. Data to save not loaded.");
+			return result;
 		}
 		RnaFileWriter writer = this.builder.buildFileWriter(path);
-		return writer.writeAndSave(molecules, path);
+		result.result = writer.writeAndSave(molecules, path);
+		if(result.result) {
+			result.addInfo("Saving to file " + path + " was successful.");
+			RnaDataLoader loader = builder.buildDataLoader(path);
+			RnaFileData newData = loader.getData(path);
+			if(!this.comparator.areEquals(molecules, newData).result)
+				result.addInfo("Some data was lost during the format switch.");
+		} else {
+			result.addInfo("Failed to save data in " + path + " file.");
+		}
+		return result;
 	}
 	
 	public OperationResult equals(String path1, String path2) {

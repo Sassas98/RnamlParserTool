@@ -18,15 +18,17 @@ public class App {
 			System.exit(1);
 		}
 		RnamlParserController controller = new RnamlParserController();
+		OperationResult result;
 		if(args[0].equals("equals") && args.length == 3) {
-			OperationResult result = controller.equals(args[1], args[2]);
+			result = controller.equals(args[1], args[2]);
 			result.getInfo().forEach(x -> System.out.println(x));
 		} else {
-			OperationResult result = controller.loadRna(args[0]);
+			result = controller.loadRna(args[0]);
 			result.getInfo().forEach(x -> System.out.println(x));
 			if(result.result){
 				for(int i = 1; i < args.length; i++){
-					controller.SaveLoadedData(args[i]);
+					result = controller.SaveLoadedData(args[i]);
+					result.getInfo().forEach(x -> System.out.println(x));
 				}
 			}
 		}

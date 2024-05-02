@@ -17,7 +17,7 @@ public class DotBracketTranslator {
                 return i;
         }
         boolean maiusc = c >= 'A' && c <= 'Z';
-        int base = (c - (maiusc ? 'A' : 'a')) - (maiusc ? 0 : 1);
+        int base = (c - (maiusc ? 'A' : 'a'));
         return ((base * 2) + 9) + (maiusc ? 0 : 1);
     }
 
