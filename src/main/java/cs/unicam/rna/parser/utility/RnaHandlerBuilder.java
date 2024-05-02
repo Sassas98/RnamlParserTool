@@ -5,6 +5,7 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.service.loader.AasDataLoader;
 import cs.unicam.rna.parser.service.loader.BpseqDataLoader;
 import cs.unicam.rna.parser.service.loader.CtDataLoader;
+import cs.unicam.rna.parser.service.loader.NullDataLoader;
 import cs.unicam.rna.parser.service.loader.RnamlDataLoader;
 import cs.unicam.rna.parser.service.writer.AasFileWriter;
 import cs.unicam.rna.parser.service.writer.BpseqFileWriter;
@@ -27,7 +28,7 @@ public class RnaHandlerBuilder {
 		case "aas":
 			return new AasFileWriter();
 		default:
-			return null;
+			return new RnamlFileWriter();
 		}
 	}
 
@@ -45,7 +46,7 @@ public class RnaHandlerBuilder {
 		case "aas":
 			return new AasDataLoader();
 		default:
-			return null;
+			return new NullDataLoader();
 		}
 	}
 
@@ -53,7 +54,10 @@ public class RnaHandlerBuilder {
 		String[] parts = path.split("\\.");
 		if(parts.length < 2)
 			return "";
-		return parts[parts.length - 1];
+		String ext = parts[parts.length - 1];
+		if(ext.equals("txt") && parts.length > 2)
+			return parts[parts.length - 2];
+		return ext;
 	}
 	
 	
