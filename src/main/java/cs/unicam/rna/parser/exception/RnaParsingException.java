@@ -2,6 +2,7 @@ package cs.unicam.rna.parser.exception;
 
 /**
  * eccezione per segnalare la posizione dell'errore di parsing
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class RnaParsingException extends Exception {
 	

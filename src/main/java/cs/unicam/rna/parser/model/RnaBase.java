@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Enumerazione contenente tutte le possibili nomenclature dell'rna
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public enum RnaBase {
 	ADENINE,

@@ -10,32 +10,46 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.*;
 
-public class XmlFileWriter {
-    
+/**
+ * Classe astratta per fornire i metodi utili all'estrapolazione
+ * del document e il salvataggio in un formato basato sull'xml
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
+public abstract class XmlFileWriter {
+    /**
+     * Document su cui scrivere
+     */
     protected Document xmlDoc;
-    protected Element root;
 
+    /**
+     * Metodo per ottenere un nuovo documento
+     */
     protected void createNewDocument(){
         try {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             this.xmlDoc = dBuilder.newDocument();
-            this.root = xmlDoc.createElement("rnaml");
-            root.setAttribute("version", "1.0");
-            xmlDoc.appendChild(root);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         }
     }
 
-    protected boolean save(String path) {
+    /**
+     * Metodo per salvare l'attuale documento
+     * in uno specifico path e tramite un dtd fornito tramite
+     * riferimento esterno
+     * @param path path di destinazione
+     * @param dtd path del file.dtd
+     * @return true se il salvataggio va a buon fine, false altrimenti
+     */
+    protected boolean save(String path, String dtd) {
         try {
             Source source = new DOMSource(xmlDoc);
             File xmlFile = new File(path);
             StreamResult result = new StreamResult(new OutputStreamWriter(
                     new FileOutputStream(xmlFile), "ISO-8859-1"));
             Transformer xformer = TransformerFactory.newInstance().newTransformer();
-            xformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, "rnaml.dtd");
+            xformer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, dtd);
             xformer.setOutputProperty(OutputKeys.INDENT, "yes");
             xformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
             xformer.transform(source, result);

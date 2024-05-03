@@ -2,6 +2,7 @@ package cs.unicam.rna.parser.service.loader;
 
 /**
  * classe per caricare i dati contenuti in un file bpseq
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public final class BpseqDataLoader extends TableDataLoader {
 

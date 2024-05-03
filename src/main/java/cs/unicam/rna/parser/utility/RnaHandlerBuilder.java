@@ -4,8 +4,19 @@ import cs.unicam.rna.parser.abstraction.*;
 import cs.unicam.rna.parser.service.loader.*;
 import cs.unicam.rna.parser.service.writer.*;
 
+/**
+ * Classe che genera il gestore adatto al contesto
+ * in base al metodo chiamato e al nome del file
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public class RnaHandlerBuilder {
 	
+	/**
+	 * Metodo per ottenere il giusto scrittore di
+	 * dati per un certo path
+	 * @param path path in cui salvare
+	 * @return scrittore di dati adatto
+	 */
 	public RnaFileWriter buildFileWriter(String path) {
 		String extension = getExtension(path);
 		switch(extension) {
@@ -26,6 +37,12 @@ public class RnaHandlerBuilder {
 		}
 	}
 
+	/**
+	 * Metodo per ottenere il giusto caricatore di
+	 * dati per un certo path
+	 * @param path path da caricare
+	 * @return caricatore di dati adatto
+	 */
 	public RnaDataLoader buildDataLoader(String path) {
 		String extension = getExtension(path);
 		switch(extension) {
@@ -46,6 +63,11 @@ public class RnaHandlerBuilder {
 		}
 	}
 
+	/**
+	 * Metodo interno per ottenere l'estensione del file
+	 * @param path nome del file
+	 * @return estensione del file
+	 */
 	private String getExtension(String path) {
 		String[] parts = path.split("\\.");
 		if(parts.length < 2)

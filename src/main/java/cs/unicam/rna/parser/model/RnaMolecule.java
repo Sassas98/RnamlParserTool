@@ -10,6 +10,7 @@ import cs.unicam.rna.parser.exception.RnaParsingException;
 
 /**
  * classe che contiene tutti i dati relativi ad un rna
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class RnaMolecule {
 	

@@ -5,6 +5,13 @@ import cs.unicam.rna.parser.model.OperationResult;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.service.comparator.RnaComparator;
 
+/**
+ * Controller che estende per parser con un check alla scrittura che segnala
+ * una perdita di dati per conversione e una nuova funzione di confronto che
+ * verifica la corrispondenza o le differenze della struttura primaria e
+ * secondaria dati due file rna
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public class RnaParserAnalyzerController extends RnaParserController {
     /**
 	 * servizio per la comparazione di due dati di rna
@@ -23,7 +30,7 @@ public class RnaParserAnalyzerController extends RnaParserController {
 	 * @param path2 percorso del secondo file
 	 * @return esito dell'analisi
 	 */
-	public OperationResult equals(String path1, String path2) {
+	public synchronized OperationResult equals(String path1, String path2) {
 		path1 = nameHandler.checkExt(path1, false);
 		path2= nameHandler.checkExt(path2, false);
 		RnaDataLoader loader = builder.buildDataLoader(path1);
@@ -34,7 +41,7 @@ public class RnaParserAnalyzerController extends RnaParserController {
 	}
 
     @Override
-    public OperationResult SaveLoadedData(String path) {
+    public synchronized OperationResult SaveLoadedData(String path) {
         OperationResult result = super.SaveLoadedData(path);
         if(result.result && (!equals(loadedPath, path).result)) {
 				result.addInfo("Some data was lost during the format switch.");

@@ -10,6 +10,7 @@ import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * classe per caricare i dati contenuti in un file aas
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public final class AasDataLoader extends LineDataLoader implements RnaDataLoader {
     

@@ -10,18 +10,36 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
+/**
+ * Classe per il salvataggio di dati nel formato RNAML
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public final class RnamlFileWriter extends XmlFileWriter implements RnaFileWriter {
+
+    /**
+     * Element root, in questo caso sarà un nodo <rnaml> ... </rnaml>
+     */
+    private Element root;
 
     @Override
     public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
         createNewDocument();
+        this.root = xmlDoc.createElement("rnaml");
+        root.setAttribute("version", "1.0");
+        xmlDoc.appendChild(root);
         for(RnaMolecule molecule : molecules.getMolecules()) {
             addMolecule(molecule, molecules.getAccessionNumber(), molecules.getOrganism());
             setgetReferenceLink(molecules.getReferenceLink(), molecule.getMoleculeId());
         }
-        return save(path);
+        return save(path, "rnaml.dtd");
     }
 
+    /**
+     * metodo per aggiungere una molecola alla radice
+     * @param molecule molecola da aggiungere
+     * @param accessionNumer numero di accesso al db
+     * @param organism nome dell'organismo
+     */
     private void addMolecule(RnaMolecule molecule, String accessionNumer, String organism) {
         Element mol = xmlDoc.createElement("molecule");
         mol.setAttribute("id", "" + molecule.getMoleculeId());
@@ -53,7 +71,11 @@ public final class RnamlFileWriter extends XmlFileWriter implements RnaFileWrite
     }
 
     
-
+    /**
+     * Imposta il link di riferimento, se esiste
+     * @param referenceLink link di riferimento
+     * @param moleculeId id della molecola
+     */
     private void setgetReferenceLink(String referenceLink, int moleculeId){
         if(referenceLink != null) {
             Element reference = xmlDoc.createElement("reference");
@@ -67,6 +89,11 @@ public final class RnamlFileWriter extends XmlFileWriter implements RnaFileWrite
         }
     }
 
+    /**
+     * Imposta l'identità, se esiste
+     * @param mol elemento della molecola
+     * @param organism nome dell'organismo
+     */
     private void setIdentity(Element mol, String organism){
         if(organism != null){
             Element identity = xmlDoc.createElement("identity");
@@ -77,22 +104,34 @@ public final class RnamlFileWriter extends XmlFileWriter implements RnaFileWrite
         }
     }
 
+    /**
+     * aggiusta la stringa contenente la sequenza di ribonucleidi
+     * in modo da renderla più leggibile nel file xml
+     * @param sequence sequenza grezza
+     * @return sequenza raffinata
+     */
     private String sequenceStyle(String sequence) {
-        String result = "\n";
+        String result = "\n\t\t\t\t";
         int count = 0;
         for(char c : sequence.toCharArray()) {
             if(count != 0) {
                 if(count % 60 == 0)
-                    result += '\n';
+                    result += "\n\t\t\t\t";
                 else if(count % 10 == 0)
                     result += ' ';
             }
             result += c;
             count++;
         }
-        return result + "\n";
+        return result;
     }
 
+    /**
+     * aggiunge una parte di una coppia di basi nella struttura secondaria 
+     * @param base_pair elemento di partenza
+     * @param id id dell'elemento della coppia
+     * @param pos posizione dell'elemento
+     */
     private void addBase(Element base_pair, String id, int pos) {
         Element base_p = xmlDoc.createElement(id);
         base_pair.appendChild(base_p);

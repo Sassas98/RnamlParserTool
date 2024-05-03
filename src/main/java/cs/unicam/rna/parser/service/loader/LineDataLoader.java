@@ -7,6 +7,7 @@ import java.util.ArrayList;
 /**
  * Classe astratta contenti metodi utili a caricatori di formati
  * di dati disposti a linea
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public abstract class LineDataLoader extends TextDataLoader {
 

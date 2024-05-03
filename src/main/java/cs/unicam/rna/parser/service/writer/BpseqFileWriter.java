@@ -6,6 +6,10 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
+/**
+ * Classe per scrivere dai dati in formato BPSEQ
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public final class BpseqFileWriter extends TextFileWriter implements RnaFileWriter {
 
 	@Override
@@ -16,6 +20,10 @@ public final class BpseqFileWriter extends TextFileWriter implements RnaFileWrit
 		return save(path);
 	}
 
+	/**
+	 * Scrive i dati contenuti nella molecola nel formato BPSEQ
+	 * @param m molecola da scrivere
+	 */
 	private void writeMolecule(RnaMolecule m) {
 		char[] array = m.getSequence().toCharArray();
 		Map<Integer, Integer> pairs = m.getPairMap();

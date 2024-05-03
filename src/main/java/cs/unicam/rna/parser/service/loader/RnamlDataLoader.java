@@ -12,6 +12,7 @@ import cs.unicam.rna.parser.utility.RnamlPairsLoader;
 
 /**
  * classe per il caricamento di dati da un rnaml
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public final class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
 	/**

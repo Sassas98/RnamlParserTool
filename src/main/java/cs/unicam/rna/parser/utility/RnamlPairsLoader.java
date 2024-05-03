@@ -7,6 +7,10 @@ import cs.unicam.rna.parser.exception.RnaParsingException;
 import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.service.loader.XmlDataLoader;
 
+/**
+ * Classe utile al caricamento delle coppie di un file rnaml
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public class RnamlPairsLoader extends XmlDataLoader {
     
     /**

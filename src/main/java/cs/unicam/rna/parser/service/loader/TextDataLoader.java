@@ -10,6 +10,7 @@ import cs.unicam.rna.parser.model.RnaFileData;
 /**
  * classe astratta con metodi adeguati per operare su un file
  * di testo e ottenere dati informativi sul file
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public abstract class TextDataLoader {
 

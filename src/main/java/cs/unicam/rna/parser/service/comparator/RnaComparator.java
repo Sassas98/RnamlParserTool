@@ -11,6 +11,7 @@ import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * Servizio di comparazione e analisi di due file di rna
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class RnaComparator {
     /**

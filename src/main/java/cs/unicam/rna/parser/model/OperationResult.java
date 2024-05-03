@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * classe per contenere l'esito e i dettagli di un operazione
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class OperationResult {
 

@@ -5,13 +5,30 @@ package cs.unicam.rna.parser;
 import cs.unicam.rna.parser.controller.RnaParserAnalyzerController;
 import cs.unicam.rna.parser.model.OperationResult;
 
+/**
+ * Classe di avvio del programma. 
+ * Pensata per un utilizzo da terminale.
+ * Se si vuole usare questo tool come una libreria esterna, cancellare questa classe
+ * e interagire direttamente con il controller che più si adatta alle esigenze dello
+ * sviluppatore interessato.
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public class App {
 
+	/**
+	 * Info da stampare su schermo quando gli argomenti non sono forniti
+	 */
 	private static String info = "To use this tool you must first type the name of the input file"
 	+ " and then all the output files you want to produce. The formats supported by this tool are"
 	+ " aas, ct, bpseq, db and rnaml.\n If instead you want to compare two files to verify that they"
 	+ " contain the same primary and secondary structure, you need to type \"equals file1 file2\".";
 	
+	/**
+	 * Metodo main per l'utilizzo via console
+	 * @param args ci sono due casi di utilizzo previsti: o il primo argomento è
+	 * equals e il secondo e terzo sono i due file da confrontare, oppure il primo
+	 * argomento è il file da leggere e tutti i seguenti sono quelli da scrivere.
+	 */
 	public static void main(String[] args) {
 		if(args.length < 2){
 			System.out.println(info);

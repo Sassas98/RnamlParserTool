@@ -11,6 +11,7 @@ import org.w3c.dom.Node;
 /**
  * classe astratta per ottenere il document xml da un path
  * e operare sui nodi
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public abstract class XmlDataLoader {
 	

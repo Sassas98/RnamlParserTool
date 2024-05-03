@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * classe che contiene tutti i dati relativi ad uno specifico file rna
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class RnaFileData {
     

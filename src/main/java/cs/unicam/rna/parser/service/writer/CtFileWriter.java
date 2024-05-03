@@ -6,6 +6,10 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
+/**
+ * Classe per scrivere dati nel formato CT
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public final class CtFileWriter extends TextFileWriter implements RnaFileWriter {
 	
 	@Override
@@ -15,7 +19,11 @@ public final class CtFileWriter extends TextFileWriter implements RnaFileWriter 
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
 		return save(path);
 	}
-
+	
+	/**
+	 * Scrive i dati di una molecola nel formato CT
+	 * @param m molecola da scrivere
+	 */
 	private void writeMolecule(RnaMolecule m) {
 		char[] array = m.getSequence().toCharArray();
 		Map<Integer, Integer> pairs = m.getPairMap();

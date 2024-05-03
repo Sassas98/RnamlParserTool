@@ -4,8 +4,17 @@ import java.util.List;
 import java.util.Stack;
 import java.util.ArrayList;
 
+/**
+ * Classe utile ad analizzare una sequenza DB
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public class DotBracketSequenceAnalyzator extends DotBracketTranslator {
     
+    /**
+     * Meotod per analizzare una sequenza DB
+     * @param data sequenza da analizzare
+     * @return lista di di coppie espresse in array bidimensionali
+     */
     public List<Integer[]> getPairs(String data) {
         List<Integer[]> pairs = new ArrayList<>();
         int[] symbols = data.chars().map(c -> getDbNumber((char)c)).toArray();

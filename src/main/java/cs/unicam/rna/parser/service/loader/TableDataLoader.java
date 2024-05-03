@@ -11,6 +11,7 @@ import cs.unicam.rna.parser.model.RnaMolecule;
  * classe astratta per il caricamento di dati da un file con i valori
  * espressi in matrici. si implementa fornando durante la costruzione
  * valori adeguati per i parametri interi
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public abstract class TableDataLoader extends TextDataLoader implements RnaDataLoader {
 

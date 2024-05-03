@@ -11,6 +11,7 @@ import cs.unicam.rna.parser.utility.RnaHandlerBuilder;
  * Controller Facade, centrale in questo tool
  * Mette insieme tutte le funzioni della libreria
  * Un ipotetico utilizzo esterno dovrà passare da qui
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class RnaParserController {
 	
@@ -49,7 +50,7 @@ public class RnaParserController {
 	 * @param path nome del file
 	 * @return esito dell'operazione
 	 */
-	public OperationResult loadRna(String path) {
+	public synchronized OperationResult loadRna(String path) {
 		path = nameHandler.checkExt(path, false);
 		RnaDataLoader loader = builder.buildDataLoader(path);
 		molecules = loader.getData(path);
@@ -82,7 +83,7 @@ public class RnaParserController {
 	 * @param path nome del file
 	 * @return esito dell'operazione
 	 */
-	public OperationResult SaveLoadedData(String path) {
+	public synchronized OperationResult SaveLoadedData(String path) {
 		OperationResult result = new OperationResult();
 		if(path == null || (!loaded)) {
 			result.addInfo(path == null ? "Error. Path is null." : "Error. Data to save not loaded.");

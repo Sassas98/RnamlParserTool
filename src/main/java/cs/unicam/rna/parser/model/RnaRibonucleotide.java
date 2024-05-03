@@ -2,6 +2,7 @@ package cs.unicam.rna.parser.model;
 
 /**
  * classe che rappresenza un ribonucleide
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class RnaRibonucleotide {
 	

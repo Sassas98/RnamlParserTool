@@ -8,6 +8,10 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
+/**
+ * Classe per salvare dei dati nel formato AAS
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
+ */
 public final class AasFileWriter extends TextFileWriter implements RnaFileWriter {
 	
 	@Override
@@ -18,6 +22,10 @@ public final class AasFileWriter extends TextFileWriter implements RnaFileWriter
 		return save(path);
 	}
 
+	/**
+	 * Scrive i dati contenuti nella molecola in formato AAS
+	 * @param m molecola da scrivere
+	 */
 	private void writeMolecule(RnaMolecule m) {
 		data += m.getSequence()+"\n";
 		List<Entry<Integer, Integer>> list = m.getPairMap().entrySet().stream()

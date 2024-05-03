@@ -5,6 +5,7 @@ import cs.unicam.rna.parser.model.RnaFileData;
 /**
  * classe con la responsabilità di salvare dei dati 
  * su un dato file, da creare o sovrascrivere
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public interface RnaFileWriter {
 	

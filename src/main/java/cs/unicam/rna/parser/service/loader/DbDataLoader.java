@@ -9,7 +9,8 @@ import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.utility.DotBracketSequenceAnalyzator;
 
 /**
- * classe per caricare i dati contenuti in un file db
+ * classe per caricare i dati contenuti in un file DB
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public final class DbDataLoader extends LineDataLoader implements RnaDataLoader {
 

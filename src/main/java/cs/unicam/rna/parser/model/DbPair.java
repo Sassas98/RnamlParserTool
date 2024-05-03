@@ -5,6 +5,7 @@ package cs.unicam.rna.parser.model;
  * unita ad un livello di ordine, indispensabile
  * per l'applicazione dell'algoritmo di scrittura
  * di file db
+ * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public class DbPair implements Comparable<DbPair> {
 
