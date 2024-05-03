@@ -4,8 +4,17 @@ import java.util.List;
 
 import java.util.ArrayList;
 
-public class LineDataLoader extends TextDataLoader {
+/**
+ * Classe astratta contenti metodi utili a caricatori di formati
+ * di dati disposti a linea
+ */
+public abstract class LineDataLoader extends TextDataLoader {
 
+    /**
+     * Metodo per trovare tutti gli indici contenenti una sequenza
+     * @param lines linee da controllare
+     * @return indici con sequenze di ribonucleidi
+     */
     protected List<Integer> getSequencePositions(List<List<String>> lines) {
         List<Integer> list = new ArrayList<>();
         for(int i = 0; i < lines.size(); i++) {
@@ -15,6 +24,11 @@ public class LineDataLoader extends TextDataLoader {
         return list;
     }
 
+    /**
+     * metodo per controllare se una data parola è una sequenza
+     * @param word parola da controllare
+     * @return true se è una sequenza, false altrimenti
+     */
     private boolean isSequence(String word) {
         if(word == null || word.length() == 0)
             return false;
@@ -26,6 +40,12 @@ public class LineDataLoader extends TextDataLoader {
         return true;
     }
 
+    /**
+     * Metodo per verificare se un carattere
+     * può far parte di una sequenza
+     * @param letter carattere da controllare
+     * @return true se è invalido, false altrimenti
+     */
     private boolean isNotSequenceLetter(char letter) {
         String l = ("" + letter).toUpperCase();
         return !"ACUGNWRMYKSBVDH".contains(l);

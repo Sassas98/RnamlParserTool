@@ -6,10 +6,10 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
-public class CtFileWriter extends TextFileWriter implements RnaFileWriter {
+public final class CtFileWriter extends TextFileWriter implements RnaFileWriter {
 	
 	@Override
-	public boolean writeAndSave(RnaFileData molecules, String path) {
+	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
 		data = "";
 		setFileInfo(molecules);
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));

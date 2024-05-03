@@ -9,6 +9,10 @@ public class RnaHandlerBuilder {
 	public RnaFileWriter buildFileWriter(String path) {
 		String extension = getExtension(path);
 		switch(extension) {
+		case "rnaml":
+			return new RnamlFileWriter();
+		case "xml":
+			return new RnamlFileWriter();
 		case "bpseq":
 			return new BpseqFileWriter();
 		case "ct":
@@ -18,7 +22,7 @@ public class RnaHandlerBuilder {
 		case "db":
 			return new DbFileWriter();
 		default:
-			return new RnamlFileWriter();
+			return new NullFileWriter();
 		}
 	}
 

@@ -10,12 +10,17 @@ import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.utility.RnamlPairsLoader;
 
-public class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
-
+/**
+ * classe per il caricamento di dati da un rnaml
+ */
+public final class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
+	/**
+	 * Caricatore di coppie per l'rnaml
+	 */
 	private RnamlPairsLoader pairsLoader = new RnamlPairsLoader();
 
 	@Override
-	public RnaFileData getData(String path) {
+	public synchronized RnaFileData getData(String path) {
 		RnaFileData data = new RnaFileData();
 		Document doc = loadXmlDocument(path);
 		if(doc == null) {
@@ -33,6 +38,13 @@ public class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
 		return data;
 	}
 
+	/**
+	 * metodo per ottenere una molecola da un elemento
+	 * di un xml e un indice
+	 * @param moleculeData elemento di xml
+	 * @param index indice
+	 * @return molecola se il parsing va correttamente, null altrimenti
+	 */
 	public RnaMolecule getMolecule(Element moleculeData, int index) {
 		RnaMolecule molecule = new RnaMolecule(index + 1);
 		try {
@@ -66,7 +78,12 @@ public class RnamlDataLoader extends XmlDataLoader implements RnaDataLoader {
 	}
 
 	
-
+	/**
+	 * metodo che controlla se ci sono informazioni accessorie da inserire
+	 * nei dati dal documento e, nel caso ci siano, le inserisce
+	 * @param doc documento da controllare
+	 * @param data dati in cui salvare le informazioni
+	 */
 	private void checkInfoData(Document doc, RnaFileData data) {
 		NodeList urls = doc.getElementsByTagName("url");
 		if(urls.getLength() > 0){

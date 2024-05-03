@@ -1,5 +1,11 @@
 package cs.unicam.rna.parser.model;
 
+/**
+ * classe che contiene una coppia di posizioni
+ * unita ad un livello di ordine, indispensabile
+ * per l'applicazione dell'algoritmo di scrittura
+ * di file db
+ */
 public class DbPair implements Comparable<DbPair> {
 
     private final int left;
@@ -28,6 +34,12 @@ public class DbPair implements Comparable<DbPair> {
         this.order = order;
     }
     
+    /**
+     * metodo per verificare se un'altra coppia
+     * si sovrappone a questa
+     * @param p coppia da controllare
+     * @return true se si sovrappongono, false altrimenti
+     */
     public boolean crossesWith(DbPair p) {
         if (p == null)
             throw new NullPointerException("Passed pair was null");

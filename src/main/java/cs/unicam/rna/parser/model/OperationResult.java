@@ -3,10 +3,18 @@ package cs.unicam.rna.parser.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * classe per contenere l'esito e i dettagli di un operazione
+ */
 public class OperationResult {
 
+    /**
+     * dettagli
+     */
     private List<String> info;
-
+    /**
+     * esito
+     */
     public boolean result;
 
     public OperationResult() {

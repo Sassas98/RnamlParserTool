@@ -8,6 +8,9 @@ import java.util.Map.Entry;
 
 import cs.unicam.rna.parser.exception.RnaParsingException;
 
+/**
+ * classe che contiene tutti i dati relativi ad un rna
+ */
 public class RnaMolecule {
 	
 	private int moleculeId;
@@ -83,12 +86,23 @@ public class RnaMolecule {
 		return map;
 	}
 
+	/**
+	 * Questo metodo ritorna una mappa semplificata della struttura secondaria
+	 * con tutti i collegamenti reciproci, indispensabile per formati che
+	 * non permettono strutture complesse
+	 * @return mappa semplificata della struttura secondaria
+	 */
 	public Map<Integer, Integer> getSimplifiedPairMap(){
 		Map<Integer, Integer> map = new HashMap<>();
 		for(Entry<Integer, List<Integer>> pair : pairs.entrySet()) {
-			if(!(map.containsKey(pair.getKey()) || map.containsKey(pair.getValue().get(0)))){
-				map.put(pair.getKey(), pair.getValue().get(0));
-				map.put(pair.getValue().get(0), pair.getKey());
+			if(!map.containsKey(pair.getKey())){
+				for(int i = 0; i < pair.getValue().size(); i++){
+					if(!map.containsKey(pair.getValue().get(i))){
+						map.put(pair.getKey(), pair.getValue().get(i));
+						map.put(pair.getValue().get(i), pair.getKey());
+						break;
+					}
+				}
 			}
 		}
 		return map;

@@ -1,5 +1,8 @@
 package cs.unicam.rna.parser.model;
 
+/**
+ * classe che rappresenza un ribonucleide
+ */
 public class RnaRibonucleotide {
 	
 	private int moleculeId;

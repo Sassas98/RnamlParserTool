@@ -1,6 +1,9 @@
 package cs.unicam.rna.parser.service.loader;
 
-public class CtDataLoader extends TableDataLoader  {
+/**
+ * classe per caricare i dati contenuti in un file ct
+ */
+public final class CtDataLoader extends TableDataLoader  {
 
     public CtDataLoader(){
         this.basePosition = 1;

@@ -2,7 +2,7 @@ package cs.unicam.rna.parser;
 
 
 
-import cs.unicam.rna.parser.controller.RnamlParserController;
+import cs.unicam.rna.parser.controller.RnaParserAnalyzerController;
 import cs.unicam.rna.parser.model.OperationResult;
 
 public class App {
@@ -17,7 +17,7 @@ public class App {
 			System.out.println(info);
 			System.exit(1);
 		}
-		RnamlParserController controller = new RnamlParserController();
+		RnaParserAnalyzerController controller = new RnaParserAnalyzerController();
 		OperationResult result;
 		if(args[0].equals("equals") && args.length == 3) {
 			result = controller.equals(args[1], args[2]);

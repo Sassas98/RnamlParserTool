@@ -3,6 +3,9 @@ package cs.unicam.rna.parser.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Enumerazione contenente tutte le possibili nomenclature dell'rna
+ */
 public enum RnaBase {
 	ADENINE,
 	URACIL,

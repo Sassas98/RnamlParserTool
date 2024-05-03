@@ -8,6 +8,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
+/**
+ * classe astratta per ottenere il document xml da un path
+ * e operare sui nodi
+ */
 public abstract class XmlDataLoader {
 	
 	protected Document loadXmlDocument(String path){

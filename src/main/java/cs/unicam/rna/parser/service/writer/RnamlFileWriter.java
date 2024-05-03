@@ -10,10 +10,10 @@ import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
-public class RnamlFileWriter extends XmlFileWriter implements RnaFileWriter {
+public final class RnamlFileWriter extends XmlFileWriter implements RnaFileWriter {
 
     @Override
-    public boolean writeAndSave(RnaFileData molecules, String path) {
+    public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
         createNewDocument();
         for(RnaMolecule molecule : molecules.getMolecules()) {
             addMolecule(molecule, molecules.getAccessionNumber(), molecules.getOrganism());

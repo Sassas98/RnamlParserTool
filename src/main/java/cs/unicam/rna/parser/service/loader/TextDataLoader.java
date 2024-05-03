@@ -7,8 +7,17 @@ import java.util.List;
 
 import cs.unicam.rna.parser.model.RnaFileData;
 
+/**
+ * classe astratta con metodi adeguati per operare su un file
+ * di testo e ottenere dati informativi sul file
+ */
 public abstract class TextDataLoader {
 
+    /**
+     * metodo per ottenre tutte le linee dato un nome di un file
+     * @param path nome del file
+     * @return lista di linee
+     */
     protected List<List<String>> getLines(String path){
         try{
             return Files.readAllLines(Paths.get(path)).stream()
@@ -19,6 +28,11 @@ public abstract class TextDataLoader {
         }
     }
 
+    /**
+     * metodo per impostare su un dato i dettagli opzionali che possono essere presenti
+     * @param file
+     * @param lines
+     */
     protected void setFileInfo(RnaFileData file, List<List<String>> lines) {
         boolean findOrganism = true, findNumber = true, findLink = true;
         for(List<String> line : lines) {
@@ -40,6 +54,12 @@ public abstract class TextDataLoader {
         }
     }
 
+    /**
+     * Metodo per ottenere le parole separate da spazi a partire da un dato indice
+     * @param line linea di testo
+     * @param from indice
+     * @return parole
+     */
     private String getWordsFrom(List<String> line, int from) {
         String s = "";
         for(int i = from; i < line.size(); i++) {
@@ -47,7 +67,7 @@ public abstract class TextDataLoader {
         }
         return s;
     }
-
+    
     private boolean containAtIndex(List<String> line, int index, String word) {
         return line.get(index).toLowerCase().contains(word.toLowerCase());
     }

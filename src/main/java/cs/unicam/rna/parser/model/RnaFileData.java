@@ -3,6 +3,9 @@ package cs.unicam.rna.parser.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * classe che contiene tutti i dati relativi ad uno specifico file rna
+ */
 public class RnaFileData {
     
     private List<RnaMolecule> molecules;

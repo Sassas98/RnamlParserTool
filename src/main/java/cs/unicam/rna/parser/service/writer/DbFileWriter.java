@@ -5,13 +5,14 @@ import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.utility.DotBracketSequenceGenerator;
 
-public class DbFileWriter extends TextFileWriter implements RnaFileWriter {
+public final class DbFileWriter extends TextFileWriter implements RnaFileWriter {
 
 	private final DotBracketSequenceGenerator sequenceGenerator = new DotBracketSequenceGenerator();
 	
 	@Override
-	public boolean writeAndSave(RnaFileData molecules, String path) {
+	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
 		data = "";
+		setFileInfo(molecules);
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
 		return save(path);
 	}

@@ -1,6 +1,9 @@
 package cs.unicam.rna.parser.service.loader;
 
-public class BpseqDataLoader extends TableDataLoader {
+/**
+ * classe per caricare i dati contenuti in un file bpseq
+ */
+public final class BpseqDataLoader extends TableDataLoader {
 
     public BpseqDataLoader(){
         this.basePosition = 1;

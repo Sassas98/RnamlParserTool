@@ -9,11 +9,10 @@ import cs.unicam.rna.parser.model.RnaFileData;
 public abstract class TextFileWriter {
     
     protected String data = "";
-    public boolean overwrite = true;
 	
 	protected boolean save(String path) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(path, !overwrite));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(path, false));
             writer.write(data);
             writer.close();
             return true;

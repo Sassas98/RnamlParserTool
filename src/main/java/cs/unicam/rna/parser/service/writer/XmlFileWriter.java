@@ -31,7 +31,7 @@ public class XmlFileWriter {
     protected boolean save(String path) {
         try {
             Source source = new DOMSource(xmlDoc);
-            File xmlFile = new File(authomaticExtension(path));
+            File xmlFile = new File(path);
             StreamResult result = new StreamResult(new OutputStreamWriter(
                     new FileOutputStream(xmlFile), "ISO-8859-1"));
             Transformer xformer = TransformerFactory.newInstance().newTransformer();
@@ -44,15 +44,6 @@ public class XmlFileWriter {
             e.printStackTrace();
             return false;
         }
-    }
-
-    private String authomaticExtension(String path) {
-        String[] parts = path.split("\\.");
-        String extension = parts[parts.length - 1];
-        if(!(extension.equals("xml") || extension.equals("rnaml"))) {
-            path += ".xml";
-        }
-        return path;
     }
 
 }

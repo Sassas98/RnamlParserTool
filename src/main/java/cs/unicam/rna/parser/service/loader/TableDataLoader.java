@@ -7,15 +7,25 @@ import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
+/**
+ * classe astratta per il caricamento di dati da un file con i valori
+ * espressi in matrici. si implementa fornando durante la costruzione
+ * valori adeguati per i parametri interi
+ */
 public abstract class TableDataLoader extends TextDataLoader implements RnaDataLoader {
 
-
+    /**
+     * Dati da caricare
+     */
     private RnaFileData data;
+    /**
+     * Indici da riempire con la concretizzazione della classe
+     */
     protected int dimension, pairOnePosition,
                   pairTwoPosition, basePosition;
 
     @Override
-    public RnaFileData getData(String path) {
+    public synchronized RnaFileData getData(String path) {
         this.data = new RnaFileData();
 		List<List<String>> lines = getLines(path);
         if(lines == null || lines.isEmpty())
@@ -36,7 +46,11 @@ public abstract class TableDataLoader extends TextDataLoader implements RnaDataL
         return data;
     }
 
-
+    /**
+     * Metodo che prende le linee in cui la sequenza inizia
+     * @param lines linee da controllare
+     * @return lista di indici
+     */
     private List<Integer> getStartLines(List<List<String>> lines){
         List<Integer> starts = new ArrayList<>();
         for(int i = 0; i < lines.size(); i++) {
@@ -47,7 +61,12 @@ public abstract class TableDataLoader extends TextDataLoader implements RnaDataL
         return starts;
     }
 
-
+    /**
+     * metodo per scrivere su una molecola dato un insieme di linee
+     * @param lines linee in cui scrivere
+     * @param molecule molecola in cui scrivere
+     * @return la molecola inserita, con tutti i nuovi dati, o null in caso di errore
+     */
     private RnaMolecule getMolecule(List<List<String>> lines, RnaMolecule molecule) {
         try {
             for(List<String> line : lines) {
