@@ -4,7 +4,6 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.List;
 import java.util.Map.Entry;
 
-import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
@@ -12,7 +11,7 @@ import cs.unicam.rna.parser.model.RnaMolecule;
  * Classe per salvare dei dati nel formato AAS
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public final class AasFileWriter extends TextFileWriter implements RnaFileWriter {
+public final class AasFileWriter extends TextFileWriter {
 	
 	@Override
 	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {

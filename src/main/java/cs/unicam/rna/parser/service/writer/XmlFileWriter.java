@@ -10,12 +10,14 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.*;
 
+import cs.unicam.rna.parser.abstraction.RnaFileWriter;
+
 /**
  * Classe astratta per fornire i metodi utili all'estrapolazione
  * del document e il salvataggio in un formato basato sull'xml
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public abstract class XmlFileWriter {
+public abstract class XmlFileWriter implements RnaFileWriter {
     /**
      * Document su cui scrivere
      */

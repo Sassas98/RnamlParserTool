@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.List;
 
+import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.model.RnaFileData;
 
 /**
@@ -12,7 +13,7 @@ import cs.unicam.rna.parser.model.RnaFileData;
  * di testo e ottenere dati informativi sul file
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public abstract class TextDataLoader {
+public abstract class TextDataLoader implements RnaDataLoader {
 
     /**
      * metodo per ottenre tutte le linee dato un nome di un file

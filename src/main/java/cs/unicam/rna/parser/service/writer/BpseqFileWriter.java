@@ -2,7 +2,6 @@ package cs.unicam.rna.parser.service.writer;
 
 import java.util.Map;
 
-import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
@@ -10,7 +9,7 @@ import cs.unicam.rna.parser.model.RnaMolecule;
  * Classe per scrivere dai dati in formato BPSEQ
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public final class BpseqFileWriter extends TextFileWriter implements RnaFileWriter {
+public final class BpseqFileWriter extends TextFileWriter {
 
 	@Override
 	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {

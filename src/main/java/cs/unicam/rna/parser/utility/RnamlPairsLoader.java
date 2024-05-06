@@ -1,17 +1,17 @@
 package cs.unicam.rna.parser.utility;
 
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import cs.unicam.rna.parser.exception.RnaParsingException;
 import cs.unicam.rna.parser.model.RnaMolecule;
-import cs.unicam.rna.parser.service.loader.XmlDataLoader;
 
 /**
  * Classe utile al caricamento delle coppie di un file rnaml
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public class RnamlPairsLoader extends XmlDataLoader {
+public class RnamlPairsLoader {
     
     /**
 	 * carica tutte le coppie
@@ -83,6 +83,19 @@ public class RnamlPairsLoader extends XmlDataLoader {
 		int first = Integer.parseInt( a );
     	int second = Integer.parseInt( b );
     	molecule.addPair(first, second);
+	}
+
+	/**
+	 * se un nodo e' un elemento torna l'elemento, altrimenti null
+	 * @param node
+	 * @return
+	 */
+	private Element getElement(Node node) {
+		if (node.getNodeType() == Node.ELEMENT_NODE) {
+			return (Element) node;
+		} else {
+			return null;
+		}
 	}
 
 }

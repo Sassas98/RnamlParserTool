@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 
 /**
@@ -11,7 +12,7 @@ import cs.unicam.rna.parser.model.RnaFileData;
  * a scrivere nei formati simili a testo
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public abstract class TextFileWriter {
+public abstract class TextFileWriter implements RnaFileWriter {
     
     protected String data = "";
     

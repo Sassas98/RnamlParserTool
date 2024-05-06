@@ -6,7 +6,6 @@ import java.util.Map.Entry;
 
 import org.w3c.dom.Element;
 
-import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
@@ -14,7 +13,7 @@ import cs.unicam.rna.parser.model.RnaMolecule;
  * Classe per il salvataggio di dati nel formato RNAML
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public final class RnamlFileWriter extends XmlFileWriter implements RnaFileWriter {
+public final class RnamlFileWriter extends XmlFileWriter {
 
     /**
      * Element root, in questo caso sarà un nodo <rnaml> ... </rnaml>

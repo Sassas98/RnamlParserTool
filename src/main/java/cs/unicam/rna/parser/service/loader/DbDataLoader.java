@@ -2,7 +2,6 @@ package cs.unicam.rna.parser.service.loader;
 
 import java.util.List;
 
-import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.exception.RnaParsingException;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
@@ -12,7 +11,7 @@ import cs.unicam.rna.parser.utility.DotBracketSequenceAnalyzator;
  * classe per caricare i dati contenuti in un file DB
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public final class DbDataLoader extends LineDataLoader implements RnaDataLoader {
+public final class DbDataLoader extends LineDataLoader {
 
     private RnaFileData data;
     /**

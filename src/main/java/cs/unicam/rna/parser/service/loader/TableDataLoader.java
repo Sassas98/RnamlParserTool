@@ -3,7 +3,6 @@ package cs.unicam.rna.parser.service.loader;
 import java.util.ArrayList;
 import java.util.List;
 
-import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
@@ -13,7 +12,7 @@ import cs.unicam.rna.parser.model.RnaMolecule;
  * valori adeguati per i parametri interi
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public abstract class TableDataLoader extends TextDataLoader implements RnaDataLoader {
+public abstract class TableDataLoader extends TextDataLoader {
 
     /**
      * Dati da caricare

@@ -14,12 +14,14 @@ import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import cs.unicam.rna.parser.abstraction.RnaDataLoader;
+
 /**
  * classe astratta per ottenere il document xml da un path
  * e operare sui nodi
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
-public abstract class XmlDataLoader {
+public abstract class XmlDataLoader implements RnaDataLoader {
 	
 	protected Document loadXmlDocument(String path, String dtdPath){
 		try {
