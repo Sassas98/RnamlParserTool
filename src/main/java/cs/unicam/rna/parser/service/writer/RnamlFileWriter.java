@@ -116,14 +116,14 @@ public final class RnamlFileWriter extends XmlFileWriter implements RnaFileWrite
         for(char c : sequence.toCharArray()) {
             if(count != 0) {
                 if(count % 60 == 0)
-                    result += "\n\t\t\t\t";
+                    result += "\n        ";
                 else if(count % 10 == 0)
                     result += ' ';
             }
             result += c;
             count++;
         }
-        return result;
+        return result + "\n      ";
     }
 
     /**

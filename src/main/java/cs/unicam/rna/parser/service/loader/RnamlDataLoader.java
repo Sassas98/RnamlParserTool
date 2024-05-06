@@ -23,7 +23,7 @@ public final class RnamlDataLoader extends XmlDataLoader implements RnaDataLoade
 	@Override
 	public synchronized RnaFileData getData(String path) {
 		RnaFileData data = new RnaFileData();
-		Document doc = loadXmlDocument(path);
+		Document doc = loadXmlDocument(path, "/rnaml.dtd");
 		if(doc == null) {
 			return null;
 		}

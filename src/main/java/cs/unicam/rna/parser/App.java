@@ -2,6 +2,9 @@ package cs.unicam.rna.parser;
 
 
 
+import java.io.File;
+import java.util.Arrays;
+
 import cs.unicam.rna.parser.controller.RnaParserAnalyzerController;
 import cs.unicam.rna.parser.model.OperationResult;
 
@@ -20,36 +23,64 @@ public class App {
 	 */
 	private static String info = "To use this tool you must first type the name of the input file"
 	+ " and then all the output files you want to produce. The formats supported by this tool are"
-	+ " aas, ct, bpseq, db and rnaml.\n If instead you want to compare two files to verify that they"
-	+ " contain the same primary and secondary structure, you need to type \"equals file1 file2\".";
+	+ " aas, ct, bpseq, db and rnaml.\n\nIf instead you want to compare two files to verify that they"
+	+ " contain the same primary and secondary structure, you need to type \"equals file1 file2\"."
+	+ "\n\nLastly, there is a multiple parsing function."
+	+ "\nThe commands are \"all path/to/the/folder ext-in ext-out\" (Example: all . ct rnaml)";
 	
 	/**
 	 * Metodo main per l'utilizzo via console
-	 * @param args ci sono due casi di utilizzo previsti: o il primo argomento è
+	 * @param args ci sono tre casi di utilizzo previsti: o il primo argomento è
 	 * equals e il secondo e terzo sono i due file da confrontare, oppure il primo
-	 * argomento è il file da leggere e tutti i seguenti sono quelli da scrivere.
+	 * argomento è il file da leggere e tutti i seguenti sono quelli da scrivere,
+	 * oppure il primo comando è all, il secondo il path della cartella e gli ultimi
+	 * due sono le estensioni di input e output
 	 */
 	public static void main(String[] args) {
 		if(args.length < 2){
 			System.out.println(info);
-			System.exit(1);
-		}
-		RnaParserAnalyzerController controller = new RnaParserAnalyzerController();
-		OperationResult result;
-		if(args[0].equals("equals") && args.length == 3) {
-			result = controller.equals(args[1], args[2]);
-			result.getInfo().forEach(x -> System.out.println(x));
+		}else if(args[0].equals("equals") && args.length == 3) {
+			compare(args[1], args[2]);
+		} else if(args[0].equals("all") && args.length == 4) {
+			parseAll(args[1], args[2], args[3]);
 		} else {
-			result = controller.loadRna(args[0]);
-			result.getInfo().forEach(x -> System.out.println(x));
-			if(result.result){
-				for(int i = 1; i < args.length; i++){
-					result = controller.SaveLoadedData(args[i]);
-					result.getInfo().forEach(x -> System.out.println(x));
-				}
+			parse(args);
+		}
+	}
+
+	private static void parse(String[] fileNames){
+		RnaParserAnalyzerController controller = new RnaParserAnalyzerController();
+		OperationResult result = controller.loadRna(fileNames[0]);
+		result.getInfo().forEach(x -> System.out.println(x));
+		if(result.result){
+			for(int i = 1; i < fileNames.length; i++){
+				result = controller.SaveLoadedData(fileNames[i]);
+				result.getInfo().forEach(x -> System.out.println(x));
 			}
 		}
-		
+	}
+
+	private static void compare(String name1, String name2){
+		RnaParserAnalyzerController controller = new RnaParserAnalyzerController();
+		OperationResult result = controller.equals(name1, name2);
+		result.getInfo().forEach(x -> System.out.println(x));
+	}
+
+	private static void parseAll(String path, String extIn, String extOut) {
+		for (File file : new File(path).listFiles()) {
+			if (file.isFile() && file.getName().endsWith(extIn)) {
+				String in = file.getName();
+				String out = changeExtTo(in, extOut);
+				parse(new String[]{in, out});
+			}
+		}
+	}
+
+	private static String changeExtTo(String base, String newExt){
+		String[] parts = base.split("\\.");
+		parts[parts.length - 1] = newExt;
+		return Arrays.asList(parts).stream()
+			.reduce("", (a, b) -> a + ( a.equals("") ? "" : ".") + b);
 	}
 	
 }

@@ -1,12 +1,18 @@
 package cs.unicam.rna.parser.service.loader;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
+import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.xml.sax.EntityResolver;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
 /**
  * classe astratta per ottenere il document xml da un path
@@ -15,11 +21,21 @@ import org.w3c.dom.Node;
  */
 public abstract class XmlDataLoader {
 	
-	protected Document loadXmlDocument(String path){
+	protected Document loadXmlDocument(String path, String dtdPath){
 		try {
-			File fXmlFile = new File(path);
-			Document doc = DocumentBuilderFactory.newInstance()
-					.newDocumentBuilder().parse(fXmlFile);
+			DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			builder.setEntityResolver(new EntityResolver() {
+				@Override
+				public InputSource resolveEntity(String publicId, String systemId) throws SAXException, IOException {
+					if (systemId.contains(".dtd")) {
+						InputStream dtdStream = getClass().getResourceAsStream(dtdPath);
+						return new InputSource(dtdStream);
+					} else {
+						return null;
+					}
+				}
+			});
+			Document doc = builder.parse(new File(path));
 		    doc.getDocumentElement().normalize();
 		    return doc;
 		} catch (Exception e) {

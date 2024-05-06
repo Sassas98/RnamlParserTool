@@ -3,10 +3,7 @@ package cs.unicam.rna.parser.utility;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import cs.unicam.rna.parser.model.DbPair;
 import cs.unicam.rna.parser.model.RnaMolecule;
@@ -19,7 +16,7 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
     /**
      * Dati finali da scrivere
      */
-    int [] array;
+    private int [] array;
 
     /**
      * Metodo per ricavare una sequenza da una molecola

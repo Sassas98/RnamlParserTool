@@ -24,10 +24,6 @@ public class RnaParserController {
 	 */
 	protected RnaHandlerBuilder builder;
 	/**
-	 * true se dei dati sono già stati caricati, false altrimenti
-	 */
-	private boolean loaded;
-	/**
 	 * Nome del file caricato
 	 */
 	protected String loadedPath;
@@ -42,7 +38,6 @@ public class RnaParserController {
 	public RnaParserController() {
 		builder = new RnaHandlerBuilder();
 		nameHandler = new RnaFileNameHandler();
-		loaded = false;
 	}
 	
 	/**
@@ -54,9 +49,8 @@ public class RnaParserController {
 		path = nameHandler.checkExt(path, false);
 		RnaDataLoader loader = builder.buildDataLoader(path);
 		molecules = loader.getData(path);
-		loaded = molecules != null;
 		OperationResult result = new OperationResult();
-		if(loaded) {
+		if(isLoaded()) {
 			loadedPath = path;
 			result.result = true;
 			result.addInfo("Load " + molecules.getMolecules().size() + " molecules.");
@@ -75,7 +69,14 @@ public class RnaParserController {
 	 * @return true se caricati, false altrimenti
 	 */
 	public boolean isLoaded() {
-		return loaded;
+		return molecules != null;
+	}
+	
+	/**
+	 * Metodo per cancellare i dati caricati
+	 */
+	public void clean() {
+		this.molecules = null;
 	}
 	
 	/**
@@ -85,7 +86,7 @@ public class RnaParserController {
 	 */
 	public synchronized OperationResult SaveLoadedData(String path) {
 		OperationResult result = new OperationResult();
-		if(path == null || (!loaded)) {
+		if(path == null || (!isLoaded())) {
 			result.addInfo(path == null ? "Error. Path is null." : "Error. Data to save not loaded.");
 			return result;
 		}
