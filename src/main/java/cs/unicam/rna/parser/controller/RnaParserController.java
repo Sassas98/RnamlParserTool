@@ -6,6 +6,7 @@ import cs.unicam.rna.parser.model.OperationResult;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.utility.RnaFileNameHandler;
 import cs.unicam.rna.parser.utility.RnaHandlerBuilder;
+import cs.unicam.rna.parser.utility.DefaultRnaHandlerBuilder;
 
 /**
  * Controller Facade, centrale in questo tool
@@ -22,21 +23,21 @@ public class RnaParserController {
 	/**
 	 * costruttore di gestori di dati rna
 	 */
-	protected RnaHandlerBuilder builder;
+	private RnaHandlerBuilder builder;
 	/**
 	 * Nome del file caricato
 	 */
-	protected String loadedPath;
+	private String loadedPath;
 	/**
 	 * classe per la gestione di nomi di file imprevisti
 	 */
-	protected RnaFileNameHandler nameHandler;
+	private RnaFileNameHandler nameHandler;
 	
 	/**
 	 * Costruttore del controller
 	 */
 	public RnaParserController() {
-		builder = new RnaHandlerBuilder();
+		builder = new DefaultRnaHandlerBuilder();
 		nameHandler = new RnaFileNameHandler();
 	}
 	
@@ -46,7 +47,7 @@ public class RnaParserController {
 	 * @return esito dell'operazione
 	 */
 	public synchronized OperationResult loadRna(String path) {
-		path = nameHandler.checkExt(path, false);
+		path = checkExt(path, false);
 		RnaDataLoader loader = builder.buildDataLoader(path);
 		molecules = loader.getData(path);
 		OperationResult result = new OperationResult();
@@ -90,12 +91,39 @@ public class RnaParserController {
 			result.addInfo(path == null ? "Error. Path is null." : "Error. Data to save not loaded.");
 			return result;
 		}
-		path = nameHandler.checkExt(path, true);
+		path = checkExt(path, true);
 		RnaFileWriter writer = this.builder.buildFileWriter(path);
 		result.result = writer.writeAndSave(molecules, path);
 		result.addInfo(result.result ? "Saving to file " + path + " was successful."
 			: "Failed to save data in " + path + " file.");
 		return result;
+	}
+
+	/**
+	 * Metodo che fa uso nel nameHandler
+	 * @param path path da controllare
+	 * @param newFile true se è un nuovo file
+	 * @return path sicuro
+	 */
+	public String checkExt(String path, boolean newFile){
+		return this.nameHandler.checkExt(this.builder.getSupportedExtensions(), this.builder.getDefaultExtension(), path, newFile);
+	}
+
+	public RnaHandlerBuilder getBuilder() {
+		return builder;
+	}
+
+	public String getLoadedPath() {
+		return loadedPath;
+	}
+
+	/**
+	 * Metodo per estendere il controller con
+	 * builder che accettano nuovi formati
+	 * @param builder nuovo builder non default
+	 */
+	public void setCustomHandlerBuilder(RnaHandlerBuilder builder) {
+		this.builder = builder;
 	}
 	
 }

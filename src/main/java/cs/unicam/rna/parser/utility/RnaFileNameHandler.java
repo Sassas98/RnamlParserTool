@@ -11,18 +11,15 @@ import java.util.Arrays;
 public class RnaFileNameHandler {
 
     /**
-     * array di tutte le estensioni supportate
-     */
-    private final String[] exts = {"rnaml", "xml", "bpseq", "ct", "aas", "db" };
-
-    /**
      * metodo per aggiustare un ipotetico path errato
+     * @param exts estensioni supportate attualmente
+     * @param def estensione di default
      * @param path path da controllare
      * @param newFile se è un nuovo file
      * @return path sicuro
      */
-    public String checkExt(String path, boolean newFile) {
-        path = authomaticExtension(path);
+    public String checkExt(String[] exts, String def, String path, boolean newFile) {
+        path = authomaticExtension(exts, def, path);
         if(newFile)
             path = checkFileExist(path);
         return path;
@@ -31,10 +28,12 @@ public class RnaFileNameHandler {
     /**
      * metodo per aggiungere un estensione di default se
      * il path non ne ha una supportata
+     * @param exts estensioni supportate
+     * @param def estensione di default
      * @param path path non sicuro
      * @return path sicuro
      */
-    private String authomaticExtension(String path) {
+    private String authomaticExtension(String[] exts, String def, String path) {
         String[] parts = path.split("\\.");
         String extension = parts[parts.length - 1];
 		if(extension.equals("txt") && parts.length > 2)
@@ -43,7 +42,7 @@ public class RnaFileNameHandler {
             if(ext.equals(extension))
                 return path;
         }
-        return path + ".xml";
+        return path + "." + def;
     }
 
     /**

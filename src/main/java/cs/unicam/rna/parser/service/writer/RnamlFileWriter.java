@@ -110,7 +110,7 @@ public final class RnamlFileWriter extends XmlFileWriter {
      * @return sequenza raffinata
      */
     private String sequenceStyle(String sequence) {
-        String result = "\n\t\t\t\t";
+        String result = "\n        ";
         int count = 0;
         for(char c : sequence.toCharArray()) {
             if(count != 0) {

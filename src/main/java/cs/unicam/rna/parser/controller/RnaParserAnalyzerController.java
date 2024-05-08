@@ -31,11 +31,11 @@ public class RnaParserAnalyzerController extends RnaParserController {
 	 * @return esito dell'analisi
 	 */
 	public synchronized OperationResult equals(String path1, String path2) {
-		path1 = nameHandler.checkExt(path1, false);
-		path2= nameHandler.checkExt(path2, false);
-		RnaDataLoader loader = builder.buildDataLoader(path1);
+		path1 = checkExt(path1, false);
+		path2= checkExt(path2, false);
+		RnaDataLoader loader = getBuilder().buildDataLoader(path1);
 		RnaFileData data1 = loader.getData(path1);
-		loader = builder.buildDataLoader(path2);
+		loader = getBuilder().buildDataLoader(path2);
 		RnaFileData data2 = loader.getData(path2);
 		return this.comparator.areEquals(data1, data2);
 	}
@@ -43,7 +43,7 @@ public class RnaParserAnalyzerController extends RnaParserController {
     @Override
     public synchronized OperationResult SaveLoadedData(String path) {
         OperationResult result = super.SaveLoadedData(path);
-        if(result.result && (!equals(loadedPath, path).result)) {
+        if(result.result && (!equals(getLoadedPath(), path).result)) {
 				result.addInfo("Some data was lost during the format switch.");
         }
         return result;
