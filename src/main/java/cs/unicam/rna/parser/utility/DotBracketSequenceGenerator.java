@@ -1,9 +1,8 @@
 package cs.unicam.rna.parser.utility;
 
 import java.util.AbstractMap.SimpleEntry;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Stack;
 
 import cs.unicam.rna.parser.model.DbPair;
 import cs.unicam.rna.parser.model.RnaMolecule;
@@ -17,6 +16,10 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
      * Dati finali da scrivere
      */
     private int [] array;
+    /**
+     * Dati finali scritti
+     */
+    String data = "";
 
     /**
      * Metodo per ricavare una sequenza da una molecola
@@ -24,15 +27,11 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
      * @return la sequenza della molecola
      */
     public String writeSequence(RnaMolecule molecule) {
-        String data = "";
         if(molecule != null){
             this.array = new int[molecule.getLength()];
             analyze(molecule);
-            for(int i : array) {
-                data += getDbBracket(i);
-            }
         }
-		return data +"\n\n";
+		return data + "\n\n";
 	}
 
     /**
@@ -45,60 +44,61 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
 											new SimpleEntry<Integer, Integer>(x.getValue(), x.getKey()))
 											.distinct().map(x -> new DbPair(x.getKey(), x.getValue()))
                                             .toList();
-        pairs = sortPairsByStartPoint(pairs);
-        setPairsOrder(pairs);
-		encodeBasePairs(pairs);
-    }
-
-    /**
-     * metodo per ordinare le coppie
-     * @param pairs coppie da ordinare
-     * @return coppie ordinate
-     */
-    private List<DbPair> sortPairsByStartPoint(List<DbPair> pairs) {
-        List<DbPair> tmp = new ArrayList<>(pairs);
-        tmp.sort(Comparator.comparingInt(r -> r.getLeft()));
-        return tmp;
-    }
-
-    /**
-     * metodo per impostare l'ordine finale delle parentesi
-     * @param pairs lista di pairs da impostare
-     */
-	private void setPairsOrder(List<DbPair> pairs) {
-        if (pairs.size() < 2) return;
-        pairs.get(0).setOrder(0);
-        for (int i = 1; i < pairs.size(); i++) {
-            int globalOrder = 0;
-            for (int j = 0; j <= i - 1; j++) {
-                if (pairs.get(j).getOrder() == globalOrder && arePairsConflicting(pairs.get(i), pairs.get(j)))
-                    globalOrder += 1;
+        updateData(pairs);
+        for(DbPair pair : pairs){
+            while(!checkSequence(pair)){
+                pair.setOrder(pair.getOrder() + 1);
+                updateData(pairs);
             }
-            pairs.get(i).setOrder(globalOrder);
         }
     }
 
     /**
-     * Metodo di servizio per verificare se due scoppie sono in conflitto
-     * @param p1 coppia 1
-     * @param p2 coppia 2
-     * @return true se c'è conflitto, false altrimenti
-     */
-    private boolean arePairsConflicting(DbPair p1, DbPair p2) {
-        boolean firstCase = p1.getLeft() < p2.getLeft() && p1.getRight() > p2.getLeft() && p2.getRight() > p1.getRight();
-        boolean secondCase = p2.getLeft() < p1.getLeft() && p2.getRight() > p1.getLeft() && p1.getRight() > p2.getRight();
-        return firstCase || secondCase;
-    }
-
-    /**
-     * Metodo per codificare i valori delle coppie nell'array
+     * Metodo per aggiornare i valori delle coppie salvati
      * @param pairs coppie da codificare
      */
-    private void encodeBasePairs(List<DbPair> pairs) {
+    private void updateData(List<DbPair> pairs){
+        array = new int[array.length];
         for (DbPair p : pairs) {
             array[p.getLeft() - 1] = 1 + (p.getOrder()*2);
 			array[p.getRight() - 1] = 2 + (p.getOrder()*2);
         }
+        data = "";
+        for(int i : array) {
+            data += getDbBracket(i);
+        }
+    }
+
+    /**
+     * Metodo per controllare che una data coppia esista
+     * @param pair
+     * @return true se la coppia emerge, false altrimenti
+     */
+    public boolean checkSequence(DbPair pair) {
+        int[] symbols = data.chars().map(c -> getDbNumber((char)c)).toArray();
+        int max = 0;
+        for(int symbol : symbols) {
+            if(symbol > max)
+                max = symbol;
+        }
+        if(max % 2 == 1)
+            return false;
+        Stack<Integer> stack = new Stack<>();
+        for(int i = 1; i < max; i += 2) {
+            for(int j = 0; j < symbols.length; j++) {
+                if(symbols[j] == i) {
+                    stack.push(j);
+                } else if (symbols[j] == i + 1) {
+                    int p = stack.pop();
+                    if(pair.getLeft() == p +1 && pair.getRight() == j +1)
+                        return true;
+                }
+            }
+            if(stack.size() != 0) {
+                return false;
+            }
+        }
+        return false;
     }
 
 }
