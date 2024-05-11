@@ -21,11 +21,22 @@ public class RnamlPairsLoader {
 		NodeList pairs = moleculeData.getElementsByTagName("base-pair");
         for (int i = 0; i < pairs.getLength(); i++) {
             Element pair = getElement(pairs.item(i));
-            if (pair != null) {
+            if (pair != null && isCanonical(pair))
                 loadPair(pair, "position", molecule);
-            }
         }
+    }
+
+	
+	private boolean isCanonical(Element pair) {
+		NodeList bol = pair.getElementsByTagName("bond-orientation");
+		if(bol.getLength() == 0)
+			return true;
+		Element bo = getElement(bol.item(0));
+		if(bo != null)
+			return bo.getTextContent().equals("c");
+		return true;
 	}
+	
 	
 	/**
 	 * gestisce i dati della coppia

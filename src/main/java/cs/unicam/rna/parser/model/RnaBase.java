@@ -145,6 +145,15 @@ public enum RnaBase {
 			list.add('G');
 		return list;
 	}
+
+	public static boolean canonicalPair(RnaBase base1, RnaBase base2) {
+		return checkCanonicalPatterns(base1, base2) || checkCanonicalPatterns(base2, base1);
+	}
+
+	private static boolean checkCanonicalPatterns(RnaBase base1, RnaBase base2) {
+		return (base1.maybeEquals(RnaBase.ADENINE) && base2.maybeEquals(RnaBase.URACIL))
+			|| (base1.maybeEquals(RnaBase.GUANINE) && base2.maybeEquals(RnaBase.CYTOSINE));
+	}
 	
 }
 

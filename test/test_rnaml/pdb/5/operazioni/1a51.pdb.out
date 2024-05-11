@@ -1,0 +1,34 @@
+PDB data file name: 1a51.pdb_new
+-----------------------------------------------------------
+BEGIN_base-pair
+     1_41, A:    68 G-C   108 A: +/+ cis         XIX
+     2_40, A:    69 G-C   107 A: +/+ cis         XIX
+     3_39, A:    70 C-G   106 A: +/+ cis         XIX
+     4_38, A:    71 C-G   105 A: +/+ cis         XIX
+     5_37, A:    72 G-A   104 A: S/H tran        XI
+     6_36, A:    73 A-U   103 A: H/W tran        XXIV
+     7_35, A:    74 U-G   102 A: H/W tran        n/a
+     9_33, A:    76 G-G   100 A: W/H tran        VII
+    10_32, A:    77 U-A    99 A: W/H tran        XXIV
+    11_31, A:    78 A-G    98 A: H/S tran        XI
+    12_30, A:    79 G-C    97 A: +/+ cis         XIX
+    13_29, A:    80 U-G    96 A: W/W cis         XXVIII
+    14_28, A:    81 G-U    95 A: W/W cis         XXVIII
+    15_27, A:    82 U-A    94 A: -/- cis         XX
+    16_26, A:    83 G-C    93 A: +/+ cis         XIX
+    17_25, A:    84 G-C    92 A: +/+ cis         XIX
+    18_24, A:    85 G-C    91 A: +/+ cis         XIX
+    26_27, A:    93 C-A    94 A:      stacked
+    27_28, A:    94 A-U    95 A:      stacked
+    29_30, A:    96 G-C    97 A:      stacked
+    36_37, A:   103 U-A   104 A:      stacked
+     8_34, A:    75 G-A   101 A: H/W cis         !1H(b_b).
+    19_23, A:    86 G-C    90 A: W/W cis         !1H(b_b).
+END_base-pair
+  The total base pairs =  17 (from   41 bases)
+------------------------------------------------
+ Standard  WW--cis  WW-tran  HH--cis  HH-tran  SS--cis  SS-tran
+        9        2        0        0        0        0        0
+  WH--cis  WH-tran  WS--cis  WS-tran  HS--cis  HS-tran
+        0        4        0        0        0        2
+------------------------------------------------
