@@ -71,31 +71,20 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
 
     /**
      * Metodo per controllare che una data coppia esista
-     * @param pair
+     * @param pair coppia da controllare
      * @return true se la coppia emerge, false altrimenti
      */
     public boolean checkSequence(DbPair pair) {
         int[] symbols = data.chars().map(c -> getDbNumber((char)c)).toArray();
-        int max = 0;
-        for(int symbol : symbols) {
-            if(symbol > max)
-                max = symbol;
-        }
-        if(max % 2 == 1)
-            return false;
+        int open = (pair.getOrder() * 2) + 1;
+        int close = open + 1;
         Stack<Integer> stack = new Stack<>();
-        for(int i = 1; i < max; i += 2) {
-            for(int j = 0; j < symbols.length; j++) {
-                if(symbols[j] == i) {
-                    stack.push(j);
-                } else if (symbols[j] == i + 1) {
-                    int p = stack.pop();
-                    if(pair.getLeft() == p +1 && pair.getRight() == j +1)
-                        return true;
-                }
-            }
-            if(stack.size() != 0) {
-                return false;
+        for(int i = 0; i < symbols.length; i++) {
+            if(symbols[i] == open) {
+                stack.push(i);
+            } else if (symbols[i] == close) {
+                if(pair.getLeft() == stack.pop() + 1 && pair.getRight() == i + 1)
+                    return true;
             }
         }
         return false;

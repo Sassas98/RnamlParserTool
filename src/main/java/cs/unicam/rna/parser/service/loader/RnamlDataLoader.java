@@ -4,7 +4,6 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
-import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.exception.RnaParsingException;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
