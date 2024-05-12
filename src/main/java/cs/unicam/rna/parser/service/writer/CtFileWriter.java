@@ -25,7 +25,7 @@ public final class CtFileWriter extends TextFileWriter {
 	 */
 	private void writeMolecule(RnaMolecule m) {
 		char[] array = m.getSequence().toCharArray();
-		Map<Integer, Integer> pairs = m.getPairMap();
+		Map<Integer, Integer> pairs = m.getSimplifiedPairMap();
 		data += m.getLength() + "\n";
 		for(int i = 1; i <= array.length; i++) {
 			int pair = pairs.getOrDefault(i, -1);

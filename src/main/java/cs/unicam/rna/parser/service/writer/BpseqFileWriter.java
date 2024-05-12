@@ -25,7 +25,7 @@ public final class BpseqFileWriter extends TextFileWriter {
 	 */
 	private void writeMolecule(RnaMolecule m) {
 		char[] array = m.getSequence().toCharArray();
-		Map<Integer, Integer> pairs = m.getPairMap();
+		Map<Integer, Integer> pairs = m.getSimplifiedPairMap();
 		for(int i = 1; i <= array.length; i++) {
 			int pair = pairs.getOrDefault(i, -1);
 			data += i + " " + array[i - 1] + " " 
