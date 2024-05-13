@@ -15,7 +15,7 @@ public final class AasFileWriter extends TextFileWriter {
 	
 	@Override
 	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
-		data = "";
+		data = molecules.getMolecules().stream().map(x -> x.getSequence()).reduce("", (a,b) -> a + b) + "\n";
 		setFileInfo(molecules);
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
 		return save(path);
@@ -26,14 +26,12 @@ public final class AasFileWriter extends TextFileWriter {
 	 * @param m molecola da scrivere
 	 */
 	private void writeMolecule(RnaMolecule m) {
-		data += m.getSequence()+"\n";
 		List<Entry<Integer, Integer>> list = m.getPairMap().entrySet().stream()
 											.map(x -> x.getKey() < x.getValue() ? x : new SimpleEntry<Integer, Integer>(x.getValue(), x.getKey()))
 											.distinct().toList();
 		for(Entry<Integer, Integer> pair : list) {
 			data += "(" + pair.getKey() + "," + pair.getValue() +");";
 		}
-		data += "\n\n";
 	}
 	
 

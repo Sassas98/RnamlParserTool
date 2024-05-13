@@ -3,6 +3,8 @@ package cs.unicam.rna.parser.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import cs.unicam.rna.parser.exception.RnaParsingException;
+
 /**
  * classe che contiene tutti i dati relativi ad uno specifico file rna
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
@@ -48,6 +50,18 @@ public class RnaFileData {
 
     public void setReferenceLink(String referenceLink) {
         this.referenceLink = referenceLink;
+    }
+
+    public void checkSecondaryStructure() throws RnaParsingException {
+        for(RnaMolecule molecule : this.molecules) {
+            if(molecule.getMaxReference() > getLength()) {
+                throw new RnaParsingException(molecule.getMoleculeId(), molecule.getMaxReference());
+            }
+        }
+    }
+
+    public int getLength() {
+        return this.molecules.stream().map(x -> x.getLength()).reduce(0, (a, b) -> a + b);
     }
 
 }

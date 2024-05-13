@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-set FILENAME=C:\Users\15mim\OneDrive\Documenti\GitHub\RnaParserLibrary\target\RnamlParserTool-1.0.0
+set FILENAME=%RNATOOL_PATH%\RnamlParserTool-1.0.0
 
 if "%1"=="equals" (
     java -jar %FILENAME%.jar equals %2 %3

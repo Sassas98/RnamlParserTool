@@ -10,10 +10,12 @@ import cs.unicam.rna.parser.model.RnaMolecule;
  * @author Marvin Sincini - Università di Informatica di Camerino - matricola 118311
  */
 public final class CtFileWriter extends TextFileWriter {
+
+	private int count = 1;
 	
 	@Override
 	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
-		data = "";
+		data = molecules.getMolecules().stream().map(x -> x.getLength()).reduce(0, (a,b) -> a + b) + "\n";
 		setFileInfo(molecules);
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
 		return save(path);
@@ -26,14 +28,12 @@ public final class CtFileWriter extends TextFileWriter {
 	private void writeMolecule(RnaMolecule m) {
 		char[] array = m.getSequence().toCharArray();
 		Map<Integer, Integer> pairs = m.getSimplifiedPairMap();
-		data += m.getLength() + "\n";
 		for(int i = 1; i <= array.length; i++) {
 			int pair = pairs.getOrDefault(i, -1);
-			data += i + " " + array[i - 1] + " " 
+			data += count + " " + array[i - 1] + " " 
 					+ (i - 1) + " " + (i == array.length ? 0 : i + 1)
-					+ " " + (pair == -1 ? "0" : pair) + " " + i + "\n";
+					+ " " + (pair == -1 ? "0" : pair) + " " + count++ + "\n";
 		}
-		data += "\n\n";
 	}
 
 }

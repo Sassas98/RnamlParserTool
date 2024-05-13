@@ -38,7 +38,13 @@ public final class DbDataLoader extends LineDataLoader {
             }
             data.addMolecule(molecule);
         }
-        return data;
+        try {
+			data.checkSecondaryStructure();
+			return data;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return null;
+		}
     }
 
     /**

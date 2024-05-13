@@ -31,7 +31,6 @@ public final class BpseqFileWriter extends TextFileWriter {
 			data += i + " " + array[i - 1] + " " 
 					+ (pair == -1 ? "0" : pair) + "\n";
 		}
-		data += "\n\n";
 	}
 
 }

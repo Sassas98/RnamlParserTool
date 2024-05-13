@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import cs.unicam.rna.parser.model.DbPair;
+import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
@@ -22,7 +23,7 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
      * @param molecule molecola da analizzare
      * @return la sequenza della molecola
      */
-    public String writeSequence(RnaMolecule molecule) {
+    public String writeSequence(RnaFileData molecule) {
         if(molecule != null){
             this.array = new int[molecule.getLength()];
             analyze(molecule);
@@ -31,15 +32,15 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
         for(int i : array) {
             data += getDbBracket(i);
         }
-		return data + "\n\n";
+		return data;
 	}
 
     /**
      * Metodo per analizzare una molecola
      * @param molecule molecola da analizzare
      */
-    private void analyze(RnaMolecule molecule) {
-		List<DbPair> pairs = molecule.getSimplifiedPairMap().entrySet().stream()
+    private void analyze(RnaFileData molecule) {
+		List<DbPair> pairs = molecule.getMolecules().stream().flatMap(x -> x.getSimplifiedPairMap().entrySet().stream())
 											.map(x -> x.getKey() < x.getValue() ? x : 
 											new SimpleEntry<Integer, Integer>(x.getValue(), x.getKey()))
 											.distinct().map(x -> new DbPair(x.getKey(), x.getValue()))

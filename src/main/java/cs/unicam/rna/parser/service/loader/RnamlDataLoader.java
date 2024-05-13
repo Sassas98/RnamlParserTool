@@ -35,7 +35,13 @@ public final class RnamlDataLoader extends XmlDataLoader {
 			data.addMolecule(molecule);
 		}
 		checkInfoData(doc, data);
-		return data;
+		try {
+			data.checkSecondaryStructure();
+			return data;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	/**

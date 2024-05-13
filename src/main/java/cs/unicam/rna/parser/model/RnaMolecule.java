@@ -17,15 +17,22 @@ public class RnaMolecule {
 	private int moleculeId;
 	private Map<Integer, RnaRibonucleotide> chain;
 	private Map<Integer, List<Integer>> pairs;
+	private Map<Integer, List<Integer>> notCanonicalPairs;
+	private int maxReference = 0;
 	
 	public RnaMolecule(int moleculeId) {
 		this.moleculeId = moleculeId;
 		this.chain = new HashMap<>();
 		this.pairs = new HashMap<>();
+		this.notCanonicalPairs = new HashMap<>();
 	}
 
 	public int getMoleculeId() {
 		return this.moleculeId;
+	}
+
+	public int getMaxReference(){
+		return maxReference;
 	}
 	
 	public void addRibonucleotide(char c) throws RnaParsingException {
@@ -40,10 +47,9 @@ public class RnaMolecule {
 	}
 	
 	public void addPair(int first, int second) throws RnaParsingException {
-		RnaRibonucleotide ribo1 = this.chain.get(first), ribo2 = this.chain.get(second);
-		if( first < 1 || first > getLength() || ribo1 == null)
+		if( first < 1 )
 			throwException(first);
-		if( first == second || second < 1 || second > getLength()|| ribo2 == null)
+		if( first == second || second < 1 )
 			throwException(second);
 		addPairToMap(first, second);
 		addPairToMap(second, first);

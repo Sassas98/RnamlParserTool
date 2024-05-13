@@ -19,17 +19,9 @@ public final class DbFileWriter extends TextFileWriter {
 	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
 		data = "";
 		setFileInfo(molecules);
-		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
+		molecules.getMolecules().stream().forEach( m -> data += m.getSequence());
+		data += "\n" + sequenceGenerator.writeSequence(molecules);
 		return save(path);
-	}
-
-	/**
-	 * Metodo per scrivere in formato DB i dati contenuti in una data molecola
-	 * @param m molecola i cui dati vanno scritti
-	 */
-	private void writeMolecule(RnaMolecule m) {
-		data += m.getSequence() + "\n";
-		data += sequenceGenerator.writeSequence(m);
 	}
 
 }
