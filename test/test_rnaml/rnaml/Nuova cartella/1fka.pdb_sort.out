@@ -1,0 +1,343 @@
+PDB data file name: 1fka.pdb_new
+-----------------------------------------------------------
+BEGIN_base-pair
+   23_437, A:    34 A-U   535 A: -/- cis         XX
+  102_174, A:   136 A-U   218 A: -/- cis         XX
+  140_159, A:   180 A-U   199 A: -/- cis         XX
+  331_351, A:   404 A-U   430 A: -/- cis         XX
+  474_508, A:   586 A-U   620 A: -/- cis         XX
+  486_498, A:   598 A-U   610 A: -/- cis         XX
+  753_951, A:   927 A-U  1212 A: -/- cis         XX
+  782_818, A:   979 A-U  1021 A: -/- cis         XX
+  873_889, A:  1104 A-U  1131 A: -/- cis         XX
+1092_1121, A:  1407 A-U  1446 A: -/- cis         XX
+   24_436, A:    35 C-G   534 A: +/+ cis         XIX
+   30_326, A:    41 C-G   398 A: +/+ cis         XIX
+   33_323, A:    44 C-G   395 A: +/+ cis         XIX
+   44_283, A:    59 C-G   350 A: +/+ cis         XIX
+   88_190, A:   117 C-G   234 A: +/+ cis         XIX
+   96_182, A:   127 C-G   226 A: +/+ cis         XIX
+  115_128, A:   149 C-G   162 A: +/+ cis         XIX
+  116_127, A:   150 C-G   161 A: +/+ cis         XIX
+  143_156, A:   183 C-G   196 A: +/+ cis         XIX
+  146_153, A:   186 C-G   193 A: +/+ cis         XIX
+  164_168, A:   208 C-G   212 A: +/+ cis         XIX
+  196_219, A:   244 C-G   272 A: +/+ cis         XIX
+  227_246, A:   286 C-G   306 A: +/+ cis         XIX
+  228_245, A:   287 C-G   305 A: +/+ cis         XIX
+  275_279, A:   337 C-G   344 A: +/+ cis         XIX
+  337_346, A:   413 C-G   422 A: +/+ cis         XIX
+  339_344, A:   415 C-G   420 A: +/+ cis         XIX
+  404_416, A:   491 C-G   508 A: +/+ cis         XIX
+  407_425, A:   497 C-G   522 A: +/+ cis         XIX
+  408_424, A:   498 C-G   521 A: +/+ cis         XIX
+  444_704, A:   553 C-G   859 A: +/+ cis         XIX
+  458_617, A:   570 C-G   739 A: +/+ cis         XIX
+  461_522, A:   573 C-G   634 A: +/+ cis         XIX
+  462_521, A:   574 C-G   633 A: +/+ cis         XIX
+  468_516, A:   580 C-G   628 A: +/+ cis         XIX
+  472_510, A:   584 C-G   622 A: +/+ cis         XIX
+  473_509, A:   585 C-G   621 A: +/+ cis         XIX
+  485_499, A:   597 C-G   611 A: +/+ cis         XIX
+  487_497, A:   599 C-G   609 A: +/+ cis         XIX
+  528_614, A:   640 C-G   734 A: +/+ cis         XIX
+  551_576, A:   663 C-G   695 A: +/+ cis         XIX
+  552_575, A:   664 C-G   694 A: +/+ cis         XIX
+  590_595, A:   710 C-G   715 A: +/+ cis         XIX
+  636_654, A:   763 C-G   787 A: +/+ cis         XIX
+  641_649, A:   768 C-G   782 A: +/+ cis         XIX
+  669_702, A:   808 C-G   854 A: +/+ cis         XIX
+  675_689, A:   816 C-G   832 A: +/+ cis         XIX
+  677_687, A:   818 C-G   830 A: +/+ cis         XIX
+ 734_1059, A:   902 C-G  1371 A: +/+ cis         XIX
+ 745_1026, A:   918 C-G  1321 A: +/+ cis         XIX
+  752_952, A:   926 C-G  1213 A: +/+ cis         XIX
+  776_941, A:   967 C-G  1196 A: +/+ cis         XIX
+  787_799, A:   986 C-G  1001 A: +/+ cis         XIX
+  788_798, A:   987 C-G  1000 A: +/+ cis         XIX
+  836_861, A:  1050 C-G  1087 A: +/+ cis         XIX
+  842_845, A:  1056 C-G  1063 A: +/+ cis         XIX
+  843_844, A:  1057 C-G  1062 A: +/+ cis         XIX
+  863_919, A:  1094 C-G  1167 A: +/+ cis         XIX
+  864_918, A:  1095 C-G  1166 A: +/+ cis         XIX
+  865_917, A:  1096 C-G  1165 A: +/+ cis         XIX
+  866_916, A:  1097 C-G  1164 A: +/+ cis         XIX
+  869_893, A:  1100 C-G  1135 A: +/+ cis         XIX
+  874_885, A:  1109 C-G  1125 A: +/+ cis         XIX
+  901_906, A:  1146 C-G  1151 A: +/+ cis         XIX
+  958_994, A:  1222 C-G  1273 A: +/+ cis         XIX
+  959_993, A:  1223 C-G  1272 A: +/+ cis         XIX
+  969_986, A:  1237 C-G  1254 A: +/+ cis         XIX
+  972_984, A:  1240 C-G  1252 A: +/+ cis         XIX
+1007_1012, A:  1292 C-G  1301 A: +/+ cis         XIX
+1035_1041, A:  1332 C-G  1347 A: +/+ cis         XIX
+1084_1129, A:  1399 C-G  1454 A: +/+ cis         XIX
+1088_1125, A:  1403 C-G  1450 A: +/+ cis         XIX
+1090_1123, A:  1405 C-G  1448 A: +/+ cis         XIX
+1093_1120, A:  1408 C-G  1445 A: +/+ cis         XIX
+1094_1119, A:  1409 C-G  1444 A: +/+ cis         XIX
+1099_1113, A:  1416 C-G  1438 A: +/+ cis         XIX
+1104_1106, A:  1426 C-G  1431 A: +/+ cis         XIX
+1157_1164, A:  1488 C-G  1495 A: +/+ cis         XIX
+1158_1163, A:  1489 C-G  1494 A: +/+ cis         XIX
+   19_441, A:    29 G-C   539 A: +/+ cis         XIX
+   31_325, A:    42 G-C   397 A: +/+ cis         XIX
+   32_324, A:    43 G-C   396 A: +/+ cis         XIX
+   34_322, A:    45 G-C   394 A: +/+ cis         XIX
+    60_69, A:    76 G-C    88 A: +/+ cis         XIX
+    61_68, A:    77 G-C    87 A: +/+ cis         XIX
+   83_250, A:   107 G-C   310 A: +/+ cis         XIX
+   89_189, A:   118 G-C   233 A: +/+ cis         XIX
+   91_187, A:   120 G-C   231 A: +/+ cis         XIX
+   92_186, A:   121 G-C   230 A: +/+ cis         XIX
+   93_185, A:   122 G-C   229 A: +/+ cis         XIX
+  100_176, A:   134 G-C   220 A: +/+ cis         XIX
+  107_133, A:   141 G-C   171 A: +/+ cis         XIX
+  108_132, A:   142 G-C   170 A: +/+ cis         XIX
+  109_131, A:   143 G-C   169 A: +/+ cis         XIX
+  117_126, A:   151 G-C   160 A: +/+ cis         XIX
+  119_124, A:   153 G-C   158 A: +/+ cis         XIX
+  161_171, A:   205 G-C   215 A: +/+ cis         XIX
+  163_169, A:   207 G-C   213 A: +/+ cis         XIX
+  201_214, A:   251 G-C   267 A: +/+ cis         XIX
+  203_212, A:   253 G-C   265 A: +/+ cis         XIX
+  204_211, A:   254 G-C   264 A: +/+ cis         XIX
+  229_244, A:   288 G-C   304 A: +/+ cis         XIX
+  251_271, A:   312 G-C   333 A: +/+ cis         XIX
+  252_270, A:   313 G-C   332 A: +/+ cis         XIX
+  253_269, A:   314 G-C   331 A: +/+ cis         XIX
+  254_268, A:   315 G-C   330 A: +/+ cis         XIX
+  329_353, A:   402 G-C   432 A: +/+ cis         XIX
+  330_352, A:   403 G-C   431 A: +/+ cis         XIX
+  332_350, A:   405 G-C   429 A: +/+ cis         XIX
+  399_430, A:   486 G-C   527 A: +/+ cis         XIX
+  443_705, A:   552 G-C   860 A: +/+ cis         XIX
+  451_624, A:   563 G-C   746 A: +/+ cis         XIX
+  457_618, A:   569 G-C   740 A: +/+ cis         XIX
+  460_523, A:   572 G-C   635 A: +/+ cis         XIX
+  469_515, A:   581 G-C   627 A: +/+ cis         XIX
+  488_496, A:   600 G-C   608 A: +/+ cis         XIX
+  489_495, A:   601 G-C   607 A: +/+ cis         XIX
+  533_608, A:   645 G-C   728 A: +/+ cis         XIX
+  539_603, A:   651 G-C   723 A: +/+ cis         XIX
+  540_602, A:   652 G-C   722 A: +/+ cis         XIX
+  542_600, A:   654 G-C   720 A: +/+ cis         XIX
+  543_599, A:   655 G-C   719 A: +/+ cis         XIX
+  630_659, A:   755 G-C   792 A: +/+ cis         XIX
+  634_656, A:   759 G-C   789 A: +/+ cis         XIX
+  642_648, A:   769 G-C   781 A: +/+ cis         XIX
+  643_647, A:   770 G-C   780 A: +/+ cis         XIX
+  670_701, A:   809 G-C   853 A: +/+ cis         XIX
+  680_684, A:   821 G-C   827 A: +/+ cis         XIX
+  681_683, A:   822 G-C   826 A: +/+ cis         XIX
+  711_715, A:   873 G-C   882 A: +/+ cis         XIX
+  751_953, A:   925 G-C  1214 A: +/+ cis         XIX
+  755_949, A:   929 G-C  1210 A: +/+ cis         XIX
+  757_947, A:   931 G-C  1208 A: +/+ cis         XIX
+  774_943, A:   965 G-C  1198 A: +/+ cis         XIX
+  775_942, A:   966 G-C  1197 A: +/+ cis         XIX
+  783_817, A:   980 G-C  1020 A: +/+ cis         XIX
+  784_816, A:   981 G-C  1019 A: +/+ cis         XIX
+  790_796, A:   989 G-C   998 A: +/+ cis         XIX
+  835_862, A:  1049 G-C  1088 A: +/+ cis         XIX
+  839_858, A:  1053 G-C  1084 A: +/+ cis         XIX
+  848_855, A:  1068 G-C  1079 A: +/+ cis         XIX
+  849_854, A:  1069 G-C  1078 A: +/+ cis         XIX
+  850_853, A:  1070 G-C  1077 A: +/+ cis         XIX
+  870_892, A:  1101 G-C  1134 A: +/+ cis         XIX
+  880_881, A:  1115 G-C  1121 A: +/+ cis         XIX
+  900_907, A:  1145 G-C  1152 A: +/+ cis         XIX
+  957_995, A:  1221 G-C  1274 A: +/+ cis         XIX
+  975_980, A:  1243 G-C  1248 A: +/+ cis         XIX
+1002_1017, A:  1287 G-C  1306 A: +/+ cis         XIX
+1003_1016, A:  1288 G-C  1305 A: +/+ cis         XIX
+1005_1014, A:  1290 G-C  1303 A: +/+ cis         XIX
+1036_1040, A:  1333 G-C  1346 A: +/+ cis         XIX
+1037_1039, A:  1334 G-C  1345 A: +/+ cis         XIX
+1085_1128, A:  1400 G-C  1453 A: +/+ cis         XIX
+1086_1127, A:  1401 G-C  1452 A: +/+ cis         XIX
+1097_1115, A:  1414 G-C  1440 A: +/+ cis         XIX
+1100_1112, A:  1417 G-C  1437 A: +/+ cis         XIX
+1151_1170, A:  1482 G-C  1501 A: +/+ cis         XIX
+1154_1167, A:  1485 G-C  1498 A: +/+ cis         XIX
+   11_725, A:    21 U-A   893 A: -/- cis         XX
+   84_249, A:   108 U-A   309 A: -/- cis         XX
+  198_217, A:   248 U-A   270 A: -/- cis         XX
+  202_213, A:   252 U-A   266 A: -/- cis         XX
+  231_240, A:   290 U-A   299 A: -/- cis         XX
+  274_280, A:   336 U-A   345 A: -/- cis         XX
+  531_610, A:   643 U-A   730 A: -/- cis         XX
+  550_577, A:   662 U-A   696 A: -/- cis         XX
+  756_948, A:   930 U-A  1209 A: -/- cis         XX
+  871_891, A:  1102 U-A  1133 A: -/- cis         XX
+  872_890, A:  1103 U-A  1132 A: -/- cis         XX
+1006_1013, A:  1291 U-A  1302 A: -/- cis         XX
+1091_1122, A:  1406 U-A  1447 A: -/- cis         XX
+   22_439, A:    33 A-A   537 A: W/W cis         n/a
+  547_581, A:   659 A-A   700 A: W/W cis         n/a
+  302_314, A:   369 A-C   386 A: W/W cis         n/a
+  256_266, A:   317 A-G   328 A: W/W cis         VIII
+  483_501, A:   595 A-G   613 A: W/W cis         VIII
+  535_606, A:   647 A-G   726 A: W/W cis         VIII
+  548_579, A:   660 A-G   698 A: W/W cis         VIII
+1077_1136, A:  1392 A-G  1461 A: W/W cis         VIII
+1082_1131, A:  1397 A-G  1456 A: W/W cis         VIII
+ 733_1060, A:   901 A-U  1372 A: W/W cis         n/a
+1150_1171, A:  1481 A-U  1502 A: W/W cis         n/a
+1156_1165, A:  1487 A-U  1496 A: W/W cis         n/a
+  370_383, A:   450 C-A   463 A: W/W cis         n/a
+  407_426, A:   497 C-A   523 A: W/W cis         n/a
+  803_813, A:  1006 C-A  1016 A: W/W cis         n/a
+  114_130, A:   148 C-C   164 A: W/W cis         n/a
+   10_726, A:    20 C-G   894 A: W/W cis         n/a
+    57_72, A:    73 C-G    91 A: W/W cis         n/a
+   97_179, A:   131 C-G   223 A: W/W cis         n/a
+   98_179, A:   132 C-G   223 A: W/W cis         n/a
+  114_129, A:   148 C-G   163 A: W/W cis         n/a
+  115_129, A:   149 C-G   163 A: W/W cis         n/a
+  141_158, A:   181 C-G   198 A: W/W cis         n/a
+  147_152, A:   187 C-G   192 A: W/W cis         n/a
+  148_152, A:   188 C-G   192 A: W/W cis         n/a
+  295_318, A:   362 C-G   390 A: W/W cis         n/a
+  299_315, A:   366 C-G   387 A: W/W cis         n/a
+  373_379, A:   453 C-G   459 A: W/W cis         n/a
+  373_380, A:   453 C-G   460 A: W/W cis         n/a
+  400_429, A:   487 C-G   526 A: W/W cis         n/a
+  408_425, A:   498 C-G   522 A: W/W cis         n/a
+  640_651, A:   767 C-G   784 A: W/W cis         n/a
+  675_690, A:   816 C-G   833 A: W/W cis         n/a
+ 739_1054, A:   908 C-G  1366 A: W/W cis         n/a
+  786_800, A:   985 C-G  1002 A: W/W cis         n/a
+  788_799, A:   987 C-G  1001 A: W/W cis         n/a
+  804_812, A:  1007 C-G  1015 A: W/W cis         n/a
+  868_894, A:  1099 C-G  1136 A: W/W cis         n/a
+  899_909, A:  1144 C-G  1154 A: W/W cis         n/a
+  973_982, A:  1241 C-G  1250 A: W/W cis         n/a
+  973_983, A:  1241 C-G  1251 A: W/W cis         n/a
+  974_982, A:  1242 C-G  1250 A: W/W cis         n/a
+    53_76, A:    69 G-A    95 A: W/W cis         VIII
+  478_504, A:   590 G-A   616 A: W/W cis         VIII
+  546_581, A:   658 G-A   700 A: W/W cis         VIII
+  749_955, A:   923 G-A  1216 A: W/W cis         VIII
+  802_813, A:  1005 G-A  1016 A: W/W cis         VIII
+     1_16, A:    10 G-C    26 A: W/W cis         n/a
+     3_14, A:    12 G-C    24 A: W/W cis         n/a
+   18_442, A:    28 G-C   540 A: W/W cis         n/a
+   36_319, A:    47 G-C   391 A: W/W cis         n/a
+   43_284, A:    58 G-C   351 A: W/W cis         n/a
+    46_81, A:    62 G-C   100 A: W/W cis         n/a
+    62_68, A:    78 G-C    87 A: W/W cis         n/a
+    63_66, A:    79 G-C    85 A: W/W cis         n/a
+   85_248, A:   109 G-C   308 A: W/W cis         n/a
+  105_135, A:   139 G-C   173 A: W/W cis         n/a
+  118_126, A:   152 G-C   160 A: W/W cis         n/a
+  139_160, A:   179 G-C   200 A: W/W cis         n/a
+  163_170, A:   207 G-C   214 A: W/W cis         n/a
+  226_247, A:   285 G-C   307 A: W/W cis         n/a
+  300_314, A:   367 G-C   386 A: W/W cis         n/a
+  307_311, A:   374 G-C   382 A: W/W cis         n/a
+  397_432, A:   484 G-C   529 A: W/W cis         n/a
+  403_417, A:   490 G-C   509 A: W/W cis         n/a
+  449_626, A:   561 G-C   748 A: W/W cis         n/a
+  529_613, A:   641 G-C   733 A: W/W cis         n/a
+  540_603, A:   652 G-C   723 A: W/W cis         n/a
+  545_582, A:   657 G-C   701 A: W/W cis         n/a
+  555_572, A:   667 G-C   691 A: W/W cis         n/a
+  633_656, A:   758 G-C   789 A: W/W cis         n/a
+  668_703, A:   807 G-C   855 A: W/W cis         n/a
+  673_691, A:   814 G-C   834 A: W/W cis         n/a
+  681_684, A:   822 G-C   827 A: W/W cis         n/a
+ 732_1062, A:   900 G-C  1374 A: W/W cis         n/a
+ 738_1056, A:   907 G-C  1368 A: W/W cis         n/a
+ 742_1051, A:   911 G-C  1363 A: W/W cis         n/a
+  791_796, A:   990 G-C   998 A: W/W cis         n/a
+  826_939, A:  1031 G-C  1189 A: W/W cis         n/a
+  849_855, A:  1069 G-C  1079 A: W/W cis         n/a
+  957_996, A:  1221 G-C  1275 A: W/W cis         n/a
+  976_980, A:  1244 G-C  1248 A: W/W cis         n/a
+1004_1016, A:  1289 G-C  1305 A: W/W cis         n/a
+1005_1015, A:  1290 G-C  1304 A: W/W cis         n/a
+1069_1145, A:  1384 G-C  1470 A: W/W cis         n/a
+    53_77, A:    69 G-G    96 A: W/W cis         n/a
+  536_605, A:   648 G-G   725 A: W/W cis         n/a
+  764_766, A:   941 G-G   951 A: W/W cis         n/a
+  831_927, A:  1042 G-G  1177 A: W/W cis         n/a
+    55_74, A:    71 G-U    93 A: W/W cis         XXVIII
+    58_71, A:    74 G-U    90 A: W/W cis         XXVIII
+    62_67, A:    78 G-U    86 A: W/W cis         XXVIII
+   87_191, A:   116 G-U   235 A: W/W cis         XXVIII
+  118_125, A:   152 G-U   159 A: W/W cis         XXVIII
+  119_125, A:   153 G-U   159 A: W/W cis         XXVIII
+  306_312, A:   373 G-U   383 A: W/W cis         XXVIII
+  538_604, A:   650 G-U   724 A: W/W cis         XXVIII
+  562_569, A:   674 G-U   681 A: W/W cis         XXVIII
+  635_655, A:   762 G-U   788 A: W/W cis         XXVIII
+  679_685, A:   820 G-U   828 A: W/W cis         XXVIII
+  680_685, A:   821 G-U   828 A: W/W cis         XXVIII
+  710_716, A:   872 G-U   883 A: W/W cis         XXVIII
+ 736_1057, A:   905 G-U  1369 A: W/W cis         XXVIII
+  789_797, A:   988 G-U   999 A: W/W cis         XXVIII
+  790_797, A:   989 G-U   999 A: W/W cis         XXVIII
+  841_846, A:  1055 G-U  1064 A: W/W cis         XXVIII
+    8_728, A:    18 U-A   896 A: W/W cis         n/a
+   27_433, A:    38 U-A   531 A: W/W cis         n/a
+  470_512, A:   582 U-A   624 A: W/W cis         n/a
+  672_699, A:   811 U-A   851 A: W/W cis         n/a
+    64_66, A:    80 U-C    85 A: W/W cis         XVIII
+     4_13, A:    13 U-G    23 A: W/W cis         XXVIII
+   27_434, A:    38 U-G   532 A: W/W cis         XXVIII
+  197_218, A:   245 U-G   271 A: W/W cis         XXVIII
+  277_278, A:   339 U-G   343 A: W/W cis         XXVIII
+  406_427, A:   496 U-G   524 A: W/W cis         XXVIII
+  452_623, A:   564 U-G   745 A: W/W cis         XXVIII
+  475_507, A:   587 U-G   619 A: W/W cis         XXVIII
+  544_598, A:   656 U-G   718 A: W/W cis         XXVIII
+  676_688, A:   817 U-G   831 A: W/W cis         XXVIII
+  676_689, A:   817 U-G   832 A: W/W cis         XXVIII
+  678_686, A:   819 U-G   829 A: W/W cis         XXVIII
+  754_950, A:   928 U-G  1211 A: W/W cis         XXVIII
+  801_814, A:  1004 U-G  1017 A: W/W cis         XXVIII
+1032_1044, A:  1329 U-G  1350 A: W/W cis         XXVIII
+1089_1124, A:  1404 U-G  1449 A: W/W cis         XXVIII
+1153_1168, A:  1484 U-G  1499 A: W/W cis         XXVIII
+1155_1166, A:  1486 U-G  1497 A: W/W cis         XXVIII
+  321_433, A:   393 A-A   531 A: W/H cis         n/a
+  490_493, A:   602 C-A   605 A: W/H tran        XXV
+  591_594, A:   711 G-G   714 A: W/H tran        VII
+1008_1011, A:  1293 U-A  1297 A: W/H tran        XXIV
+1029_1047, A:  1326 U-A  1353 A: W/H tran        XXIV
+ 963_1035, A:  1230 A-C  1332 A: W/S tran        n/a
+ 964_1036, A:  1231 G-G  1333 A: W/S tran        n/a
+  537_588, A:   649 A-G   708 A: H/W cis         IX
+  455_620, A:   567 A-G   742 A: H/S tran        XI
+1095_1116, A:  1412 A-G  1441 A: H/S tran        XI
+   40_286, A:    55 C-G   353 A: S/W cis         n/a
+1083_1131, A:  1398 G-G  1456 A: S/W cis         n/a
+  300_301, A:   367 G-C   368 A: S/H cis         n/a
+  651_652, A:   784 G-U   785 A: S/H cis         n/a
+    5_725, A:    14 U-A   893 A: S/H cis         n/a
+  294_295, A:   361 U-C   362 A: S/H cis         n/a
+  120_123, A:   154 G-A   157 A: S/H tran        XI
+  333_349, A:   406 G-A   428 A: S/H tran        XI
+  563_568, A:   675 G-A   680 A: S/H tran        XI
+  453_622, A:   565 G-G   744 A: S/H tran        n/a
+   32_494, A:    43 G-A   606 A: S/S tran        n/a
+END_base-pair
+
+Summary of triplets and higher multiplets
+BEGIN_multiplets
+5_11_725_| [1 3]  A: 14 U  +  A: 21 U  +  A: 893 A
+32_324_494_| [2 3]  A: 43 G  +  A: 396 C  +  A: 606 A
+294_295_318_| [3 3]  A: 361 U  +  A: 362 C  +  A: 390 G
+300_302_314_| [4 3]  A: 367 G  +  A: 369 A  +  A: 386 C
+963_1035_1041_| [5 3]  A: 1230 A  +  A: 1332 C  +  A: 1347 G
+964_1036_1040_| [6 3]  A: 1231 G  +  A: 1333 G  +  A: 1346 C
+END_multiplets
+
+  The total base pairs = 321 (from 1174 bases)
+------------------------------------------------
+ Standard  WW--cis  WW-tran  HH--cis  HH-tran  SS--cis  SS-tran
+      172      128        0        0        0        0        1
+  WH--cis  WH-tran  WS--cis  WS-tran  HS--cis  HS-tran
+        2        4        2        2        4        6
+------------------------------------------------

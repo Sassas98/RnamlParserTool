@@ -1,0 +1,18 @@
+PDB data file name: 1fhk.pdb_new
+-----------------------------------------------------------
+BEGIN_base-pair
+     1_14, A:     1 G-C    14 A: +/+ cis         XIX
+     2_13, A:     2 G-C    13 A: +/+ cis         XIX
+     3_12, A:     3 C-G    12 A: +/+ cis         XIX
+      5_9, A:     5 G-A     9 A: W/H tran        n/a
+     5_10, A:     5 G-A    10 A: S/H tran        XI
+     4_11, A:     4 G-U    11 A: S/W tran        !1H(b_b)
+      6_9, A:     6 U-A     9 A: S/H tran        !(s_s)
+END_base-pair
+  The total base pairs =   5 (from   14 bases)
+------------------------------------------------
+ Standard  WW--cis  WW-tran  HH--cis  HH-tran  SS--cis  SS-tran
+        3        0        0        0        0        0        0
+  WH--cis  WH-tran  WS--cis  WS-tran  HS--cis  HS-tran
+        0        1        0        0        0        1
+------------------------------------------------
