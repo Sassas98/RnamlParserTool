@@ -16,7 +16,7 @@ public class RnaMolecule {
 	
 	private int moleculeId;
 	private Map<Integer, RnaRibonucleotide> chain;
-	private Map<Integer, List<Integer>> pairs;
+	private Map<Integer, Integer> pairs;
 	private List<String[]> tertiaryPairs;
 	private int maxReference = 0;
 	
@@ -51,8 +51,20 @@ public class RnaMolecule {
 			throwException(first);
 		if( first == second || second < 1 )
 			throwException(second);
-		addPairToMap(first, second);
-		addPairToMap(second, first);
+		if(this.pairs.containsKey(first) || this.pairs.containsKey(second)){
+			if(this.pairs.containsKey(first)) {
+				addTertiaryPair(first, pairs.get(first));
+				pairs.remove(first);
+			}
+			if(this.pairs.containsKey(second)) {
+				addTertiaryPair(second, pairs.get(second));
+				pairs.remove(second);
+			}
+			addTertiaryPair(first, second);
+		} else {
+			pairs.put(first, second);
+			pairs.put(second, first);
+		}
 	}
 	public void addTertiaryPair(int first, int second) throws RnaParsingException {
 		if( first < 1 )
@@ -60,15 +72,6 @@ public class RnaMolecule {
 		if( first == second || second < 1 )
 			throwException(second);
 			tertiaryPairs.add(new String[]{getBaseOf(first) + first, getBaseOf(second) + second});
-	}
-
-	public void addPairToMap(int first, int second) {
-		List<Integer> list =  pairs.get(first);
-		if(list == null) {
-			list = new ArrayList<>();
-			pairs.put(first, list);
-		}
-		list.add(second);
 	}
 
 	public String getBaseOf(int index){
@@ -91,38 +94,8 @@ public class RnaMolecule {
 	
 	public Map<Integer, Integer> getPairMap(){
 		Map<Integer, Integer> map = new HashMap<>();
-		for(Entry<Integer, List<Integer>> pair : pairs.entrySet()) {
-			for(Integer i : pair.getValue()) {
-				Integer x = map.get(pair.getKey());
-				if(x == null) {
-					map.put(pair.getKey(), i);
-				} else {
-					if(map.get(i) == null)
-						map.put(i, pair.getKey());
-				}
-			}
-		}
-		return map;
-	}
-
-	/**
-	 * Questo metodo ritorna una mappa semplificata della struttura secondaria
-	 * con tutti i collegamenti reciproci, indispensabile per formati che
-	 * non permettono strutture complesse
-	 * @return mappa semplificata della struttura secondaria
-	 */
-	public Map<Integer, Integer> getSimplifiedPairMap(){
-		Map<Integer, Integer> map = new HashMap<>();
-		for(Entry<Integer, List<Integer>> pair : pairs.entrySet()) {
-			if(!map.containsKey(pair.getKey())){
-				for(int i = 0; i < pair.getValue().size(); i++){
-					if(!map.containsKey(pair.getValue().get(i))){
-						map.put(pair.getKey(), pair.getValue().get(i));
-						map.put(pair.getValue().get(i), pair.getKey());
-						break;
-					}
-				}
-			}
+		for(Entry<Integer, Integer> pair : pairs.entrySet()) {
+			map.put(pair.getKey(), pair.getValue());
 		}
 		return map;
 	}

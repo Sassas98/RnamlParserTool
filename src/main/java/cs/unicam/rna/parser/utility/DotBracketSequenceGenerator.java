@@ -39,7 +39,7 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
      * @param molecule molecola da analizzare
      */
     private void analyze(RnaFileData molecule) {
-		List<DbPair> pairs = molecule.getMolecules().stream().flatMap(x -> x.getSimplifiedPairMap().entrySet().stream())
+		List<DbPair> pairs = molecule.getMolecules().stream().flatMap(x -> x.getPairMap().entrySet().stream())
 											.map(x -> x.getKey() < x.getValue() ? x : 
 											new SimpleEntry<Integer, Integer>(x.getValue(), x.getKey()))
 											.distinct().map(x -> new DbPair(x.getKey(), x.getValue()))
