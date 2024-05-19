@@ -15,8 +15,8 @@ public final class CtFileWriter extends TextFileWriter {
 	
 	@Override
 	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
-		data = molecules.getMolecules().stream().map(x -> x.getLength()).reduce(0, (a,b) -> a + b) + "\n";
 		setFileInfo(molecules);
+		data += molecules.getMolecules().stream().map(x -> x.getLength()).reduce(0, (a,b) -> a + b) + "\n";
 		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
 		return save(path);
 	}

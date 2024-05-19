@@ -73,11 +73,9 @@ public final class RnamlDataLoader extends XmlDataLoader {
 				.item(0));
 		NodeList list = sequenceNode.getElementsByTagName("seq-data");
 				
-		String sequence = list.getLength() > 0 ? 
-							getElement(list.item(0)).getTextContent()
+		String sequence = getElement(list.item(0)).getTextContent()
 							.replace(" ", "").replace("\n", "")
-							.replace("\t", "").replace("\r", "").toUpperCase() 
-							: sequenceNode.getTextContent();
+							.replace("\t", "").replace("\r", "").toUpperCase();
 		for(char c : sequence.toCharArray()) {
 			molecule.addRibonucleotide(c);
 		}

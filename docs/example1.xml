@@ -4,7 +4,11 @@
   <molecule type="rna" id="RNA1">
     <name>RNA molecola di esempio</name>
     <description>Questa è una molecola RNA di esempio con varie informazioni.</description>
-    <sequence length="20">AUGCGCUAGCAUCGAUCGAU</sequence>
+    <sequence length="20">
+      <seq-data>
+        AUGCGCUAGCAUCGAUCGAU
+      </seq-data>
+    </sequence>
     <structure type="2D" id="Structure1">
       <base-pair-list>
         <base-pair>
