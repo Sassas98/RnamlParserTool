@@ -1,7 +1,6 @@
 package cs.unicam.rna.parser.service.writer;
 
 import cs.unicam.rna.parser.model.RnaFileData;
-import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.utility.DotBracketSequenceGenerator;
 
 /**

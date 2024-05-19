@@ -34,20 +34,6 @@ public class DbPair implements Comparable<DbPair> {
     public void setOrder(int order) {
         this.order = order;
     }
-    
-    /**
-     * metodo per verificare se un'altra coppia
-     * si sovrappone a questa
-     * @param p coppia da controllare
-     * @return true se si sovrappongono, false altrimenti
-     */
-    public boolean crossesWith(DbPair p) {
-        if (p == null)
-            throw new NullPointerException("Passed pair was null");
-        if (this.equals(p))
-            throw new IllegalArgumentException("Passed pair was equal to this one");
-        return p.left < this.left && p.right < this.right || this.left < p.left && this.right < p.right;
-    }
 
     @Override
     public int hashCode() {

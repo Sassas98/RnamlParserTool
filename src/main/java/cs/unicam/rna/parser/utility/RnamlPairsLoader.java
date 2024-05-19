@@ -21,8 +21,8 @@ public class RnamlPairsLoader {
 		NodeList pairs = moleculeData.getElementsByTagName("base-pair");
         for (int i = 0; i < pairs.getLength(); i++) {
             Element pair = getElement(pairs.item(i));
-            if (pair != null && isCanonical(pair))
-                loadPair(pair, "position", molecule);
+            if (pair != null)
+                loadPair(pair, "position", molecule, isCanonical(pair));
         }
     }
 
@@ -43,19 +43,19 @@ public class RnamlPairsLoader {
 	 * @param pair
 	 * @throws RnaParsingException
 	 */
-	private void loadPair(Element pair, String nodeName, RnaMolecule molecule) throws RnaParsingException {
+	private void loadPair(Element pair, String nodeName, RnaMolecule molecule, boolean isCanonical) throws RnaParsingException {
 		NodeList positions = pair.getElementsByTagName(nodeName);
         if(positions.getLength() == 2) {
         	if(!isNumber(positions.item(0).getTextContent())) {
-        		loadPairAlt(pair, nodeName, molecule);
+        		loadPairAlt(pair, nodeName, molecule, isCanonical);
         	} else {
             	String first = positions.item(0).getTextContent();
             	String second = positions.item(1).getTextContent();
-            	addPair(first, second, molecule);
+            	addPair(first, second, molecule, isCanonical);
         	}
         } else {
         	if(!nodeName.equals("base-id"))
-        		loadPair(pair, "base-id", molecule);
+        		loadPair(pair, "base-id", molecule, isCanonical);
         }
 	}
 
@@ -74,13 +74,13 @@ public class RnamlPairsLoader {
 	 * @param pair
 	 * @throws RnaParsingException
 	 */
-	private void loadPairAlt(Element pair, String nodeName, RnaMolecule molecule) throws RnaParsingException {
+	private void loadPairAlt(Element pair, String nodeName, RnaMolecule molecule, boolean isCanonical) throws RnaParsingException {
 		NodeList baseList = pair.getElementsByTagName(nodeName);
 		Element base1 = getElement(baseList.item(0)), base2 = getElement(baseList.item(1));
 		if(base1 != null && base2 != null) {
 	    	String first = base1.getAttribute("base-id");
 	    	String second = base2.getAttribute("base-id");
-	    	addPair(first, second, molecule);
+	    	addPair(first, second, molecule, isCanonical);
 		}
 	}
 	
@@ -90,10 +90,12 @@ public class RnamlPairsLoader {
 	 * @param b
 	 * @throws RnaParsingException
 	 */
-	private void addPair(String a, String b, RnaMolecule molecule) throws RnaParsingException {
+	private void addPair(String a, String b, RnaMolecule molecule, boolean isCanonical) throws RnaParsingException {
 		int first = Integer.parseInt( a );
     	int second = Integer.parseInt( b );
-    	molecule.addPair(first, second);
+		if(isCanonical)
+    		molecule.addPair(first, second);
+		else molecule.addTertiaryPair(first, second);
 	}
 
 	/**

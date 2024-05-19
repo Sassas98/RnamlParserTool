@@ -2,6 +2,7 @@ package cs.unicam.rna.parser.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map.Entry;
 
 import cs.unicam.rna.parser.exception.RnaParsingException;
 
@@ -63,5 +64,15 @@ public class RnaFileData {
     public int getLength() {
         return this.molecules.stream().map(x -> x.getLength()).reduce(0, (a, b) -> a + b);
     }
+
+    public boolean haveTertiaryData(){
+		return this.molecules.stream().anyMatch(x -> x.haveTertiaryData());
+	}
+
+	public List<Entry<Integer, Integer>> getTertiaryStructure(){
+		return this.molecules.stream()
+        .map(x -> x.getTertiaryStructure())
+        .reduce(new ArrayList<>(), (a,b) -> {a.addAll(b); return a;} );
+	}
 
 }

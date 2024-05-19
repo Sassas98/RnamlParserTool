@@ -6,7 +6,6 @@ import java.util.Comparator;
 import java.util.List;
 import cs.unicam.rna.parser.model.DbPair;
 import cs.unicam.rna.parser.model.RnaFileData;
-import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * Classe per generare sequenze DB

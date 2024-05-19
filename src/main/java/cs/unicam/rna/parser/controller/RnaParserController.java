@@ -1,9 +1,13 @@
 package cs.unicam.rna.parser.controller;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.OperationResult;
 import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.service.writer.TertiaryStructureWriter;
 import cs.unicam.rna.parser.utility.RnaFileNameHandler;
 import cs.unicam.rna.parser.utility.RnaHandlerBuilder;
 import cs.unicam.rna.parser.utility.DefaultRnaHandlerBuilder;
@@ -32,6 +36,8 @@ public class RnaParserController {
 	 * classe per la gestione di nomi di file imprevisti
 	 */
 	private RnaFileNameHandler nameHandler;
+
+	private TertiaryStructureWriter tertiaryWriter;
 	
 	/**
 	 * Costruttore del controller
@@ -39,6 +45,7 @@ public class RnaParserController {
 	public RnaParserController() {
 		builder = new DefaultRnaHandlerBuilder();
 		nameHandler = new RnaFileNameHandler();
+		tertiaryWriter = new TertiaryStructureWriter();
 	}
 	
 	/**
@@ -96,6 +103,11 @@ public class RnaParserController {
 		result.result = writer.writeAndSave(molecules, path);
 		result.addInfo(result.result ? "Saving to file " + path + " was successful."
 			: "Failed to save data in " + path + " file.");
+		if(result.result && molecules.haveTertiaryData() && (!Files.exists(Paths.get(loadedPath + ".csv")))){
+			result.result = this.tertiaryWriter.writeAndSave(molecules, loadedPath + ".csv");
+			result.addInfo(result.result ? "Saving to tertiary structure was successful."
+				: "Saving to tertiary structure was failed.");
+		}
 		return result;
 	}
 
