@@ -1,6 +1,5 @@
 package cs.unicam.rna.parser.model;
 
-import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,14 +17,14 @@ public class RnaMolecule {
 	private int moleculeId;
 	private Map<Integer, RnaRibonucleotide> chain;
 	private Map<Integer, List<Integer>> pairs;
-	private Map<Integer, List<Integer>> tertiaryPairs;
+	private List<String[]> tertiaryPairs;
 	private int maxReference = 0;
 	
 	public RnaMolecule(int moleculeId) {
 		this.moleculeId = moleculeId;
 		this.chain = new HashMap<>();
 		this.pairs = new HashMap<>();
-		this.tertiaryPairs = new HashMap<>();
+		this.tertiaryPairs = new ArrayList<>();
 	}
 
 	public int getMoleculeId() {
@@ -52,27 +51,29 @@ public class RnaMolecule {
 			throwException(first);
 		if( first == second || second < 1 )
 			throwException(second);
-		addPairToMap(first, second, false);
-		addPairToMap(second, first, false);
+		addPairToMap(first, second);
+		addPairToMap(second, first);
 	}
 	public void addTertiaryPair(int first, int second) throws RnaParsingException {
 		if( first < 1 )
 			throwException(first);
 		if( first == second || second < 1 )
 			throwException(second);
-			addPairToMap(first, second, true);
-			addPairToMap(second, first, true);
+			tertiaryPairs.add(new String[]{getBaseOf(first) + first, getBaseOf(second) + second});
 	}
 
-	public void addPairToMap(int first, int second, boolean tertiary) {
-		List<Integer> list = tertiary ? tertiaryPairs.get(first) : pairs.get(first);
+	public void addPairToMap(int first, int second) {
+		List<Integer> list =  pairs.get(first);
 		if(list == null) {
 			list = new ArrayList<>();
-			if(tertiary)
-				tertiaryPairs.put(first, list);
-			else pairs.put(first, list);
+			pairs.put(first, list);
 		}
 		list.add(second);
+	}
+
+	public String getBaseOf(int index){
+		RnaRibonucleotide ribo = this.chain.get(index);
+		return ribo==null ? "N" : "" + RnaBase.getBaseLetter(ribo.getBase());
 	}
 	
 	public int getLength() {
@@ -130,20 +131,12 @@ public class RnaMolecule {
 		return !this.tertiaryPairs.isEmpty();
 	}
 
-	public List<Entry<Integer, Integer>> getTertiaryStructure(){
-		List<Entry<Integer, Integer>> list = new ArrayList<>();
+	public List<String[]> getTertiaryStructure(){
+		List<String[]> list = new ArrayList<>();
 		if(!haveTertiaryData())
 			return list;
-		for(Entry<Integer,List<Integer>> data : tertiaryPairs.entrySet()){
-			for(Integer i : data.getValue()){
-				list.add(new AbstractMap.SimpleEntry<Integer, Integer>(data.getKey(), i));
-			}
-		}
-		return new ArrayList<>(list.stream()
-								.map(x -> x.getKey() < x.getValue() ? x : 
-								new AbstractMap.SimpleEntry<Integer, Integer>(x.getValue(), x.getKey()))
-								.distinct().toList()
-							);
+		list.addAll(tertiaryPairs);
+		return list;
 	}
 	
 	private void throwException(int pos) throws RnaParsingException {
