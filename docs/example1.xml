@@ -8,14 +8,20 @@
     <structure type="2D" id="Structure1">
       <base-pair-list>
         <base-pair>
-          <base-id base-id="1">A</base-id>
-          <base-id base-id="20">U</base-id>
-          <orientation>Watson-Crick</orientation>
+          <base-id-5p>
+              <base-id><position>1</position></base-id>
+          </base-id-5p>
+          <base-id-3p>
+              <base-id><position>20</position></base-id>
+          </base-id-3p>
         </base-pair>
         <base-pair>
-          <base-id base-id="2">U</base-id>
-          <base-id base-id="19">A</base-id>
-          <orientation>Watson-Crick</orientation>
+          <base-id-5p>
+              <base-id><position>2</position></base-id>
+          </base-id-5p>
+          <base-id-3p>
+              <base-id><position>19</position></base-id>
+          </base-id-3p>
         </base-pair>
         <!-- Altri accoppiamenti di basi possono essere elencati qui -->
       </base-pair-list>
