@@ -43,9 +43,17 @@ public class RnaParserController {
 	 * Costruttore del controller
 	 */
 	public RnaParserController() {
-		builder = new DefaultRnaHandlerBuilder();
-		nameHandler = new RnaFileNameHandler();
-		tertiaryWriter = new TertiaryStructureWriter();
+		this(new DefaultRnaHandlerBuilder());
+	}
+	
+	/**
+	 * Costruttore del controller con builder custom
+	 * @param builder builder esteso con nuovi formati
+	 */
+	public RnaParserController(RnaHandlerBuilder builder) {
+		this.builder = builder;
+		this.nameHandler = new RnaFileNameHandler();
+		this.tertiaryWriter = new TertiaryStructureWriter();
 	}
 	
 	/**
@@ -127,15 +135,6 @@ public class RnaParserController {
 
 	public String getLoadedPath() {
 		return loadedPath;
-	}
-
-	/**
-	 * Metodo per estendere il controller con
-	 * builder che accettano nuovi formati
-	 * @param builder nuovo builder non default
-	 */
-	public void setCustomHandlerBuilder(RnaHandlerBuilder builder) {
-		this.builder = builder;
 	}
 	
 }

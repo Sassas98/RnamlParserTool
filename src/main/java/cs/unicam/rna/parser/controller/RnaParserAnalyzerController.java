@@ -4,6 +4,7 @@ import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.model.OperationResult;
 import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.service.comparator.RnaComparator;
+import cs.unicam.rna.parser.utility.RnaHandlerBuilder;
 
 /**
  * Controller che estende per parser con un check alla scrittura che segnala
@@ -20,6 +21,11 @@ public class RnaParserAnalyzerController extends RnaParserController {
 
     public RnaParserAnalyzerController() {
 		super();
+		comparator = new RnaComparator();
+    }
+
+    public RnaParserAnalyzerController(RnaHandlerBuilder builder) {
+		super(builder);
 		comparator = new RnaComparator();
     }
 
