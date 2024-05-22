@@ -1,5 +1,5 @@
-base-id-5p, base-id-3p
-G5, A9
-G5, A10
-G4, U11
-U6, A9
+base-id-5p, base-id-3p, bond-type
+G5, A9, Not-canonical
+G5, A10, Not-canonical
+G4, U11, Not-canonical
+U6, A9, Canonical

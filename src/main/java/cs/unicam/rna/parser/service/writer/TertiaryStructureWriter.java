@@ -15,9 +15,9 @@ public class TertiaryStructureWriter implements RnaFileWriter {
         try (FileWriter fw = new FileWriter(path, false);
                 BufferedWriter bw = new BufferedWriter(fw);
                 PrintWriter out = new PrintWriter(bw)) {
-            out.println("base-id-5p, base-id-3p");
+            out.println("base-id-5p, base-id-3p, bond-type");
             for (String[] pair : molecules.getTertiaryStructure()) {
-                out.println(pair[0] + ", " + pair[1]);
+                out.println(pair[0] + ", " + pair[1] + ", " + pair[2]);
             }
             out.close();
             return true;

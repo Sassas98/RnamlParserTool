@@ -1,1035 +1,972 @@
-base-id-5p, base-id-3p
-U3, G519
-G14, A508
-G15, A507
-A16, G506
-U21, A441
-G23, G444
-C27, G434
-C27, A662
-C31, A429
-C31, A430
-G38, A104
-A39, A105
-A40, G103
-G45, A60
-A51, A77
-G75, G47
-C53, G75
-G62, A97
-G62, U98
-G69, A90
-G70, A89
-A71, G85
-A71, G88
-G72, A89
-C118, A132
-G145, C167
-G145, A1383
-G147, A165
-A148, U164
-A149, A162
-A149, G879
-C150, C161
-C150, C880
-A154, G911
-U158, G209
-G173, A427
-G178, A423
-A179, U422
-A180, G191
-A181, G401
-G184, A187
-A186, G404
-A192, A424
-U193, A425
-U199, C216
-A200, A215
-U202, A214
-A203, G213
-C206, A210
-G219, A654
-A229, U258
-A230, G257
-A231, G262
-G234, U253
-A235, G252
-U241, C244
-G245, C240
-U241, G245
-G280, A348
-A281, U347
-G292, A335
-A293, G333
-U301, A305
-G302, A325
-G303, G324
-A319, G333
-U323, A327
-A368, A396
-U370, A395
-A371, G394
-A407, C1832
-A407, U2243
-A429, C31
-A429, A430
-A437, G1262
-G440, A448
-A443, A448
-G446, A451
-A451, A465
-U453, A464
-A454, G463
-G457, A460
-U469, A473
-G470, A474
-A473, A497
-A474, A499
-A477, G491
-G492, G500
-C493, A497
-G494, A499
-A509, G1277
-A520, G2455
-G523, G1982
-A524, G1975
-A540, G1236
-A554, G580
-A554, G1052
-G556, A578
-A557, U577
-G565, A568
-U612, A616
-A617, G1970
-G630, A1271
-A631, G889
-A631, A1268
-U633, A748
-U652, A670
-A654, G668
-G679, A682
-A686, G729
-G690, C713
-G690, G731
-G694, G709
-C695, A708
-A696, G707
-U720, G725
-G726, C719
-U720, G726
-A753, C883
-A754, A882
-A754, G2010
-C761, G459
-C761, G874
-G762, G855
-A763, U766
-A763, G858
-A777, G811
-G782, A805
-A783, G804
-A784, G803
-G792, A795
-A814, G841
-C825, A830
-A833, U824
-C829, A833
-A844, U1743
-A844, A1757
-A848, U1401
-G850, A1372
-G857, A854
-G857, C867
-G860, A863
-A861, G1744
-G898, A1207
-A899, U1206
-A901, A1029
-A910, U2007
-A910, G2275
-A913, C1002
-G915, C902
-G915, A2189
-G925, A991
-A926, G990
-G927, A991
-U941, A972
-A942, A971
-G945, A948
-C946, A964
-C967, G945
-C949, C967
-U968, A944
-U968, C969
-A973, A2102
-G1005, A1041
-G1014, A1017
-G1031, A1047
-A1032, A1045
-G1034, A1057
-A1038, G1968
-C1042, G1035
-C1042, A1083
-U1055, A1172
-A1057, G1171
-G1059, A1066
-G1069, A568
-G1069, C1166
-U1070, G567
-U1070, A1165
-U1075, A1159
-A1077, U1157
-A1091, A1143
-A1092, C1142
-G1110, A1128
-A1111, G1127
-A1111, G1129
-G1119, A1120
-C1121, G1118
-G1119, C1121
-A1144, C2293
-A1144, U2318
-C1151, G1154
-G1213, A1243
-G1229, A1254
-A1230, G1253
-A1231, G1252
-G1240, A1243
-U1281, C1956
-A1282, A1955
-U1284, A1954
-A1285, G1953
-C1290, G1595
-A1294, G1314
-U1301, A1305
-C1307, U1345
-U1318, A1628
-A1320, A1629
-A1327, G1593
-C1339, A1350
-C1352, G1338
-C1341, C1352
-A1361, U1589
-G1362, A1406
-G1365, A1399
-G1365, C1587
-U1370, A1398
-A1372, G1397
-C1380, G1388
-C1380, A1389
-G1388, A1778
-A1400, G1609
-U1412, A1417
-A1440, A1576
-A1441, G1575
-G1445, A1571
-A1446, A1570
-C1447, A1569
-G1455, A1528
-G1456, A1554
-U1457, A1553
-C1458, C1552
-G1480, A1544
-G1483, A1538
-A1484, A1536
-A1485, C1535
-C1491, A1528
-A1493, G1526
-G1500, A1519
-G1501, A1518
-A1502, G1517
-G1541, A1544
-A1594, U1608
-G1618, A1624
-G1619, A1623
-C1637, A1306
-C1637, G1950
-A1645, G1946
-A1654, C1937
-A1658, U1932
-G1677, A1691
-A1679, A1688
-C1680, A1687
-U1682, G1685
-G1706, A1709
-G1717, C1699
-G1717, A2667
-G1718, A2675
-A1723, G2523
-A1741, A1918
-C1742, U1758
-C1746, C1753
-U1750, U2416
-A1759, G1796
-C1768, G1785
-C1768, A1787
-G1775, A1778
-C1806, A1854
-G1820, A1843
-A1822, G2028
-G1829, A1834
-A1833, G2244
-A1843, G2067
-C1855, G1808
-C1852, C1855
-G1857, A1869
-U1866, G1870
-U1872, A1910
-A1873, G1909
-A1881, C1883
-A1894, G2379
-G1913, C1801
-A1910, G1913
-A1954, U2443
-A1960, C526
-A1960, U1976
-U1969, A1974
-C1988, G2451
-C1988, A2632
-A1995, A2407
-A2003, A2333
-U2007, A910
-U2007, A2274
-U2009, A2262
-G2013, G872
-G2013, C2267
-U2015, A2265
-U2015, G2427
-A2018, U2016
-A2018, U2076
-C2019, G2071
-A2023, G2070
-U2042, A2058
-A2044, G2057
-G2049, A2052
-A2265, U2015
-U2077, A2265
-G2266, C2014
-U2078, G2266
-G2079, G908
-G2079, C2092
-G2089, A2091
-G2095, A2156
-G2099, U2108
-A2100, A2107
-A2101, U2106
-G2114, A2220
-A2121, U2173
-A2121, A2175
-U2130, A2164
-A2132, G2147
-A2151, A2164
-G2160, A2165
-U2185, A2193
-C2186, G2192
-G2207, A2210
-G2223, G2261
-A2224, U2256
-A2225, A2255
-G2248, A680
-C2234, G2248
-G2266, A2428
-U2268, A2012
-U2268, C2270
-A2280, C2331
-A2285, G1972
-A2285, U2326
-G2286, A1017
-G2286, C2325
-U2290, G2320
-U2290, U2322
-C2293, A1144
-C2293, G2317
-G2315, A1092
-C2295, G2315
-A2299, G2311
-G2302, A2308
-C2305, G2359
-C2328, G2284
-A2327, C2328
-C2347, G2397
-G2398, C2346
-C2347, G2398
-G2353, C2370
-G2353, A2591
-A2361, A2491
-G2362, G2492
-G2369, C2354
-G2369, A2568
-G2375, A2395
-G2397, C2347
-U2376, G2397
-G2412, C2337
-G2383, G2412
-U2392, A2396
-A2417, G2438
-U2435, G1879
-A2419, U2435
-G2425, A2428
-G2452, A2633
-U2456, A2604
-G2457, A2608
-G2459, A2619
-U2465, A2603
-G2466, A2605
-A2467, G2602
-A2473, G2505
-U2482, C2496
-A2483, A2495
-U2485, A2494
-A2486, G2493
-G2488, A2491
-C2510, A2553
-G2555, C2509
-C2512, G2555
-G2517, A2549
-C2544, C1722
-G2522, C2544
-C2561, A2597
-U2566, A2591
-A2568, G2590
-U2573, U2583
-G2574, A2584
-A2575, U2581
-A2576, A2580
-G2615, A2706
-G2618, A2706
-A2619, A2705
-C2624, G2640
-C2624, A2700
-G2639, A2698
-G2643, A2698
-U2645, A2694
-G2657, A2683
-G2666, A2675
-A2667, G2674
-G2669, A2672
-U13, A509
-G32, A139
-G35, A36
-G42, U112
-G47, C53
-A58, U100
-C118, A133
-A140, G172
-G178, A424
-A179, A423
-A231, U256
-U269, C356
-C279, C349
-C291, C336
-A294, G333
-A304, U1227
-G346, U347
-G381, G405
-A383, C2238
-U384, G2237
-A395, A417
-A396, A417
-A396, A418
-U442, U1275
-A472, A496
-C482, A486
-U547, C586
-U613, C1971
-C687, C715
-C713, G731
-C751, U887
-U755, C880
-C776, G843
-U781, A805
-G817, A1922
-A900, G1030
-C902, U1001
-A916, U1000
-C917, A999
-A930, C984
-C946, C950
-G1012, U2108
-U1015, G2324
-G1022, A2101
-C1064, A1065
-A1077, A1159
-G1078, U1079
-U1079, A1159
-C1112, G2578
-A1113, C1126
-G1148, G1980
-U1189, A1193
-G1286, C1344
-A1327, A1594
-G1329, A1597
-U1331, U1359
-G1343, A1603
-U1367, G1404
-A1398, A1568
-G1402, A1569
-G1657, U1934
-U1725, C1730
-G1767, U1786
-C1768, G1789
-A1770, U1783
-A1771, G1790
-A1797, U1917
-U1815, A1846
-A1878, G1905
-G1879, C2436
-U1896, C2386
-G1941, U2518
-G1992, G1993
-G1992, U2447
-C2004, C2331
-C2006, U2279
-G2013, C2270
-U2033, A2060
-U2122, G2216
-C2155, A2220
-C2222, G2257
-G2277, A2281
-G2320, U2322
-G2335, U2440
-C2337, G2383
-U2349, C2351
-C2350, A2372
-U2382, C2386
-A2444, C2446
-A2472, G2504
-A2519, G2547
-U2573, A2585
-A2644, C2695
-G2668, A2672
-A2694, A2697
-G24, G444
-C31, C343
-A120, A1378
-U125, G128
-U125, G247
-A148, G879
-C150, U755
-A155, U2077
-A157, G2075
-C159, A210
-C183, A403
-C183, G414
-G184, C216
-G184, U413
-G219, A653
-C223, A423
-A224, U422
-A229, A366
-A235, A249
-A294, A328
-G295, C330
-U370, A418
-C438, A1265
-U458, G762
-A460, U875
-G470, A496
-A472, G494
-A474, C493
-G475, G500
-G494, A496
-G506, U1251
-C566, G1071
-A568, C1166
-A590, C593
-C609, A1270
-G622, A1271
-G624, A1960
-A648, A674
-G649, G734
-G677, G717
-A682, U2236
-U721, A724
-A723, G2178
-A723, U2201
-G726, G2180
-G742, A999
-A753, U2273
-C765, C867
-C768, G860
-G773, G1402
-G823, A1649
-A830, U832
-C838, A1922
-U849, A1400
-A854, C867
-A862, U1745
-G872, C2014
-C893, A1242
-A909, A2080
-A926, G986
-A966, A2111
-U975, A2103
-U987, U989
-U989, A1184
-G1011, A2100
-A1016, C2325
-A1017, C2325
-C1061, G1067
-A1065, C1170
-A1077, C1140
-U1079, C1140
-G1090, G2317
-A1092, C2295
-C1107, A1128
-A1145, G2319
-A1146, A2399
-A1155, A1160
-G1225, A1230
-A1226, A1254
-A1230, C1255
-G1289, A1648
-C1316, U1321
-A1340, U1353
-G1357, A1415
-U1360, U1416
-G1388, A1777
-U1401, G1609
-G1402, A1568
-G1403, A1570
-A1407, U1418
-U1424, A1485
-G1455, A1527
-U1461, C1710
-G1468, A1542
-A1502, C1514
-C1591, A1597
-G1625, G2526
-U1670, G1731
-U1683, G1685
-U1683, U1917
-A1687, A1919
-C1699, A2667
-A1727, U2525
-U1737, C1899
-A1754, C2436
-G1761, A1853
-A1769, U2046
-U1795, A1911
-C1801, A1910
-A1834, G2244
-G1857, A1868
-C1858, A1869
-A1873, G1914
-A1878, U1908
-U1880, U1908
-A1907, G2422
-A1939, G2515
-U1943, G2540
-U1964, A2448
-G1973, A2283
-U2016, U2426
-U2076, A2264
-G2083, U2326
-C2096, A2157
-C2096, U2219
-G2104, C2187
-C2271, U2416
-G2300, A2306
-U2309, G2367
-G2319, A2348
-U2352, A2476
-C2354, A2568
-G2452, G2634
-U2458, G2609
-G2471, A2473
-A2472, C2474
-A2511, C2556
-C2572, C2582
-C2624, C2699
-G2626, U2645
-C2627, A2646
-C2631, G2634
-U2658, U2681
-G2659, A2683
-G14, G1277
-U17, G1232
-U18, A1231
-U34, A39
-A50, A51
-G57, A58
-A71, G72
-C73, A90
-U99, U100
-C101, U112
-A140, C428
-C141, A427
-A148, G163
-A148, C757
-A149, C756
-C150, U2076
-U166, G758
-G168, A1384
-A177, U193
-G178, A192
-A179, A224
-A181, A182
-A181, C415
-A187, U188
-U188, G189
-G191, A192
-G191, C415
-C196, A654
-G197, A653
-G201, A214
-G207, C208
-C218, A670
-A220, C655
-A222, A424
-A224, G225
-A230, C365
-A231, C364
-A249, A250
-U258, C259
-C259, A260
-A260, C356
-A273, G355
-A281, G346
-C282, A345
-A293, G314
-A294, U313
-U296, C297
-C318, A319
-C318, G333
-C318, U334
-A325, C326
-C329, C330
-C329, C331
-G367, A368
-A368, G369
-G369, A395
-U380, G382
-G382, A383
-A383, U386
-A385, U386
-A396, C400
-U397, A398
-G405, C406
-G416, A417
-A418, G419
-A437, C438
-C439, A443
-G452, A464
-A460, A760
-U469, A499
-C471, G494
-C471, A495
-U476, A477
-U476, A501
-U505, G1232
-A508, C626
-A509, C625
-G517, G533
-G517, U599
-U521, C1984
-U521, A2604
-G523, A1962
-A539, C1248
-A540, G541
-A540, C1247
-G552, A581
-A553, U1177
-A554, C1176
-U555, G1053
-A557, G576
-C558, A575
-G569, C1167
-G576, U577
-A581, A1051
-C609, A618
-U613, G615
-U614, G1004
-G615, A1029
-G615, C2328
-G615, C2329
-G630, A631
-G632, U633
-G645, U650
-U650, C735
-G660, U661
-G669, A670
-G672, C735
-G678, U718
-G678, G727
-A681, C719
-A681, C2235
-C687, A688
-G694, C695
-G694, A708
-U701, U702
-G709, G925
-A724, C2200
-G741, G997
-A748, C749
-G752, G2275
-A754, C2272
-U755, G2011
-A763, U764
-U764, C765
-U766, C866
-A767, U859
-C770, A1372
-A771, A1371
-G774, C1611
-C776, U813
-A778, C1620
-G815, C846
-U818, U819
-G821, U822
-U822, G823
-U832, A833
-A844, U845
-A861, A862
-A861, A1757
-C867, A1748
-C868, C871
-U870, C871
-C871, G872
-C886, G2275
-U887, A2278
-G888, A1271
-U890, U891
-C892, A1243
-A899, C917
-A899, G1205
-A900, U1001
-A909, A910
-A926, G927
-G940, A972
-A965, C967
-A965, C2098
-A966, C967
-A966, U2097
-U988, A1187
-G990, A991
-C1002, C1003
-A1016, U2287
-C1019, U2326
-G1022, U2106
-C1027, A1041
-C1028, A1040
-C1028, G1046
-A1037, U1978
-C1043, A1057
-C1044, A1056
-G1046, A1174
-A1066, C1169
-A1076, G1097
-A1076, C1158
-G1080, A1161
-C1086, G1970
-U1087, C1088
-U1089, U2318
-A1091, A2316
-C1106, A1111
-C1107, U1108
-A1145, C2346
-U1147, G2400
-G1148, A1149
-A1159, A1160
-A1160, A1161
-G1173, A1174
-C1214, A1244
-A1226, U1227
-A1230, C1256
-A1243, A1244
-U1272, C1273
-G1283, A1954
-A1288, G1944
-G1289, C1290
-U1293, A1294
-A1294, G1295
-A1294, C1633
-C1308, G1346
-U1318, A1319
-G1322, G1630
-G1328, C1598
-U1331, U1332
-C1334, A1414
-C1344, U1345
-U1345, G1951
-C1363, C1364
-C1380, A1778
-G1381, A1777
-C1382, A1384
-C1382, C1385
-U1386, C1387
-A1389, G1779
-A1399, A1400
-G1403, G1445
-G1404, A1405
-A1405, C1427
-A1406, C1426
-C1408, U1418
-C1408, A1484
-G1410, G1539
-U1413, A1415
-U1418, U1419
-G1425, C1486
-C1466, A1544
-U1467, A1543
-U1481, C1545
-C1482, G1546
-A1493, G1558
-U1508, A1510
-U1508, U1511
-A1528, C1555
-C1529, G1530
-A1536, U1537
-U1537, A1538
-G1541, A1543
-A1544, C1545
-U1551, G1707
-C1564, A1565
-A1576, G1577
-A1594, G1595
-A1597, C1598
-A1603, C1604
-U1614, G1615
-G1619, G1621
-G1619, A1622
-C1626, U2527
-C1626, G2536
-G1635, U1636
-G1651, U2516
-U1661, G1663
-A1671, G1672
-U1678, A1690
-U1683, C1684
-C1699, G2674
-G1701, A2672
-U1719, G2676
-G1726, A1727
-C1746, U1747
-U1747, A1748
-U1747, A1752
-G1749, U1750
-A1751, A1752
-C1765, A1771
-C1766, A1770
-C1768, A1769
-U1786, A1787
-G1796, A1797
-U1802, G1803
-C1804, A1869
-C1805, A1868
-U1815, A1816
-U1830, A1833
-G1841, A1842
-A1842, U2027
-C1852, A1853
-G1859, G1871
-G1871, A1910
-G1874, A1915
-U1877, U1903
-A1881, G2433
-U1892, A1894
-C1893, U2390
-A1894, C2389
-G1905, C1906
-A1907, U1908
-A1922, G1923
-A1939, C2552
-C1940, U2516
-C1940, G2550
-U1976, C1977
-G1997, G2335
-G2002, G2332
-C2014, A2428
-U2017, G2071
-A2018, G2071
-U2078, A2262
-G2083, G2110
-C2092, G2093
-A2101, A2102
-C2109, G2110
-C2117, C2222
-U2122, G2123
-G2123, G2215
-C2125, C2206
-C2125, G2211
-G2152, G2166
-A2165, G2166
-U2173, G2174
-A2189, A2190
-C2222, G2223
-G2223, G2257
-U2256, G2257
-C2267, G2429
-C2288, G2289
-C2331, G2332
-G2332, A2333
-U2336, G2406
-G2338, U2384
-A2348, U2349
-C2350, A2395
-C2351, A2394
-C2355, G2569
-U2358, G2359
-A2361, C2487
-C2370, A2567
-G2373, A2476
-U2376, A2396
-U2393, A2395
-A2396, G2397
-U2402, C2403
-G2406, A2407
-G2411, G2412
-U2440, G2441
-U2443, A2444
-G2453, G2634
-G2460, G2620
-A2473, C2474
-G2484, U2485
-G2484, A2494
-C2582, U2583
-A2591, A2592
-A2592, A2593
-A2604, A2605
-A2605, A2606
-C2616, C2617
-C2625, A2698
-G2640, U2641
-G2640, C2699
-U2658, G2659
-A2682, A2683
-A3, G21
-A11, G68
-C15, G66
-C15, C113
-G22, C26
-C29, G53
-C29, A56
-C30, G50
-C30, A52
-C48, G32
-C35, C48
-U39, A44
-G43, C46
-A54, U28
-A54, A56
-G66, C113
-G76, A105
-A77, A104
-U79, A103
-A80, G102
-G90, A93
-G22, G58
-C27, U55
-U28, A57
-C29, A51
-U33, C35
-A65, C67
-U1, C122
-C10, A13
-C12, U69
-C36, A47
-C36, C48
-A3, G4
-C10, A11
-C12, U112
-U39, C42
-G78, A103
-U87, G88
-C113, G114
+base-id-5p, base-id-3p, bond-type
+U3, G519, Not-canonical
+G14, A508, Not-canonical
+G15, A507, Not-canonical
+A16, G506, Not-canonical
+U21, A441, Canonical
+G23, G444, Not-canonical
+C27, A662, Not-canonical
+C31, A430, Not-canonical
+G38, A104, Not-canonical
+A39, A105, Not-canonical
+A40, G103, Not-canonical
+G45, A60, Not-canonical
+A51, A77, Not-canonical
+C53, G75, Canonical
+G62, U98, Not-canonical
+G69, A90, Not-canonical
+G70, A89, Not-canonical
+A71, G85, Not-canonical
+A71, G88, Not-canonical
+G72, A89, Not-canonical
+C118, A132, Not-canonical
+G145, A1383, Not-canonical
+G147, A165, Not-canonical
+A148, U164, Canonical
+A149, A162, Not-canonical
+A149, G879, Not-canonical
+C150, C161, Not-canonical
+C150, C880, Not-canonical
+A154, G911, Not-canonical
+U158, G209, Not-canonical
+G173, A427, Not-canonical
+G178, A423, Not-canonical
+A179, U422, Canonical
+A180, G191, Not-canonical
+A181, G401, Not-canonical
+G184, A187, Not-canonical
+A186, G404, Not-canonical
+A192, A424, Not-canonical
+U193, A425, Canonical
+U199, C216, Not-canonical
+A200, A215, Not-canonical
+U202, A214, Canonical
+A203, G213, Not-canonical
+C206, A210, Not-canonical
+G219, A654, Not-canonical
+A229, U258, Canonical
+A230, G257, Not-canonical
+A231, G262, Not-canonical
+G234, U253, Not-canonical
+A235, G252, Not-canonical
+U241, C244, Not-canonical
+U241, G245, Not-canonical
+G280, A348, Not-canonical
+A281, U347, Canonical
+G292, A335, Not-canonical
+A293, G333, Not-canonical
+U301, A305, Canonical
+G302, A325, Not-canonical
+G303, G324, Not-canonical
+A319, G333, Not-canonical
+U323, A327, Canonical
+A368, A396, Not-canonical
+U370, A395, Canonical
+A371, G394, Not-canonical
+A407, U2243, Canonical
+A429, A430, Not-canonical
+A437, G1262, Not-canonical
+G440, A448, Not-canonical
+A443, A448, Not-canonical
+G446, A451, Not-canonical
+A451, A465, Not-canonical
+U453, A464, Canonical
+A454, G463, Not-canonical
+G457, A460, Not-canonical
+U469, A473, Canonical
+G470, A474, Not-canonical
+A473, A497, Not-canonical
+A474, A499, Not-canonical
+A477, G491, Not-canonical
+G492, G500, Not-canonical
+C493, A497, Not-canonical
+G494, A499, Not-canonical
+A509, G1277, Not-canonical
+A520, G2455, Not-canonical
+G523, G1982, Not-canonical
+A524, G1975, Not-canonical
+A540, G1236, Not-canonical
+A554, G580, Not-canonical
+A554, G1052, Not-canonical
+G556, A578, Not-canonical
+A557, U577, Canonical
+G565, A568, Not-canonical
+U612, A616, Canonical
+A617, G1970, Not-canonical
+G630, A1271, Not-canonical
+A631, G889, Not-canonical
+A631, A1268, Not-canonical
+U633, A748, Canonical
+U652, A670, Canonical
+A654, G668, Not-canonical
+G679, A682, Not-canonical
+A686, G729, Not-canonical
+G690, G731, Not-canonical
+G694, G709, Not-canonical
+C695, A708, Not-canonical
+A696, G707, Not-canonical
+U720, G726, Not-canonical
+A753, C883, Not-canonical
+A754, A882, Not-canonical
+A754, G2010, Not-canonical
+C761, G874, Canonical
+G762, G855, Not-canonical
+A763, U766, Canonical
+A763, G858, Not-canonical
+A777, G811, Not-canonical
+G782, A805, Not-canonical
+A783, G804, Not-canonical
+A784, G803, Not-canonical
+G792, A795, Not-canonical
+A814, G841, Not-canonical
+C825, A830, Not-canonical
+C829, A833, Not-canonical
+A844, A1757, Not-canonical
+A848, U1401, Canonical
+G850, A1372, Not-canonical
+G857, C867, Canonical
+G860, A863, Not-canonical
+A861, G1744, Not-canonical
+G898, A1207, Not-canonical
+A899, U1206, Canonical
+A901, A1029, Not-canonical
+A910, G2275, Not-canonical
+A913, C1002, Not-canonical
+G915, A2189, Not-canonical
+G925, A991, Not-canonical
+A926, G990, Not-canonical
+G927, A991, Not-canonical
+U941, A972, Canonical
+A942, A971, Not-canonical
+G945, A948, Not-canonical
+C946, A964, Not-canonical
+C949, C967, Not-canonical
+U968, C969, Not-canonical
+A973, A2102, Not-canonical
+G1005, A1041, Not-canonical
+G1014, A1017, Not-canonical
+G1031, A1047, Not-canonical
+A1032, A1045, Not-canonical
+G1034, A1057, Not-canonical
+A1038, G1968, Not-canonical
+C1042, A1083, Not-canonical
+U1055, A1172, Canonical
+A1057, G1171, Not-canonical
+G1059, A1066, Not-canonical
+G1069, C1166, Canonical
+U1070, A1165, Canonical
+U1075, A1159, Canonical
+A1077, U1157, Canonical
+A1091, A1143, Not-canonical
+A1092, C1142, Not-canonical
+G1110, A1128, Not-canonical
+A1111, G1127, Not-canonical
+A1111, G1129, Not-canonical
+G1119, A1120, Not-canonical
+G1119, C1121, Canonical
+A1144, U2318, Canonical
+C1151, G1154, Canonical
+G1213, A1243, Not-canonical
+G1229, A1254, Not-canonical
+A1230, G1253, Not-canonical
+A1231, G1252, Not-canonical
+G1240, A1243, Not-canonical
+U1281, C1956, Not-canonical
+A1282, A1955, Not-canonical
+U1284, A1954, Canonical
+A1285, G1953, Not-canonical
+C1290, G1595, Canonical
+A1294, G1314, Not-canonical
+U1301, A1305, Canonical
+C1307, U1345, Not-canonical
+U1318, A1628, Canonical
+A1320, A1629, Not-canonical
+A1327, G1593, Not-canonical
+C1339, A1350, Not-canonical
+C1341, C1352, Not-canonical
+A1361, U1589, Canonical
+G1362, A1406, Not-canonical
+G1365, C1587, Canonical
+U1370, A1398, Canonical
+A1372, G1397, Not-canonical
+C1380, A1389, Not-canonical
+G1388, A1778, Not-canonical
+A1400, G1609, Not-canonical
+U1412, A1417, Canonical
+A1440, A1576, Not-canonical
+A1441, G1575, Not-canonical
+G1445, A1571, Not-canonical
+A1446, A1570, Not-canonical
+C1447, A1569, Not-canonical
+G1455, A1528, Not-canonical
+G1456, A1554, Not-canonical
+U1457, A1553, Canonical
+C1458, C1552, Not-canonical
+G1480, A1544, Not-canonical
+G1483, A1538, Not-canonical
+A1484, A1536, Not-canonical
+A1485, C1535, Not-canonical
+C1491, A1528, Not-canonical
+A1493, G1526, Not-canonical
+G1500, A1519, Not-canonical
+G1501, A1518, Not-canonical
+A1502, G1517, Not-canonical
+G1541, A1544, Not-canonical
+A1594, U1608, Canonical
+G1618, A1624, Not-canonical
+G1619, A1623, Not-canonical
+C1637, G1950, Canonical
+A1645, G1946, Not-canonical
+A1654, C1937, Not-canonical
+A1658, U1932, Canonical
+G1677, A1691, Not-canonical
+A1679, A1688, Not-canonical
+C1680, A1687, Not-canonical
+U1682, G1685, Not-canonical
+G1706, A1709, Not-canonical
+G1717, A2667, Not-canonical
+G1718, A2675, Not-canonical
+A1723, G2523, Not-canonical
+A1741, A1918, Not-canonical
+C1742, U1758, Not-canonical
+C1746, C1753, Not-canonical
+U1750, U2416, Not-canonical
+A1759, G1796, Not-canonical
+C1768, G1785, Canonical
+C1768, A1787, Not-canonical
+G1775, A1778, Not-canonical
+C1806, A1854, Not-canonical
+G1820, A1843, Not-canonical
+A1822, G2028, Not-canonical
+G1829, A1834, Not-canonical
+A1833, G2244, Not-canonical
+A1843, G2067, Not-canonical
+C1852, C1855, Not-canonical
+G1857, A1869, Not-canonical
+U1866, G1870, Not-canonical
+U1872, A1910, Canonical
+A1873, G1909, Not-canonical
+A1881, C1883, Not-canonical
+A1894, G2379, Not-canonical
+A1910, G1913, Not-canonical
+A1954, U2443, Canonical
+A1960, U1976, Canonical
+U1969, A1974, Canonical
+C1988, A2632, Not-canonical
+A1995, A2407, Not-canonical
+A2003, A2333, Not-canonical
+U2007, A2274, Canonical
+U2009, A2262, Canonical
+G2013, C2267, Canonical
+U2015, G2427, Not-canonical
+A2018, U2076, Canonical
+C2019, G2071, Canonical
+A2023, G2070, Not-canonical
+U2042, A2058, Canonical
+A2044, G2057, Not-canonical
+G2049, A2052, Not-canonical
+U2077, A2265, Canonical
+U2078, G2266, Not-canonical
+G2079, C2092, Canonical
+G2089, A2091, Not-canonical
+G2095, A2156, Not-canonical
+G2099, U2108, Not-canonical
+A2100, A2107, Not-canonical
+A2101, U2106, Canonical
+G2114, A2220, Not-canonical
+A2121, U2173, Canonical
+A2121, A2175, Not-canonical
+U2130, A2164, Canonical
+A2132, G2147, Not-canonical
+A2151, A2164, Not-canonical
+G2160, A2165, Not-canonical
+U2185, A2193, Canonical
+C2186, G2192, Canonical
+G2207, A2210, Not-canonical
+G2223, G2261, Not-canonical
+A2224, U2256, Canonical
+A2225, A2255, Not-canonical
+C2234, G2248, Canonical
+G2266, A2428, Not-canonical
+U2268, C2270, Not-canonical
+A2280, C2331, Not-canonical
+A2285, U2326, Canonical
+G2286, C2325, Canonical
+U2290, U2322, Not-canonical
+C2293, G2317, Canonical
+C2295, G2315, Canonical
+A2299, G2311, Not-canonical
+G2302, A2308, Not-canonical
+C2305, G2359, Canonical
+A2327, C2328, Not-canonical
+C2347, G2398, Canonical
+G2353, A2591, Not-canonical
+A2361, A2491, Not-canonical
+G2362, G2492, Not-canonical
+G2369, A2568, Not-canonical
+G2375, A2395, Not-canonical
+U2376, G2397, Not-canonical
+G2383, G2412, Not-canonical
+U2392, A2396, Canonical
+A2417, G2438, Not-canonical
+A2419, U2435, Canonical
+G2425, A2428, Not-canonical
+G2452, A2633, Not-canonical
+U2456, A2604, Canonical
+G2457, A2608, Not-canonical
+G2459, A2619, Not-canonical
+U2465, A2603, Canonical
+G2466, A2605, Not-canonical
+A2467, G2602, Not-canonical
+A2473, G2505, Not-canonical
+U2482, C2496, Not-canonical
+A2483, A2495, Not-canonical
+U2485, A2494, Canonical
+A2486, G2493, Not-canonical
+G2488, A2491, Not-canonical
+C2510, A2553, Not-canonical
+C2512, G2555, Canonical
+G2517, A2549, Not-canonical
+G2522, C2544, Canonical
+C2561, A2597, Not-canonical
+U2566, A2591, Canonical
+A2568, G2590, Not-canonical
+U2573, U2583, Not-canonical
+G2574, A2584, Not-canonical
+A2575, U2581, Canonical
+A2576, A2580, Not-canonical
+G2615, A2706, Not-canonical
+G2618, A2706, Not-canonical
+A2619, A2705, Not-canonical
+C2624, A2700, Not-canonical
+G2639, A2698, Not-canonical
+G2643, A2698, Not-canonical
+U2645, A2694, Canonical
+G2657, A2683, Not-canonical
+G2666, A2675, Not-canonical
+A2667, G2674, Not-canonical
+G2669, A2672, Not-canonical
+U13, A509, Canonical
+G32, A139, Not-canonical
+G35, A36, Not-canonical
+G42, U112, Not-canonical
+G47, C53, Canonical
+A58, U100, Canonical
+C118, A133, Not-canonical
+A140, G172, Not-canonical
+G178, A424, Not-canonical
+A179, A423, Not-canonical
+A231, U256, Canonical
+U269, C356, Not-canonical
+C279, C349, Not-canonical
+C291, C336, Not-canonical
+A294, G333, Not-canonical
+A304, U1227, Canonical
+G346, U347, Not-canonical
+G381, G405, Not-canonical
+A383, C2238, Not-canonical
+U384, G2237, Not-canonical
+A395, A417, Not-canonical
+A396, A417, Not-canonical
+A396, A418, Not-canonical
+U442, U1275, Not-canonical
+A472, A496, Not-canonical
+C482, A486, Not-canonical
+U547, C586, Not-canonical
+U613, C1971, Not-canonical
+C687, C715, Not-canonical
+C713, G731, Canonical
+C751, U887, Not-canonical
+U755, C880, Not-canonical
+C776, G843, Canonical
+U781, A805, Canonical
+G817, A1922, Not-canonical
+A900, G1030, Not-canonical
+C902, U1001, Not-canonical
+A916, U1000, Canonical
+C917, A999, Not-canonical
+A930, C984, Not-canonical
+C946, C950, Not-canonical
+G1012, U2108, Not-canonical
+U1015, G2324, Not-canonical
+G1022, A2101, Not-canonical
+C1064, A1065, Not-canonical
+A1077, A1159, Not-canonical
+G1078, U1079, Not-canonical
+U1079, A1159, Canonical
+C1112, G2578, Canonical
+A1113, C1126, Not-canonical
+G1148, G1980, Not-canonical
+U1189, A1193, Canonical
+G1286, C1344, Canonical
+A1327, A1594, Not-canonical
+G1329, A1597, Not-canonical
+U1331, U1359, Not-canonical
+G1343, A1603, Not-canonical
+U1367, G1404, Not-canonical
+A1398, A1568, Not-canonical
+G1402, A1569, Not-canonical
+G1657, U1934, Not-canonical
+U1725, C1730, Not-canonical
+G1767, U1786, Not-canonical
+C1768, G1789, Canonical
+A1770, U1783, Canonical
+A1771, G1790, Not-canonical
+A1797, U1917, Canonical
+U1815, A1846, Canonical
+A1878, G1905, Not-canonical
+G1879, C2436, Canonical
+U1896, C2386, Not-canonical
+G1941, U2518, Not-canonical
+G1992, G1993, Not-canonical
+G1992, U2447, Not-canonical
+C2004, C2331, Not-canonical
+C2006, U2279, Not-canonical
+G2013, C2270, Canonical
+U2033, A2060, Canonical
+U2122, G2216, Not-canonical
+C2155, A2220, Not-canonical
+C2222, G2257, Canonical
+G2277, A2281, Not-canonical
+G2320, U2322, Not-canonical
+G2335, U2440, Not-canonical
+C2337, G2383, Canonical
+U2349, C2351, Not-canonical
+C2350, A2372, Not-canonical
+U2382, C2386, Not-canonical
+A2444, C2446, Not-canonical
+A2472, G2504, Not-canonical
+A2519, G2547, Not-canonical
+U2573, A2585, Canonical
+A2644, C2695, Not-canonical
+G2668, A2672, Not-canonical
+A2694, A2697, Not-canonical
+G24, G444, Not-canonical
+C31, C343, Not-canonical
+A120, A1378, Not-canonical
+U125, G128, Not-canonical
+U125, G247, Not-canonical
+A148, G879, Not-canonical
+C150, U755, Not-canonical
+A155, U2077, Canonical
+A157, G2075, Not-canonical
+C159, A210, Not-canonical
+C183, A403, Not-canonical
+C183, G414, Canonical
+G184, C216, Canonical
+G184, U413, Not-canonical
+G219, A653, Not-canonical
+C223, A423, Not-canonical
+A224, U422, Canonical
+A229, A366, Not-canonical
+A235, A249, Not-canonical
+A294, A328, Not-canonical
+G295, C330, Canonical
+U370, A418, Canonical
+C438, A1265, Not-canonical
+U458, G762, Not-canonical
+A460, U875, Canonical
+G470, A496, Not-canonical
+A472, G494, Not-canonical
+A474, C493, Not-canonical
+G475, G500, Not-canonical
+G494, A496, Not-canonical
+G506, U1251, Not-canonical
+C566, G1071, Canonical
+A568, C1166, Not-canonical
+A590, C593, Not-canonical
+C609, A1270, Not-canonical
+G622, A1271, Not-canonical
+G624, A1960, Not-canonical
+A648, A674, Not-canonical
+G649, G734, Not-canonical
+G677, G717, Not-canonical
+A682, U2236, Canonical
+U721, A724, Canonical
+A723, G2178, Not-canonical
+A723, U2201, Canonical
+G726, G2180, Not-canonical
+G742, A999, Not-canonical
+A753, U2273, Canonical
+C765, C867, Not-canonical
+C768, G860, Canonical
+G773, G1402, Not-canonical
+G823, A1649, Not-canonical
+A830, U832, Canonical
+C838, A1922, Not-canonical
+U849, A1400, Canonical
+A854, C867, Not-canonical
+A862, U1745, Canonical
+G872, C2014, Canonical
+C893, A1242, Not-canonical
+A909, A2080, Not-canonical
+A926, G986, Not-canonical
+A966, A2111, Not-canonical
+U975, A2103, Canonical
+U987, U989, Not-canonical
+U989, A1184, Canonical
+G1011, A2100, Not-canonical
+A1016, C2325, Not-canonical
+A1017, C2325, Not-canonical
+C1061, G1067, Canonical
+A1065, C1170, Not-canonical
+A1077, C1140, Not-canonical
+U1079, C1140, Not-canonical
+G1090, G2317, Not-canonical
+A1092, C2295, Not-canonical
+C1107, A1128, Not-canonical
+A1145, G2319, Not-canonical
+A1146, A2399, Not-canonical
+A1155, A1160, Not-canonical
+G1225, A1230, Not-canonical
+A1226, A1254, Not-canonical
+A1230, C1255, Not-canonical
+G1289, A1648, Not-canonical
+C1316, U1321, Not-canonical
+A1340, U1353, Canonical
+G1357, A1415, Not-canonical
+U1360, U1416, Not-canonical
+G1388, A1777, Not-canonical
+U1401, G1609, Not-canonical
+G1402, A1568, Not-canonical
+G1403, A1570, Not-canonical
+A1407, U1418, Canonical
+U1424, A1485, Canonical
+G1455, A1527, Not-canonical
+U1461, C1710, Not-canonical
+G1468, A1542, Not-canonical
+A1502, C1514, Not-canonical
+C1591, A1597, Not-canonical
+G1625, G2526, Not-canonical
+U1670, G1731, Not-canonical
+U1683, G1685, Not-canonical
+U1683, U1917, Not-canonical
+A1687, A1919, Not-canonical
+C1699, A2667, Not-canonical
+A1727, U2525, Canonical
+U1737, C1899, Not-canonical
+A1754, C2436, Not-canonical
+G1761, A1853, Not-canonical
+A1769, U2046, Canonical
+U1795, A1911, Canonical
+C1801, A1910, Not-canonical
+A1834, G2244, Not-canonical
+G1857, A1868, Not-canonical
+C1858, A1869, Not-canonical
+A1873, G1914, Not-canonical
+A1878, U1908, Canonical
+U1880, U1908, Not-canonical
+A1907, G2422, Not-canonical
+A1939, G2515, Not-canonical
+U1943, G2540, Not-canonical
+U1964, A2448, Canonical
+G1973, A2283, Not-canonical
+U2016, U2426, Not-canonical
+U2076, A2264, Canonical
+G2083, U2326, Not-canonical
+C2096, A2157, Not-canonical
+C2096, U2219, Not-canonical
+G2104, C2187, Canonical
+C2271, U2416, Not-canonical
+G2300, A2306, Not-canonical
+U2309, G2367, Not-canonical
+G2319, A2348, Not-canonical
+U2352, A2476, Canonical
+C2354, A2568, Not-canonical
+G2452, G2634, Not-canonical
+U2458, G2609, Not-canonical
+G2471, A2473, Not-canonical
+A2472, C2474, Not-canonical
+A2511, C2556, Not-canonical
+C2572, C2582, Not-canonical
+C2624, C2699, Not-canonical
+G2626, U2645, Not-canonical
+C2627, A2646, Not-canonical
+C2631, G2634, Canonical
+U2658, U2681, Not-canonical
+G2659, A2683, Not-canonical
+G14, G1277, Not-canonical
+U17, G1232, Not-canonical
+U18, A1231, Canonical
+U34, A39, Canonical
+A50, A51, Not-canonical
+G57, A58, Not-canonical
+A71, G72, Not-canonical
+C73, A90, Not-canonical
+U99, U100, Not-canonical
+C101, U112, Not-canonical
+A140, C428, Not-canonical
+C141, A427, Not-canonical
+A148, G163, Not-canonical
+A148, C757, Not-canonical
+A149, C756, Not-canonical
+C150, U2076, Not-canonical
+U166, G758, Not-canonical
+G168, A1384, Not-canonical
+A177, U193, Canonical
+G178, A192, Not-canonical
+A179, A224, Not-canonical
+A181, A182, Not-canonical
+A181, C415, Not-canonical
+A187, U188, Canonical
+U188, G189, Not-canonical
+G191, A192, Not-canonical
+G191, C415, Canonical
+C196, A654, Not-canonical
+G197, A653, Not-canonical
+G201, A214, Not-canonical
+G207, C208, Canonical
+C218, A670, Not-canonical
+A220, C655, Not-canonical
+A222, A424, Not-canonical
+A224, G225, Not-canonical
+A230, C365, Not-canonical
+A231, C364, Not-canonical
+A249, A250, Not-canonical
+U258, C259, Not-canonical
+C259, A260, Not-canonical
+A260, C356, Not-canonical
+A273, G355, Not-canonical
+A281, G346, Not-canonical
+C282, A345, Not-canonical
+A293, G314, Not-canonical
+A294, U313, Canonical
+U296, C297, Not-canonical
+C318, A319, Not-canonical
+C318, G333, Canonical
+C318, U334, Not-canonical
+A325, C326, Not-canonical
+C329, C330, Not-canonical
+C329, C331, Not-canonical
+G367, A368, Not-canonical
+A368, G369, Not-canonical
+G369, A395, Not-canonical
+U380, G382, Not-canonical
+G382, A383, Not-canonical
+A383, U386, Canonical
+A385, U386, Canonical
+A396, C400, Not-canonical
+U397, A398, Canonical
+G405, C406, Canonical
+G416, A417, Not-canonical
+A418, G419, Not-canonical
+A437, C438, Not-canonical
+C439, A443, Not-canonical
+G452, A464, Not-canonical
+A460, A760, Not-canonical
+U469, A499, Canonical
+C471, G494, Canonical
+C471, A495, Not-canonical
+U476, A477, Canonical
+U476, A501, Canonical
+U505, G1232, Not-canonical
+A508, C626, Not-canonical
+A509, C625, Not-canonical
+G517, G533, Not-canonical
+G517, U599, Not-canonical
+U521, C1984, Not-canonical
+U521, A2604, Canonical
+G523, A1962, Not-canonical
+A539, C1248, Not-canonical
+A540, G541, Not-canonical
+A540, C1247, Not-canonical
+G552, A581, Not-canonical
+A553, U1177, Canonical
+A554, C1176, Not-canonical
+U555, G1053, Not-canonical
+A557, G576, Not-canonical
+C558, A575, Not-canonical
+G569, C1167, Canonical
+G576, U577, Not-canonical
+A581, A1051, Not-canonical
+C609, A618, Not-canonical
+U613, G615, Not-canonical
+U614, G1004, Not-canonical
+G615, A1029, Not-canonical
+G615, C2328, Canonical
+G615, C2329, Canonical
+G630, A631, Not-canonical
+G632, U633, Not-canonical
+G645, U650, Not-canonical
+U650, C735, Not-canonical
+G660, U661, Not-canonical
+G669, A670, Not-canonical
+G672, C735, Canonical
+G678, U718, Not-canonical
+G678, G727, Not-canonical
+A681, C719, Not-canonical
+A681, C2235, Not-canonical
+C687, A688, Not-canonical
+G694, C695, Canonical
+G694, A708, Not-canonical
+U701, U702, Not-canonical
+G709, G925, Not-canonical
+A724, C2200, Not-canonical
+G741, G997, Not-canonical
+A748, C749, Not-canonical
+G752, G2275, Not-canonical
+A754, C2272, Not-canonical
+U755, G2011, Not-canonical
+A763, U764, Canonical
+U764, C765, Not-canonical
+U766, C866, Not-canonical
+A767, U859, Canonical
+C770, A1372, Not-canonical
+A771, A1371, Not-canonical
+G774, C1611, Canonical
+C776, U813, Not-canonical
+A778, C1620, Not-canonical
+G815, C846, Canonical
+U818, U819, Not-canonical
+G821, U822, Not-canonical
+U822, G823, Not-canonical
+U832, A833, Canonical
+A844, U845, Canonical
+A861, A862, Not-canonical
+A861, A1757, Not-canonical
+C867, A1748, Not-canonical
+C868, C871, Not-canonical
+U870, C871, Not-canonical
+C871, G872, Canonical
+C886, G2275, Canonical
+U887, A2278, Canonical
+G888, A1271, Not-canonical
+U890, U891, Not-canonical
+C892, A1243, Not-canonical
+A899, C917, Not-canonical
+A899, G1205, Not-canonical
+A900, U1001, Canonical
+A909, A910, Not-canonical
+A926, G927, Not-canonical
+G940, A972, Not-canonical
+A965, C967, Not-canonical
+A965, C2098, Not-canonical
+A966, C967, Not-canonical
+A966, U2097, Canonical
+U988, A1187, Canonical
+G990, A991, Not-canonical
+C1002, C1003, Not-canonical
+A1016, U2287, Canonical
+C1019, U2326, Not-canonical
+G1022, U2106, Not-canonical
+C1027, A1041, Not-canonical
+C1028, A1040, Not-canonical
+C1028, G1046, Canonical
+A1037, U1978, Canonical
+C1043, A1057, Not-canonical
+C1044, A1056, Not-canonical
+G1046, A1174, Not-canonical
+A1066, C1169, Not-canonical
+A1076, G1097, Not-canonical
+A1076, C1158, Not-canonical
+G1080, A1161, Not-canonical
+C1086, G1970, Canonical
+U1087, C1088, Not-canonical
+U1089, U2318, Not-canonical
+A1091, A2316, Not-canonical
+C1106, A1111, Not-canonical
+C1107, U1108, Not-canonical
+A1145, C2346, Not-canonical
+U1147, G2400, Not-canonical
+G1148, A1149, Not-canonical
+A1159, A1160, Not-canonical
+A1160, A1161, Not-canonical
+G1173, A1174, Not-canonical
+C1214, A1244, Not-canonical
+A1226, U1227, Canonical
+A1230, C1256, Not-canonical
+A1243, A1244, Not-canonical
+U1272, C1273, Not-canonical
+G1283, A1954, Not-canonical
+A1288, G1944, Not-canonical
+G1289, C1290, Canonical
+U1293, A1294, Canonical
+A1294, G1295, Not-canonical
+A1294, C1633, Not-canonical
+C1308, G1346, Canonical
+U1318, A1319, Canonical
+G1322, G1630, Not-canonical
+G1328, C1598, Canonical
+U1331, U1332, Not-canonical
+C1334, A1414, Not-canonical
+C1344, U1345, Not-canonical
+U1345, G1951, Not-canonical
+C1363, C1364, Not-canonical
+C1380, A1778, Not-canonical
+G1381, A1777, Not-canonical
+C1382, A1384, Not-canonical
+C1382, C1385, Not-canonical
+U1386, C1387, Not-canonical
+A1389, G1779, Not-canonical
+A1399, A1400, Not-canonical
+G1403, G1445, Not-canonical
+G1404, A1405, Not-canonical
+A1405, C1427, Not-canonical
+A1406, C1426, Not-canonical
+C1408, U1418, Not-canonical
+C1408, A1484, Not-canonical
+G1410, G1539, Not-canonical
+U1413, A1415, Canonical
+U1418, U1419, Not-canonical
+G1425, C1486, Canonical
+C1466, A1544, Not-canonical
+U1467, A1543, Canonical
+U1481, C1545, Not-canonical
+C1482, G1546, Canonical
+A1493, G1558, Not-canonical
+U1508, A1510, Canonical
+U1508, U1511, Not-canonical
+A1528, C1555, Not-canonical
+C1529, G1530, Canonical
+A1536, U1537, Canonical
+U1537, A1538, Canonical
+G1541, A1543, Not-canonical
+A1544, C1545, Not-canonical
+U1551, G1707, Not-canonical
+C1564, A1565, Not-canonical
+A1576, G1577, Not-canonical
+A1594, G1595, Not-canonical
+A1597, C1598, Not-canonical
+A1603, C1604, Not-canonical
+U1614, G1615, Not-canonical
+G1619, G1621, Not-canonical
+G1619, A1622, Not-canonical
+C1626, U2527, Not-canonical
+C1626, G2536, Canonical
+G1635, U1636, Not-canonical
+G1651, U2516, Not-canonical
+U1661, G1663, Not-canonical
+A1671, G1672, Not-canonical
+U1678, A1690, Canonical
+U1683, C1684, Not-canonical
+C1699, G2674, Canonical
+G1701, A2672, Not-canonical
+U1719, G2676, Not-canonical
+G1726, A1727, Not-canonical
+C1746, U1747, Not-canonical
+U1747, A1748, Canonical
+U1747, A1752, Canonical
+G1749, U1750, Not-canonical
+A1751, A1752, Not-canonical
+C1765, A1771, Not-canonical
+C1766, A1770, Not-canonical
+C1768, A1769, Not-canonical
+U1786, A1787, Canonical
+G1796, A1797, Not-canonical
+U1802, G1803, Not-canonical
+C1804, A1869, Not-canonical
+C1805, A1868, Not-canonical
+U1815, A1816, Canonical
+U1830, A1833, Canonical
+G1841, A1842, Not-canonical
+A1842, U2027, Canonical
+C1852, A1853, Not-canonical
+G1859, G1871, Not-canonical
+G1871, A1910, Not-canonical
+G1874, A1915, Not-canonical
+U1877, U1903, Not-canonical
+A1881, G2433, Not-canonical
+U1892, A1894, Canonical
+C1893, U2390, Not-canonical
+A1894, C2389, Not-canonical
+G1905, C1906, Canonical
+A1907, U1908, Canonical
+A1922, G1923, Not-canonical
+A1939, C2552, Not-canonical
+C1940, U2516, Not-canonical
+C1940, G2550, Canonical
+U1976, C1977, Not-canonical
+G1997, G2335, Not-canonical
+G2002, G2332, Not-canonical
+C2014, A2428, Not-canonical
+U2017, G2071, Not-canonical
+A2018, G2071, Not-canonical
+U2078, A2262, Canonical
+G2083, G2110, Not-canonical
+C2092, G2093, Canonical
+A2101, A2102, Not-canonical
+C2109, G2110, Canonical
+C2117, C2222, Not-canonical
+U2122, G2123, Not-canonical
+G2123, G2215, Not-canonical
+C2125, C2206, Not-canonical
+C2125, G2211, Canonical
+G2152, G2166, Not-canonical
+A2165, G2166, Not-canonical
+U2173, G2174, Not-canonical
+A2189, A2190, Not-canonical
+C2222, G2223, Canonical
+G2223, G2257, Not-canonical
+U2256, G2257, Not-canonical
+C2267, G2429, Canonical
+C2288, G2289, Canonical
+C2331, G2332, Canonical
+G2332, A2333, Not-canonical
+U2336, G2406, Not-canonical
+G2338, U2384, Not-canonical
+A2348, U2349, Canonical
+C2350, A2395, Not-canonical
+C2351, A2394, Not-canonical
+C2355, G2569, Canonical
+U2358, G2359, Not-canonical
+A2361, C2487, Not-canonical
+C2370, A2567, Not-canonical
+G2373, A2476, Not-canonical
+U2376, A2396, Canonical
+U2393, A2395, Canonical
+A2396, G2397, Not-canonical
+U2402, C2403, Not-canonical
+G2406, A2407, Not-canonical
+G2411, G2412, Not-canonical
+U2440, G2441, Not-canonical
+U2443, A2444, Canonical
+G2453, G2634, Not-canonical
+G2460, G2620, Not-canonical
+A2473, C2474, Not-canonical
+G2484, U2485, Not-canonical
+G2484, A2494, Not-canonical
+C2582, U2583, Not-canonical
+A2591, A2592, Not-canonical
+A2592, A2593, Not-canonical
+A2604, A2605, Not-canonical
+A2605, A2606, Not-canonical
+C2616, C2617, Not-canonical
+C2625, A2698, Not-canonical
+G2640, U2641, Not-canonical
+G2640, C2699, Canonical
+U2658, G2659, Not-canonical
+A2682, A2683, Not-canonical
+A3, G21, Not-canonical
+A11, G68, Not-canonical
+C15, C113, Not-canonical
+G22, C26, Canonical
+C29, A56, Not-canonical
+C30, A52, Not-canonical
+C35, C48, Not-canonical
+U39, A44, Canonical
+G43, C46, Canonical
+A54, A56, Not-canonical
+G66, C113, Canonical
+G76, A105, Not-canonical
+A77, A104, Not-canonical
+U79, A103, Canonical
+A80, G102, Not-canonical
+G90, A93, Not-canonical
+G22, G58, Not-canonical
+C27, U55, Not-canonical
+U28, A57, Canonical
+C29, A51, Not-canonical
+U33, C35, Not-canonical
+A65, C67, Not-canonical
+U1, C122, Not-canonical
+C10, A13, Not-canonical
+C12, U69, Not-canonical
+C36, A47, Not-canonical
+C36, C48, Not-canonical
+A3, G4, Not-canonical
+C10, A11, Not-canonical
+C12, U112, Not-canonical
+U39, C42, Not-canonical
+G78, A103, Not-canonical
+U87, G88, Not-canonical
+C113, G114, Canonical

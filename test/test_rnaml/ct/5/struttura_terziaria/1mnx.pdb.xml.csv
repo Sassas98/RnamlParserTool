@@ -1,10 +1,10 @@
-base-id-5p, base-id-3p
-G5, A38
-A6, U37
-U10, A33
-G20, A23
-C7, A36
-G8, A35
-A9, A34
-A11, A32
-A9, A35
+base-id-5p, base-id-3p, bond-type
+G5, A38, Not-canonical
+A6, U37, Canonical
+U10, A33, Canonical
+G20, A23, Not-canonical
+C7, A36, Not-canonical
+G8, A35, Not-canonical
+A9, A34, Not-canonical
+A11, A32, Not-canonical
+A9, A35, Not-canonical

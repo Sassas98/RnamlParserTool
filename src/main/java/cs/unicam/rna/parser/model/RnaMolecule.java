@@ -52,14 +52,6 @@ public class RnaMolecule {
 		if( first == second || second < 1 )
 			throwException(second);
 		if(this.pairs.containsKey(first) || this.pairs.containsKey(second)){
-			if(this.pairs.containsKey(first)) {
-				addTertiaryPair(first, pairs.get(first));
-				pairs.remove(first);
-			}
-			if(this.pairs.containsKey(second)) {
-				addTertiaryPair(second, pairs.get(second));
-				pairs.remove(second);
-			}
 			addTertiaryPair(first, second);
 		} else {
 			pairs.put(first, second);
@@ -71,12 +63,21 @@ public class RnaMolecule {
 			throwException(first);
 		if( first == second || second < 1 )
 			throwException(second);
-			tertiaryPairs.add(new String[]{getBaseOf(first) + first, getBaseOf(second) + second});
+			tertiaryPairs.add(new String[]{getBaseOf(first) + first, getBaseOf(second) + second, getBond(first, second)});
 	}
 
 	public String getBaseOf(int index){
 		RnaRibonucleotide ribo = this.chain.get(index);
 		return ribo==null ? "N" : "" + RnaBase.getBaseLetter(ribo.getBase());
+	}
+
+	public String getBond(int i1, int i2){
+		RnaRibonucleotide ribo1 = this.chain.get(i1);
+		RnaRibonucleotide ribo2 = this.chain.get(i2);
+		if(ribo1 == null || ribo2 == null)
+			return "Not-canonical";
+		return RnaBase.canonicalPair(ribo1.getBase(), ribo2.getBase())
+					? "Canonical" : "Not-canonical";
 	}
 	
 	public int getLength() {
