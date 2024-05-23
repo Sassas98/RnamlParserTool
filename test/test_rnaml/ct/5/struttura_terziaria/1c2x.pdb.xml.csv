@@ -1,21 +1,21 @@
-base-id-5p, base-id-3p, bond-type
-G24, G51, Not-canonical
-C47, A57, Not-canonical
-G72, A104, Not-canonical
-A73, U103, Canonical
-U74, G102, Not-canonical
-G76, G100, Not-canonical
-U77, A99, Canonical
-A78, G98, Not-canonical
-C47, G51, Canonical
-G86, C90, Canonical
-C8, C60, Not-canonical
-C12, A15, Not-canonical
-C19, C28, Not-canonical
-C43, A45, Not-canonical
-G10, C12, Canonical
-G20, C28, Canonical
-C31, A58, Not-canonical
-C35, C36, Not-canonical
-C36, C37, Not-canonical
-C63, A109, Not-canonical
+base-id-5p base-id-3p canonical-bond bond-type cis-or-trans
+G24 G51 Not-Canonical-Pair Watson-Crick-Sugar trans
+C47 A57 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+G72 A104 Not-Canonical-Pair Sugar-Hoogsteen trans
+A73 U103 Canonical-Pair Hoogsteen-Watson-Crick trans
+U74 G102 Not-Canonical-Pair Hoogsteen-Watson-Crick trans
+G76 G100 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+U77 A99 Canonical-Pair Watson-Crick-Hoogsteen trans
+A78 G98 Not-Canonical-Pair Hoogsteen-Sugar trans
+C47 G51 Canonical-Pair ???-??? trans
+G86 C90 Canonical-Pair ???-??? trans
+C8 C60 Not-Canonical-Pair ???-??? trans
+C12 A15 Not-Canonical-Pair ???-??? trans
+C19 C28 Not-Canonical-Pair ???-??? trans
+C43 A45 Not-Canonical-Pair ???-??? trans
+G10 C12 Canonical-Pair ???-??? trans
+G20 C28 Canonical-Pair ???-??? trans
+C31 A58 Not-Canonical-Pair ???-??? trans
+C35 C36 Not-Canonical-Pair ???-??? trans
+C36 C37 Not-Canonical-Pair ???-??? trans
+C63 A109 Not-Canonical-Pair ???-??? trans

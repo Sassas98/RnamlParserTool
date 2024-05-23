@@ -1,5 +1,5 @@
-base-id-5p, base-id-3p, bond-type
-G5, A9, Not-canonical
-G5, A10, Not-canonical
-G4, U11, Not-canonical
-U6, A9, Canonical
+base-id-5p base-id-3p canonical-bond bond-type cis-or-trans
+G5 A9 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+G5 A10 Not-Canonical-Pair Sugar-Hoogsteen trans
+G4 U11 Not-Canonical-Pair ???-??? trans
+U6 A9 Canonical-Pair ???-??? trans

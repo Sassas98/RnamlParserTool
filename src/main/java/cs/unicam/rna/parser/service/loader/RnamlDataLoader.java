@@ -26,7 +26,7 @@ public final class RnamlDataLoader extends XmlDataLoader {
 		if(doc == null) {
 			return null;
 		}
-		NodeList chainList = doc.getElementsByTagName("chain");
+		NodeList chainList = doc.getElementsByTagName("molecule");
 		for (int i = 0; i < chainList.getLength(); i++) {
             Element node = getElement(chainList.item(i));
 			RnaChain chain = getchain(node, i);

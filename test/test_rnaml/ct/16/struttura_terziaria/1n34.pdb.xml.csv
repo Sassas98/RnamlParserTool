@@ -1,476 +1,476 @@
-base-id-5p, base-id-3p, bond-type
-U9, U16, Not-canonical
-G11, U894, Not-canonical
-U13, G1057, Not-canonical
-G17, A887, Not-canonical
-A22, G537, Not-canonical
-U45, U356, Not-canonical
-A47, C305, Not-canonical
-A51, U359, Canonical
-A56, G96, Not-canonical
-G62, A162, Not-canonical
-G64, A90, Not-canonical
-G64, A142, Not-canonical
-G91, A141, Not-canonical
-C92, A162, Not-canonical
-G102, A344, Not-canonical
-U103, A304, Canonical
-A105, A304, Not-canonical
-A108, U278, Canonical
-C110, G227, Canonical
-G132, A198, Not-canonical
-A139, A161, Not-canonical
-A139, A162, Not-canonical
-C140, A161, Not-canonical
-A141, U160, Canonical
-C143, C159, Not-canonical
-U170, A197, Canonical
-U172, U214, Not-canonical
-C177, G193, Canonical
-C180, U190, Not-canonical
-G223, A253, Not-canonical
-A234, A273, Not-canonical
-A237, G272, Not-canonical
-U244, A265, Canonical
-G245, C263, Canonical
-C281, C302, Not-canonical
-G283, A587, Not-canonical
-G310, A1412, Not-canonical
-C313, A320, Not-canonical
-U314, A318, Canonical
-G368, U378, Not-canonical
-C370, C376, Not-canonical
-A388, A526, Not-canonical
-G401, A423, Not-canonical
-A402, A421, Not-canonical
-G429, A476, Not-canonical
-A430, U474, Canonical
-A431, G473, Not-canonical
-A442, U460, Canonical
-U477, A478, Canonical
-U477, A526, Canonical
-C490, G520, Canonical
-G494, A512, Not-canonical
-U495, A512, Canonical
-A499, G508, Not-canonical
-A499, A512, Not-canonical
-C501, C507, Not-canonical
-A502, G506, Not-canonical
-A542, U857, Canonical
-A551, G889, Not-canonical
-U561, A738, Canonical
-G573, C624, Canonical
-C575, G623, Canonical
-C575, C624, Not-canonical
-C597, A601, Not-canonical
-U631, A732, Canonical
-G664, A683, Not-canonical
-G664, U684, Not-canonical
-A666, G682, Not-canonical
-G669, U676, Not-canonical
-G670, A675, Not-canonical
-G706, G709, Not-canonical
-A745, U792, Canonical
-A746, G1484, Not-canonical
-G748, A873, Not-canonical
-C749, C872, Not-canonical
-A759, A781, Not-canonical
-A760, U780, Canonical
-A761, G779, Not-canonical
-C762, G779, Canonical
-G765, C775, Canonical
-U806, A845, Canonical
-G816, U823, Not-canonical
-A833, G842, Not-canonical
-A837, G890, Not-canonical
-G861, A882, Not-canonical
-A862, A881, Not-canonical
-U864, A880, Canonical
-A865, G879, Not-canonical
-G868, U878, Not-canonical
-G871, A874, Not-canonical
-C903, C1366, Not-canonical
-A908, C1361, Not-canonical
-C909, C1360, Not-canonical
-A910, C1356, Not-canonical
-G924, C1207, Canonical
-G927, A1204, Not-canonical
-G927, C1205, Canonical
-U929, U933, Not-canonical
-A951, A1337, Not-canonical
-A951, G1338, Not-canonical
-A956, A1178, Not-canonical
-C1003, G1011, Canonical
-C1004, G1010, Canonical
-G1028, C1186, Canonical
-U1030, G1184, Not-canonical
-C1038, G1175, Canonical
-G1042, G1170, Not-canonical
-G1046, A1168, Not-canonical
-G1050, G1062, Not-canonical
-G1052, A1079, Not-canonical
-G1105, C1123, Canonical
-G1105, C1125, Canonical
-A1108, G1122, Not-canonical
-G1134, A1156, Not-canonical
-G1154, G1158, Not-canonical
-A1215, U1278, Canonical
-G1218, C1273, Canonical
-C1221, G1271, Canonical
-U1224, G1268, Not-canonical
-A1229, A1262, Not-canonical
-G1232, G1260, Not-canonical
-G1243, C1247, Canonical
-G1281, A1310, Not-canonical
-G1282, A1309, Not-canonical
-U1292, A1296, Canonical
-A1296, G1338, Not-canonical
-U1322, U1354, Not-canonical
-A1323, A1353, Not-canonical
-U1335, A1341, Canonical
-U1392, G1460, Not-canonical
-G1394, U1458, Not-canonical
-A1396, G1455, Not-canonical
-C1404, G1448, Canonical
-A1411, G1440, Not-canonical
-G1419, A1433, Not-canonical
-G1419, G1434, Not-canonical
-U1426, G1429, Not-canonical
-G1481, U1501, Not-canonical
-C1488, G1494, Canonical
-G1489, A1492, Not-canonical
-U16, A888, Canonical
-C39, C391, Not-canonical
-U41, C389, Not-canonical
-G100, G322, Not-canonical
-A169, A198, Not-canonical
-C183, G187, Canonical
-G242, C262, Canonical
-G251, G256, Not-canonical
-G257, C262, Canonical
-U285, U295, Not-canonical
-A289, U539, Canonical
-U314, A320, Canonical
-U334, G338, Not-canonical
-C363, G367, Canonical
-G397, C427, Canonical
-A406, G419, Not-canonical
-G407, G417, Not-canonical
-G437, C468, Canonical
-C439, G464, Canonical
-A443, U460, Canonical
-C492, G517, Canonical
-C498, A512, Not-canonical
-C548, C855, Not-canonical
-G574, C622, Canonical
-G574, G623, Not-canonical
-U620, C622, Not-canonical
-G633, G731, Not-canonical
-A655, A694, Not-canonical
-U656, G693, Not-canonical
-C726, C728, Not-canonical
-A747, C790, Not-canonical
-U810, C829, Not-canonical
-A833, A845, Not-canonical
-G863, U864, Not-canonical
-C909, U1358, Not-canonical
-U916, U1318, Not-canonical
-U934, A1178, Canonical
-C935, A947, Not-canonical
-A959, U1196, Canonical
-U965, A1022, Canonical
-G1000, G1014, Not-canonical
-C1001, G1012, Canonical
-G1026, C1186, Canonical
-G1026, C1191, Canonical
-G1031, G1036, Not-canonical
-G1036, G1179, Not-canonical
-G1042, C1169, Canonical
-U1051, G1062, Not-canonical
-C1053, U1061, Not-canonical
-G1102, U1104, Not-canonical
-G1105, A1124, Not-canonical
-G1111, C1119, Canonical
-C1123, C1125, Not-canonical
-G1138, G1158, Not-canonical
-A1153, G1158, Not-canonical
-C1177, G1184, Canonical
-A1216, A1276, Not-canonical
-G1232, C1259, Canonical
-C1236, C1237, Not-canonical
-G1277, C1280, Canonical
-A1295, A1337, Not-canonical
-G1357, U1359, Not-canonical
-U1384, U1468, Not-canonical
-U1384, C1469, Not-canonical
-C1387, A1465, Not-canonical
-G1400, C1452, Canonical
-U1414, C1438, Not-canonical
-G7, G485, Not-canonical
-G7, C504, Canonical
-C15, A551, Not-canonical
-G18, A886, Not-canonical
-U33, A526, Canonical
-G38, A601, Not-canonical
-G42, C298, Canonical
-A51, G348, Not-canonical
-G57, G369, Not-canonical
-U58, C376, Not-canonical
-U107, G280, Not-canonical
-A120, C225, Not-canonical
-A120, A254, Not-canonical
-A151, G338, Not-canonical
-G173, U214, Not-canonical
-A197, U213, Canonical
-A237, G269, Not-canonical
-A291, C543, Not-canonical
-G300, A586, Not-canonical
-G301, A586, Not-canonical
-C305, A344, Not-canonical
-U334, G337, Not-canonical
-G345, A380, Not-canonical
-G348, U359, Not-canonical
-A364, A441, Not-canonical
-A365, C381, Not-canonical
-U366, C381, Not-canonical
-C391, A601, Not-canonical
-G393, C599, Canonical
-C409, G519, Canonical
-G437, A467, Not-canonical
-G479, G527, Not-canonical
-U495, C498, Not-canonical
-G506, A514, Not-canonical
-A562, G737, Not-canonical
-G585, A611, Not-canonical
-G633, G734, Not-canonical
-U656, A756, Canonical
-U657, G757, Not-canonical
-A666, G679, Not-canonical
-G667, A683, Not-canonical
-A673, A766, Not-canonical
-A675, C776, Not-canonical
-U676, G777, Not-canonical
-A708, C743, Not-canonical
-A708, G744, Not-canonical
-C735, G851, Canonical
-A747, G1496, Not-canonical
-A760, C1487, Not-canonical
-A760, U1495, Canonical
-A773, U1479, Canonical
-C790, A873, Not-canonical
-C791, G876, Canonical
-U792, G876, Not-canonical
-A807, G831, Not-canonical
-G840, A846, Not-canonical
-A882, A1391, Not-canonical
-A892, A1058, Not-canonical
-G895, A1376, Not-canonical
-A896, C1377, Not-canonical
-C897, A1475, Not-canonical
-G917, A1316, Not-canonical
-A922, G944, Not-canonical
-A956, G1028, Not-canonical
-G961, A990, Not-canonical
-U964, G966, Not-canonical
-C968, A1024, Not-canonical
-G985, C992, Canonical
-U986, G991, Not-canonical
-G987, A989, Not-canonical
-A989, C1195, Not-canonical
-A990, C1194, Not-canonical
-G1067, A1146, Not-canonical
-C1074, A1147, Not-canonical
-U1113, G1116, Not-canonical
-C1127, A1257, Not-canonical
-G1134, A1157, Not-canonical
-U1176, G1179, Not-canonical
-U1188, A1190, Canonical
-G1210, G1343, Not-canonical
-C1214, C1280, Not-canonical
-C1214, G1311, Canonical
-C1244, C1304, Not-canonical
-A1246, G1289, Not-canonical
-A1246, C1302, Not-canonical
-A1283, G1308, Not-canonical
-G1311, G1314, Not-canonical
-G1320, A1326, Not-canonical
-A1326, G1351, Not-canonical
-C1336, C1339, Not-canonical
-A1355, G1357, Not-canonical
-C1378, U1513, Not-canonical
-U1384, G1490, Not-canonical
-G1395, A1456, Not-canonical
-A1412, G1440, Not-canonical
-G2, A289, Not-canonical
-U10, U13, Not-canonical
-A12, A1058, Not-canonical
-C19, U540, Not-canonical
-G42, U356, Not-canonical
-A47, G48, Not-canonical
-C50, A51, Not-canonical
-C50, A344, Not-canonical
-U58, C370, Not-canonical
-C59, A373, Not-canonical
-G60, U61, Not-canonical
-C63, A161, Not-canonical
-U75, U78, Not-canonical
-G94, C370, Canonical
-G104, A105, Not-canonical
-C112, C281, Not-canonical
-U118, G119, Not-canonical
-G119, A120, Not-canonical
-C121, G186, Canonical
-U123, A124, Canonical
-A133, G134, Not-canonical
-G149, A151, Not-canonical
-G149, A152, Not-canonical
-G171, U172, Not-canonical
-G186, G187, Not-canonical
-A199, G200, Not-canonical
-U204, U205, Not-canonical
-A234, U235, Canonical
-A234, C274, Not-canonical
-U252, A254, Canonical
-G269, A270, Not-canonical
-C271, G272, Canonical
-G272, A273, Not-canonical
-G283, G296, Not-canonical
-G288, G290, Not-canonical
-G288, A291, Not-canonical
-C319, A320, Not-canonical
-C325, A1412, Not-canonical
-U334, A335, Canonical
-G353, A355, Not-canonical
-G353, U356, Not-canonical
-C357, U358, Not-canonical
-U359, C360, Not-canonical
-C361, A462, Not-canonical
-G371, A373, Not-canonical
-G371, A374, Not-canonical
-C392, A600, Not-canonical
-C392, A601, Not-canonical
-U396, G397, Not-canonical
-G404, G419, Not-canonical
-G414, G415, Not-canonical
-A430, G473, Not-canonical
-A438, G465, Not-canonical
-C451, G452, Canonical
-G461, A462, Not-canonical
-G465, U466, Not-canonical
-G473, U474, Not-canonical
-A476, U477, Canonical
-C480, C528, Not-canonical
-G496, C497, Canonical
-G496, G509, Not-canonical
-C497, C498, Not-canonical
-G500, C515, Canonical
-U510, A511, Canonical
-A514, C515, Not-canonical
-G523, C528, Canonical
-A526, G527, Not-canonical
-A538, U539, Canonical
-U540, C541, Not-canonical
-G554, G555, Not-canonical
-G555, G739, Not-canonical
-G566, A732, Not-canonical
-G585, A586, Not-canonical
-A586, G610, Not-canonical
-U620, A621, Canonical
-C630, A732, Not-canonical
-G645, C705, Canonical
-A666, G667, Not-canonical
-U671, A673, Canonical
-C696, G697, Canonical
-C733, G734, Canonical
-U736, G800, Not-canonical
-G744, U792, Not-canonical
-A747, U1485, Canonical
-G755, A781, Not-canonical
-A761, G1494, Not-canonical
-U768, G770, Not-canonical
-C776, G777, Canonical
-C790, A874, Not-canonical
-C791, G875, Canonical
-A794, A795, Not-canonical
-G797, A846, Not-canonical
-U799, G800, Not-canonical
-U820, C821, Not-canonical
-G827, U844, Not-canonical
-G828, U844, Not-canonical
-G831, U843, Not-canonical
-A832, G842, Not-canonical
-G834, G847, Not-canonical
-A838, A891, Not-canonical
-G842, U843, Not-canonical
-A846, G847, Not-canonical
-U857, G858, Not-canonical
-A862, G863, Not-canonical
-G863, A880, Not-canonical
-U893, G1059, Not-canonical
-G900, G1478, Not-canonical
-G918, G1311, Not-canonical
-A919, A1310, Not-canonical
-G920, A1283, Not-canonical
-U930, A932, Canonical
-A931, C958, Not-canonical
-U933, U934, Not-canonical
-G944, A1341, Not-canonical
-A950, C953, Not-canonical
-A950, U954, Canonical
-C952, G1199, Canonical
-G960, U1196, Not-canonical
-U970, G971, Not-canonical
-A974, G975, Not-canonical
-G987, A990, Not-canonical
-C993, U994, Not-canonical
-G1005, A1008, Not-canonical
-G1025, G1192, Not-canonical
-C1032, U1034, Not-canonical
-C1041, G1363, Canonical
-A1045, A1071, Not-canonical
-G1055, G1057, Not-canonical
-A1058, G1059, Not-canonical
-U1069, A1071, Canonical
-A1079, A1080, Not-canonical
-C1085, A1168, Not-canonical
-G1102, U1103, Not-canonical
-U1103, U1104, Not-canonical
-U1104, U1258, Not-canonical
-A1135, C1136, Not-canonical
-G1144, A1147, Not-canonical
-G1155, A1157, Not-canonical
-G1159, A1160, Not-canonical
-U1173, G1174, Not-canonical
-A1178, G1179, Not-canonical
-U1189, A1190, Canonical
-C1191, G1192, Canonical
-G1198, C1297, Canonical
-G1198, C1298, Canonical
-G1199, C1299, Canonical
-C1200, G1201, Canonical
-C1200, A1202, Not-canonical
-C1203, A1204, Not-canonical
-C1214, A1215, Not-canonical
-C1214, G1277, Canonical
-G1243, A1246, Not-canonical
-A1245, C1303, Not-canonical
-A1246, C1247, Not-canonical
-C1247, U1290, Not-canonical
-A1256, A1257, Not-canonical
-A1265, C1329, Not-canonical
-G1282, A1283, Not-canonical
-U1292, A1337, Canonical
-G1324, U1325, Not-canonical
-G1324, A1352, Not-canonical
-C1336, G1338, Canonical
-C1339, C1340, Not-canonical
-U1371, C1474, Not-canonical
-A1372, C1373, Not-canonical
-C1375, A1376, Not-canonical
-C1377, C1378, Not-canonical
-G1410, A1441, Not-canonical
-G1421, G1423, Not-canonical
-U1426, A1427, Canonical
-U1471, A1472, Canonical
-G1477, A1480, Not-canonical
-G1478, U1479, Not-canonical
+base-id-5p base-id-3p canonical-bond bond-type cis-or-trans
+U9 U16 Not-Canonical-Pair Hoogsteen-Watson-Crick trans
+G11 U894 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+U13 G1057 Not-Canonical-Pair ???-Sugar cis
+G17 A887 Not-Canonical-Pair Sugar-Hoogsteen trans
+A22 G537 Not-Canonical-Pair Hoogsteen-Sugar trans
+U45 U356 Not-Canonical-Pair Watson-Crick-Watson-Crick trans
+A47 C305 Not-Canonical-Pair Watson-Crick-Sugar cis
+A51 U359 Canonical-Pair Watson-Crick-Watson-Crick trans
+A56 G96 Not-Canonical-Pair Sugar-Sugar trans
+G62 A162 Not-Canonical-Pair Sugar-Sugar cis
+G64 A90 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+G64 A142 Not-Canonical-Pair Sugar-Sugar trans
+G91 A141 Not-Canonical-Pair ???-Sugar cis
+C92 A162 Not-Canonical-Pair Sugar-Watson-Crick trans
+G102 A344 Not-Canonical-Pair Sugar-??? cis
+U103 A304 Canonical-Pair Watson-Crick-Watson-Crick cis
+A105 A304 Not-Canonical-Pair Watson-Crick-Sugar trans
+A108 U278 Canonical-Pair Hoogsteen-Watson-Crick trans
+C110 G227 Canonical-Pair Watson-Crick-Hoogsteen trans
+G132 A198 Not-Canonical-Pair Sugar-Sugar trans
+A139 A161 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+A139 A162 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+C140 A161 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+A141 U160 Canonical-Pair Hoogsteen-Watson-Crick trans
+C143 C159 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+U170 A197 Canonical-Pair Watson-Crick-Hoogsteen trans
+U172 U214 Not-Canonical-Pair Watson-Crick-Sugar trans
+C177 G193 Canonical-Pair Watson-Crick-Watson-Crick cis
+C180 U190 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+G223 A253 Not-Canonical-Pair Sugar-Watson-Crick trans
+A234 A273 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+A237 G272 Not-Canonical-Pair Hoogsteen-Sugar trans
+U244 A265 Canonical-Pair Watson-Crick-Watson-Crick cis
+G245 C263 Canonical-Pair Watson-Crick-Watson-Crick cis
+C281 C302 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+G283 A587 Not-Canonical-Pair Sugar-Watson-Crick trans
+G310 A1412 Not-Canonical-Pair Sugar-Sugar trans
+C313 A320 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+U314 A318 Canonical-Pair Watson-Crick-Hoogsteen trans
+G368 U378 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+C370 C376 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+A388 A526 Not-Canonical-Pair Hoogsteen-Sugar trans
+G401 A423 Not-Canonical-Pair Sugar-Hoogsteen trans
+A402 A421 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+G429 A476 Not-Canonical-Pair Sugar-Hoogsteen trans
+A430 U474 Canonical-Pair Hoogsteen-Watson-Crick trans
+A431 G473 Not-Canonical-Pair Hoogsteen-Sugar trans
+A442 U460 Canonical-Pair Hoogsteen-Watson-Crick trans
+U477 A478 Canonical-Pair Sugar-Hoogsteen cis
+U477 A526 Canonical-Pair Watson-Crick-Hoogsteen trans
+C490 G520 Canonical-Pair Watson-Crick-Watson-Crick cis
+G494 A512 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+U495 A512 Canonical-Pair Watson-Crick-Hoogsteen trans
+A499 G508 Not-Canonical-Pair Hoogsteen-Sugar trans
+A499 A512 Not-Canonical-Pair Watson-Crick-Watson-Crick trans
+C501 C507 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+A502 G506 Not-Canonical-Pair Sugar-Watson-Crick cis
+A542 U857 Canonical-Pair Watson-Crick-Watson-Crick trans
+A551 G889 Not-Canonical-Pair Sugar-Sugar cis
+U561 A738 Canonical-Pair Watson-Crick-Hoogsteen trans
+G573 C624 Canonical-Pair Watson-Crick-Watson-Crick cis
+C575 G623 Canonical-Pair Watson-Crick-Watson-Crick cis
+C575 C624 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+C597 A601 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+U631 A732 Canonical-Pair Watson-Crick-Hoogsteen trans
+G664 A683 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+G664 U684 Not-Canonical-Pair Sugar-Hoogsteen trans
+A666 G682 Not-Canonical-Pair Hoogsteen-Sugar trans
+G669 U676 Not-Canonical-Pair Sugar-Hoogsteen trans
+G670 A675 Not-Canonical-Pair Sugar-Hoogsteen trans
+G706 G709 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+A745 U792 Canonical-Pair Hoogsteen-Watson-Crick trans
+A746 G1484 Not-Canonical-Pair Sugar-Sugar trans
+G748 A873 Not-Canonical-Pair Sugar-Watson-Crick cis
+C749 C872 Not-Canonical-Pair Sugar-Watson-Crick cis
+A759 A781 Not-Canonical-Pair Sugar-Hoogsteen trans
+A760 U780 Canonical-Pair Hoogsteen-Watson-Crick trans
+A761 G779 Not-Canonical-Pair Hoogsteen-Sugar trans
+C762 G779 Canonical-Pair Watson-Crick-Watson-Crick cis
+G765 C775 Canonical-Pair Watson-Crick-Watson-Crick cis
+U806 A845 Canonical-Pair Watson-Crick-Watson-Crick trans
+G816 U823 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+A833 G842 Not-Canonical-Pair Hoogsteen-Sugar trans
+A837 G890 Not-Canonical-Pair Sugar-Sugar trans
+G861 A882 Not-Canonical-Pair Sugar-Hoogsteen trans
+A862 A881 Not-Canonical-Pair Hoogsteen-Hoogsteen trans
+U864 A880 Canonical-Pair Watson-Crick-Hoogsteen trans
+A865 G879 Not-Canonical-Pair Hoogsteen-Sugar trans
+G868 U878 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+G871 A874 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+C903 C1366 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+A908 C1361 Not-Canonical-Pair Sugar-Watson-Crick cis
+C909 C1360 Not-Canonical-Pair Sugar-Watson-Crick cis
+A910 C1356 Not-Canonical-Pair Sugar-Hoogsteen trans
+G924 C1207 Canonical-Pair Watson-Crick-Watson-Crick cis
+G927 A1204 Not-Canonical-Pair Sugar-Hoogsteen trans
+G927 C1205 Canonical-Pair Watson-Crick-Watson-Crick cis
+U929 U933 Not-Canonical-Pair Watson-Crick-Watson-Crick trans
+A951 A1337 Not-Canonical-Pair Hoogsteen-Watson-Crick trans
+A951 G1338 Not-Canonical-Pair Hoogsteen-Watson-Crick trans
+A956 A1178 Not-Canonical-Pair Hoogsteen-Watson-Crick trans
+C1003 G1011 Canonical-Pair Watson-Crick-Watson-Crick cis
+C1004 G1010 Canonical-Pair Watson-Crick-Watson-Crick cis
+G1028 C1186 Canonical-Pair Watson-Crick-Watson-Crick cis
+U1030 G1184 Not-Canonical-Pair Sugar-Watson-Crick cis
+C1038 G1175 Canonical-Pair Watson-Crick-Watson-Crick cis
+G1042 G1170 Not-Canonical-Pair Watson-Crick-Watson-Crick trans
+G1046 A1168 Not-Canonical-Pair Sugar-Sugar trans
+G1050 G1062 Not-Canonical-Pair Hoogsteen-Sugar trans
+G1052 A1079 Not-Canonical-Pair Sugar-Sugar trans
+G1105 C1123 Canonical-Pair Watson-Crick-Watson-Crick cis
+G1105 C1125 Canonical-Pair Sugar-Watson-Crick cis
+A1108 G1122 Not-Canonical-Pair Watson-Crick-Sugar cis
+G1134 A1156 Not-Canonical-Pair Sugar-Watson-Crick trans
+G1154 G1158 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+A1215 U1278 Canonical-Pair Hoogsteen-Watson-Crick trans
+G1218 C1273 Canonical-Pair Watson-Crick-Watson-Crick cis
+C1221 G1271 Canonical-Pair Watson-Crick-Watson-Crick cis
+U1224 G1268 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+A1229 A1262 Not-Canonical-Pair Watson-Crick-Watson-Crick trans
+G1232 G1260 Not-Canonical-Pair Watson-Crick-Sugar cis
+G1243 C1247 Canonical-Pair Watson-Crick-Watson-Crick cis
+G1281 A1310 Not-Canonical-Pair Sugar-Hoogsteen trans
+G1282 A1309 Not-Canonical-Pair Sugar-Hoogsteen trans
+U1292 A1296 Canonical-Pair Watson-Crick-Hoogsteen trans
+A1296 G1338 Not-Canonical-Pair Watson-Crick-Sugar trans
+U1322 U1354 Not-Canonical-Pair Watson-Crick-Watson-Crick trans
+A1323 A1353 Not-Canonical-Pair Hoogsteen-Hoogsteen trans
+U1335 A1341 Canonical-Pair Watson-Crick-Watson-Crick trans
+U1392 G1460 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+G1394 U1458 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+A1396 G1455 Not-Canonical-Pair Hoogsteen-Sugar trans
+C1404 G1448 Canonical-Pair Watson-Crick-Watson-Crick cis
+A1411 G1440 Not-Canonical-Pair Hoogsteen-Sugar trans
+G1419 A1433 Not-Canonical-Pair Sugar-Hoogsteen trans
+G1419 G1434 Not-Canonical-Pair Sugar-Watson-Crick cis
+U1426 G1429 Not-Canonical-Pair Sugar-Watson-Crick trans
+G1481 U1501 Not-Canonical-Pair Watson-Crick-Watson-Crick cis
+C1488 G1494 Canonical-Pair Watson-Crick-Watson-Crick cis
+G1489 A1492 Not-Canonical-Pair Watson-Crick-Hoogsteen trans
+U16 A888 Canonical-Pair ???-??? trans
+C39 C391 Not-Canonical-Pair ???-??? trans
+U41 C389 Not-Canonical-Pair ???-??? trans
+G100 G322 Not-Canonical-Pair ???-??? trans
+A169 A198 Not-Canonical-Pair ???-??? trans
+C183 G187 Canonical-Pair ???-??? trans
+G242 C262 Canonical-Pair ???-??? trans
+G251 G256 Not-Canonical-Pair ???-??? trans
+G257 C262 Canonical-Pair ???-??? trans
+U285 U295 Not-Canonical-Pair ???-??? trans
+A289 U539 Canonical-Pair ???-??? trans
+U314 A320 Canonical-Pair ???-??? trans
+U334 G338 Not-Canonical-Pair ???-??? trans
+C363 G367 Canonical-Pair ???-??? trans
+G397 C427 Canonical-Pair ???-??? trans
+A406 G419 Not-Canonical-Pair ???-??? trans
+G407 G417 Not-Canonical-Pair ???-??? trans
+G437 C468 Canonical-Pair ???-??? trans
+C439 G464 Canonical-Pair ???-??? trans
+A443 U460 Canonical-Pair ???-??? trans
+C492 G517 Canonical-Pair ???-??? trans
+C498 A512 Not-Canonical-Pair ???-??? trans
+C548 C855 Not-Canonical-Pair ???-??? trans
+G574 C622 Canonical-Pair ???-??? trans
+G574 G623 Not-Canonical-Pair ???-??? trans
+U620 C622 Not-Canonical-Pair ???-??? trans
+G633 G731 Not-Canonical-Pair ???-??? trans
+A655 A694 Not-Canonical-Pair ???-??? trans
+U656 G693 Not-Canonical-Pair ???-??? trans
+C726 C728 Not-Canonical-Pair ???-??? trans
+A747 C790 Not-Canonical-Pair ???-??? trans
+U810 C829 Not-Canonical-Pair ???-??? trans
+A833 A845 Not-Canonical-Pair ???-??? trans
+G863 U864 Not-Canonical-Pair ???-??? trans
+C909 U1358 Not-Canonical-Pair ???-??? trans
+U916 U1318 Not-Canonical-Pair ???-??? trans
+U934 A1178 Canonical-Pair ???-??? trans
+C935 A947 Not-Canonical-Pair ???-??? trans
+A959 U1196 Canonical-Pair ???-??? trans
+U965 A1022 Canonical-Pair ???-??? trans
+G1000 G1014 Not-Canonical-Pair ???-??? trans
+C1001 G1012 Canonical-Pair ???-??? trans
+G1026 C1186 Canonical-Pair ???-??? trans
+G1026 C1191 Canonical-Pair ???-??? trans
+G1031 G1036 Not-Canonical-Pair ???-??? trans
+G1036 G1179 Not-Canonical-Pair ???-??? trans
+G1042 C1169 Canonical-Pair ???-??? trans
+U1051 G1062 Not-Canonical-Pair ???-??? trans
+C1053 U1061 Not-Canonical-Pair ???-??? trans
+G1102 U1104 Not-Canonical-Pair ???-??? trans
+G1105 A1124 Not-Canonical-Pair ???-??? trans
+G1111 C1119 Canonical-Pair ???-??? trans
+C1123 C1125 Not-Canonical-Pair ???-??? trans
+G1138 G1158 Not-Canonical-Pair ???-??? trans
+A1153 G1158 Not-Canonical-Pair ???-??? trans
+C1177 G1184 Canonical-Pair ???-??? trans
+A1216 A1276 Not-Canonical-Pair ???-??? trans
+G1232 C1259 Canonical-Pair ???-??? trans
+C1236 C1237 Not-Canonical-Pair ???-??? trans
+G1277 C1280 Canonical-Pair ???-??? trans
+A1295 A1337 Not-Canonical-Pair ???-??? trans
+G1357 U1359 Not-Canonical-Pair ???-??? trans
+U1384 U1468 Not-Canonical-Pair ???-??? trans
+U1384 C1469 Not-Canonical-Pair ???-??? trans
+C1387 A1465 Not-Canonical-Pair ???-??? trans
+G1400 C1452 Canonical-Pair ???-??? trans
+U1414 C1438 Not-Canonical-Pair ???-??? trans
+G7 G485 Not-Canonical-Pair ???-??? trans
+G7 C504 Canonical-Pair ???-??? trans
+C15 A551 Not-Canonical-Pair ???-??? trans
+G18 A886 Not-Canonical-Pair ???-??? trans
+U33 A526 Canonical-Pair ???-??? trans
+G38 A601 Not-Canonical-Pair ???-??? trans
+G42 C298 Canonical-Pair ???-??? trans
+A51 G348 Not-Canonical-Pair ???-??? trans
+G57 G369 Not-Canonical-Pair ???-??? trans
+U58 C376 Not-Canonical-Pair ???-??? trans
+U107 G280 Not-Canonical-Pair ???-??? trans
+A120 C225 Not-Canonical-Pair ???-??? trans
+A120 A254 Not-Canonical-Pair ???-??? trans
+A151 G338 Not-Canonical-Pair ???-??? trans
+G173 U214 Not-Canonical-Pair ???-??? trans
+A197 U213 Canonical-Pair ???-??? trans
+A237 G269 Not-Canonical-Pair ???-??? trans
+A291 C543 Not-Canonical-Pair ???-??? trans
+G300 A586 Not-Canonical-Pair ???-??? trans
+G301 A586 Not-Canonical-Pair ???-??? trans
+C305 A344 Not-Canonical-Pair ???-??? trans
+U334 G337 Not-Canonical-Pair ???-??? trans
+G345 A380 Not-Canonical-Pair ???-??? trans
+G348 U359 Not-Canonical-Pair ???-??? trans
+A364 A441 Not-Canonical-Pair ???-??? trans
+A365 C381 Not-Canonical-Pair ???-??? trans
+U366 C381 Not-Canonical-Pair ???-??? trans
+C391 A601 Not-Canonical-Pair ???-??? trans
+G393 C599 Canonical-Pair ???-??? trans
+C409 G519 Canonical-Pair ???-??? trans
+G437 A467 Not-Canonical-Pair ???-??? trans
+G479 G527 Not-Canonical-Pair ???-??? trans
+U495 C498 Not-Canonical-Pair ???-??? trans
+G506 A514 Not-Canonical-Pair ???-??? trans
+A562 G737 Not-Canonical-Pair ???-??? trans
+G585 A611 Not-Canonical-Pair ???-??? trans
+G633 G734 Not-Canonical-Pair ???-??? trans
+U656 A756 Canonical-Pair ???-??? trans
+U657 G757 Not-Canonical-Pair ???-??? trans
+A666 G679 Not-Canonical-Pair ???-??? trans
+G667 A683 Not-Canonical-Pair ???-??? trans
+A673 A766 Not-Canonical-Pair ???-??? trans
+A675 C776 Not-Canonical-Pair ???-??? trans
+U676 G777 Not-Canonical-Pair ???-??? trans
+A708 C743 Not-Canonical-Pair ???-??? trans
+A708 G744 Not-Canonical-Pair ???-??? trans
+C735 G851 Canonical-Pair ???-??? trans
+A747 G1496 Not-Canonical-Pair ???-??? trans
+A760 C1487 Not-Canonical-Pair ???-??? trans
+A760 U1495 Canonical-Pair ???-??? trans
+A773 U1479 Canonical-Pair ???-??? trans
+C790 A873 Not-Canonical-Pair ???-??? trans
+C791 G876 Canonical-Pair ???-??? trans
+U792 G876 Not-Canonical-Pair ???-??? trans
+A807 G831 Not-Canonical-Pair ???-??? trans
+G840 A846 Not-Canonical-Pair ???-??? trans
+A882 A1391 Not-Canonical-Pair ???-??? trans
+A892 A1058 Not-Canonical-Pair ???-??? trans
+G895 A1376 Not-Canonical-Pair ???-??? trans
+A896 C1377 Not-Canonical-Pair ???-??? trans
+C897 A1475 Not-Canonical-Pair ???-??? trans
+G917 A1316 Not-Canonical-Pair ???-??? trans
+A922 G944 Not-Canonical-Pair ???-??? trans
+A956 G1028 Not-Canonical-Pair ???-??? trans
+G961 A990 Not-Canonical-Pair ???-??? trans
+U964 G966 Not-Canonical-Pair ???-??? trans
+C968 A1024 Not-Canonical-Pair ???-??? trans
+G985 C992 Canonical-Pair ???-??? trans
+U986 G991 Not-Canonical-Pair ???-??? trans
+G987 A989 Not-Canonical-Pair ???-??? trans
+A989 C1195 Not-Canonical-Pair ???-??? trans
+A990 C1194 Not-Canonical-Pair ???-??? trans
+G1067 A1146 Not-Canonical-Pair ???-??? trans
+C1074 A1147 Not-Canonical-Pair ???-??? trans
+U1113 G1116 Not-Canonical-Pair ???-??? trans
+C1127 A1257 Not-Canonical-Pair ???-??? trans
+G1134 A1157 Not-Canonical-Pair ???-??? trans
+U1176 G1179 Not-Canonical-Pair ???-??? trans
+U1188 A1190 Canonical-Pair ???-??? trans
+G1210 G1343 Not-Canonical-Pair ???-??? trans
+C1214 C1280 Not-Canonical-Pair ???-??? trans
+C1214 G1311 Canonical-Pair ???-??? trans
+C1244 C1304 Not-Canonical-Pair ???-??? trans
+A1246 G1289 Not-Canonical-Pair ???-??? trans
+A1246 C1302 Not-Canonical-Pair ???-??? trans
+A1283 G1308 Not-Canonical-Pair ???-??? trans
+G1311 G1314 Not-Canonical-Pair ???-??? trans
+G1320 A1326 Not-Canonical-Pair ???-??? trans
+A1326 G1351 Not-Canonical-Pair ???-??? trans
+C1336 C1339 Not-Canonical-Pair ???-??? trans
+A1355 G1357 Not-Canonical-Pair ???-??? trans
+C1378 U1513 Not-Canonical-Pair ???-??? trans
+U1384 G1490 Not-Canonical-Pair ???-??? trans
+G1395 A1456 Not-Canonical-Pair ???-??? trans
+A1412 G1440 Not-Canonical-Pair ???-??? trans
+G2 A289 Not-Canonical-Pair ???-??? trans
+U10 U13 Not-Canonical-Pair ???-??? trans
+A12 A1058 Not-Canonical-Pair ???-??? trans
+C19 U540 Not-Canonical-Pair ???-??? trans
+G42 U356 Not-Canonical-Pair ???-??? trans
+A47 G48 Not-Canonical-Pair ???-??? trans
+C50 A51 Not-Canonical-Pair ???-??? trans
+C50 A344 Not-Canonical-Pair ???-??? trans
+U58 C370 Not-Canonical-Pair ???-??? trans
+C59 A373 Not-Canonical-Pair ???-??? trans
+G60 U61 Not-Canonical-Pair ???-??? trans
+C63 A161 Not-Canonical-Pair ???-??? trans
+U75 U78 Not-Canonical-Pair ???-??? trans
+G94 C370 Canonical-Pair ???-??? trans
+G104 A105 Not-Canonical-Pair ???-??? trans
+C112 C281 Not-Canonical-Pair ???-??? trans
+U118 G119 Not-Canonical-Pair ???-??? trans
+G119 A120 Not-Canonical-Pair ???-??? trans
+C121 G186 Canonical-Pair ???-??? trans
+U123 A124 Canonical-Pair ???-??? trans
+A133 G134 Not-Canonical-Pair ???-??? trans
+G149 A151 Not-Canonical-Pair ???-??? trans
+G149 A152 Not-Canonical-Pair ???-??? trans
+G171 U172 Not-Canonical-Pair ???-??? trans
+G186 G187 Not-Canonical-Pair ???-??? trans
+A199 G200 Not-Canonical-Pair ???-??? trans
+U204 U205 Not-Canonical-Pair ???-??? trans
+A234 U235 Canonical-Pair ???-??? trans
+A234 C274 Not-Canonical-Pair ???-??? trans
+U252 A254 Canonical-Pair ???-??? trans
+G269 A270 Not-Canonical-Pair ???-??? trans
+C271 G272 Canonical-Pair ???-??? trans
+G272 A273 Not-Canonical-Pair ???-??? trans
+G283 G296 Not-Canonical-Pair ???-??? trans
+G288 G290 Not-Canonical-Pair ???-??? trans
+G288 A291 Not-Canonical-Pair ???-??? trans
+C319 A320 Not-Canonical-Pair ???-??? trans
+C325 A1412 Not-Canonical-Pair ???-??? trans
+U334 A335 Canonical-Pair ???-??? trans
+G353 A355 Not-Canonical-Pair ???-??? trans
+G353 U356 Not-Canonical-Pair ???-??? trans
+C357 U358 Not-Canonical-Pair ???-??? trans
+U359 C360 Not-Canonical-Pair ???-??? trans
+C361 A462 Not-Canonical-Pair ???-??? trans
+G371 A373 Not-Canonical-Pair ???-??? trans
+G371 A374 Not-Canonical-Pair ???-??? trans
+C392 A600 Not-Canonical-Pair ???-??? trans
+C392 A601 Not-Canonical-Pair ???-??? trans
+U396 G397 Not-Canonical-Pair ???-??? trans
+G404 G419 Not-Canonical-Pair ???-??? trans
+G414 G415 Not-Canonical-Pair ???-??? trans
+A430 G473 Not-Canonical-Pair ???-??? trans
+A438 G465 Not-Canonical-Pair ???-??? trans
+C451 G452 Canonical-Pair ???-??? trans
+G461 A462 Not-Canonical-Pair ???-??? trans
+G465 U466 Not-Canonical-Pair ???-??? trans
+G473 U474 Not-Canonical-Pair ???-??? trans
+A476 U477 Canonical-Pair ???-??? trans
+C480 C528 Not-Canonical-Pair ???-??? trans
+G496 C497 Canonical-Pair ???-??? trans
+G496 G509 Not-Canonical-Pair ???-??? trans
+C497 C498 Not-Canonical-Pair ???-??? trans
+G500 C515 Canonical-Pair ???-??? trans
+U510 A511 Canonical-Pair ???-??? trans
+A514 C515 Not-Canonical-Pair ???-??? trans
+G523 C528 Canonical-Pair ???-??? trans
+A526 G527 Not-Canonical-Pair ???-??? trans
+A538 U539 Canonical-Pair ???-??? trans
+U540 C541 Not-Canonical-Pair ???-??? trans
+G554 G555 Not-Canonical-Pair ???-??? trans
+G555 G739 Not-Canonical-Pair ???-??? trans
+G566 A732 Not-Canonical-Pair ???-??? trans
+G585 A586 Not-Canonical-Pair ???-??? trans
+A586 G610 Not-Canonical-Pair ???-??? trans
+U620 A621 Canonical-Pair ???-??? trans
+C630 A732 Not-Canonical-Pair ???-??? trans
+G645 C705 Canonical-Pair ???-??? trans
+A666 G667 Not-Canonical-Pair ???-??? trans
+U671 A673 Canonical-Pair ???-??? trans
+C696 G697 Canonical-Pair ???-??? trans
+C733 G734 Canonical-Pair ???-??? trans
+U736 G800 Not-Canonical-Pair ???-??? trans
+G744 U792 Not-Canonical-Pair ???-??? trans
+A747 U1485 Canonical-Pair ???-??? trans
+G755 A781 Not-Canonical-Pair ???-??? trans
+A761 G1494 Not-Canonical-Pair ???-??? trans
+U768 G770 Not-Canonical-Pair ???-??? trans
+C776 G777 Canonical-Pair ???-??? trans
+C790 A874 Not-Canonical-Pair ???-??? trans
+C791 G875 Canonical-Pair ???-??? trans
+A794 A795 Not-Canonical-Pair ???-??? trans
+G797 A846 Not-Canonical-Pair ???-??? trans
+U799 G800 Not-Canonical-Pair ???-??? trans
+U820 C821 Not-Canonical-Pair ???-??? trans
+G827 U844 Not-Canonical-Pair ???-??? trans
+G828 U844 Not-Canonical-Pair ???-??? trans
+G831 U843 Not-Canonical-Pair ???-??? trans
+A832 G842 Not-Canonical-Pair ???-??? trans
+G834 G847 Not-Canonical-Pair ???-??? trans
+A838 A891 Not-Canonical-Pair ???-??? trans
+G842 U843 Not-Canonical-Pair ???-??? trans
+A846 G847 Not-Canonical-Pair ???-??? trans
+U857 G858 Not-Canonical-Pair ???-??? trans
+A862 G863 Not-Canonical-Pair ???-??? trans
+G863 A880 Not-Canonical-Pair ???-??? trans
+U893 G1059 Not-Canonical-Pair ???-??? trans
+G900 G1478 Not-Canonical-Pair ???-??? trans
+G918 G1311 Not-Canonical-Pair ???-??? trans
+A919 A1310 Not-Canonical-Pair ???-??? trans
+G920 A1283 Not-Canonical-Pair ???-??? trans
+U930 A932 Canonical-Pair ???-??? trans
+A931 C958 Not-Canonical-Pair ???-??? trans
+U933 U934 Not-Canonical-Pair ???-??? trans
+G944 A1341 Not-Canonical-Pair ???-??? trans
+A950 C953 Not-Canonical-Pair ???-??? trans
+A950 U954 Canonical-Pair ???-??? trans
+C952 G1199 Canonical-Pair ???-??? trans
+G960 U1196 Not-Canonical-Pair ???-??? trans
+U970 G971 Not-Canonical-Pair ???-??? trans
+A974 G975 Not-Canonical-Pair ???-??? trans
+G987 A990 Not-Canonical-Pair ???-??? trans
+C993 U994 Not-Canonical-Pair ???-??? trans
+G1005 A1008 Not-Canonical-Pair ???-??? trans
+G1025 G1192 Not-Canonical-Pair ???-??? trans
+C1032 U1034 Not-Canonical-Pair ???-??? trans
+C1041 G1363 Canonical-Pair ???-??? trans
+A1045 A1071 Not-Canonical-Pair ???-??? trans
+G1055 G1057 Not-Canonical-Pair ???-??? trans
+A1058 G1059 Not-Canonical-Pair ???-??? trans
+U1069 A1071 Canonical-Pair ???-??? trans
+A1079 A1080 Not-Canonical-Pair ???-??? trans
+C1085 A1168 Not-Canonical-Pair ???-??? trans
+G1102 U1103 Not-Canonical-Pair ???-??? trans
+U1103 U1104 Not-Canonical-Pair ???-??? trans
+U1104 U1258 Not-Canonical-Pair ???-??? trans
+A1135 C1136 Not-Canonical-Pair ???-??? trans
+G1144 A1147 Not-Canonical-Pair ???-??? trans
+G1155 A1157 Not-Canonical-Pair ???-??? trans
+G1159 A1160 Not-Canonical-Pair ???-??? trans
+U1173 G1174 Not-Canonical-Pair ???-??? trans
+A1178 G1179 Not-Canonical-Pair ???-??? trans
+U1189 A1190 Canonical-Pair ???-??? trans
+C1191 G1192 Canonical-Pair ???-??? trans
+G1198 C1297 Canonical-Pair ???-??? trans
+G1198 C1298 Canonical-Pair ???-??? trans
+G1199 C1299 Canonical-Pair ???-??? trans
+C1200 G1201 Canonical-Pair ???-??? trans
+C1200 A1202 Not-Canonical-Pair ???-??? trans
+C1203 A1204 Not-Canonical-Pair ???-??? trans
+C1214 A1215 Not-Canonical-Pair ???-??? trans
+C1214 G1277 Canonical-Pair ???-??? trans
+G1243 A1246 Not-Canonical-Pair ???-??? trans
+A1245 C1303 Not-Canonical-Pair ???-??? trans
+A1246 C1247 Not-Canonical-Pair ???-??? trans
+C1247 U1290 Not-Canonical-Pair ???-??? trans
+A1256 A1257 Not-Canonical-Pair ???-??? trans
+A1265 C1329 Not-Canonical-Pair ???-??? trans
+G1282 A1283 Not-Canonical-Pair ???-??? trans
+U1292 A1337 Canonical-Pair ???-??? trans
+G1324 U1325 Not-Canonical-Pair ???-??? trans
+G1324 A1352 Not-Canonical-Pair ???-??? trans
+C1336 G1338 Canonical-Pair ???-??? trans
+C1339 C1340 Not-Canonical-Pair ???-??? trans
+U1371 C1474 Not-Canonical-Pair ???-??? trans
+A1372 C1373 Not-Canonical-Pair ???-??? trans
+C1375 A1376 Not-Canonical-Pair ???-??? trans
+C1377 C1378 Not-Canonical-Pair ???-??? trans
+G1410 A1441 Not-Canonical-Pair ???-??? trans
+G1421 G1423 Not-Canonical-Pair ???-??? trans
+U1426 A1427 Canonical-Pair ???-??? trans
+U1471 A1472 Canonical-Pair ???-??? trans
+G1477 A1480 Not-Canonical-Pair ???-??? trans
+G1478 U1479 Not-Canonical-Pair ???-??? trans

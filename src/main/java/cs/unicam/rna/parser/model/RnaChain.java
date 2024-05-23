@@ -45,25 +45,54 @@ public class RnaChain {
 			throwException(pos);
 		}
 	}
-	
+
 	public void addPair(int first, int second) throws RnaParsingException {
+		addPair(first, second, "W", "W");
+	}
+	
+	public void addPair(int first, int second, String bt1, String bt2) throws RnaParsingException {
 		if( first < 1 )
 			throwException(first);
 		if( first == second || second < 1 )
 			throwException(second);
 		if(this.pairs.containsKey(first) || this.pairs.containsKey(second)){
-			addTertiaryPair(first, second);
+			addTertiaryPair(first, second, true, bt1, bt2);
 		} else {
 			pairs.put(first, second);
 			pairs.put(second, first);
 		}
 	}
-	public void addTertiaryPair(int first, int second) throws RnaParsingException {
+	public void addTertiaryPair(int first, int second, boolean isCis, String bt1, String bt2) throws RnaParsingException {
 		if( first < 1 )
 			throwException(first);
 		if( first == second || second < 1 )
 			throwException(second);
-			tertiaryPairs.add(new String[]{getBaseOf(first) + first, getBaseOf(second) + second, getBond(first, second)});
+		String firstPair = getBaseOf(first) + first;
+		String secondPair = getBaseOf(second) + second;
+		String canon = isCanonical(first, second) ? "Canonical-Pair" : "Not-Canonical-Pair";
+		String bond = getBond(bt1, bt2, isCis);
+		tertiaryPairs.add(new String[]{firstPair, secondPair, canon, bond});
+	}
+
+	private String getBond(String bt1, String bt2, boolean isCis) {
+		return getLate(bt1) + "-" + getLate(bt2) + (isCis ? " cis" : " trans");
+	}
+
+	private String getLate(String letter){
+		switch (letter) {
+			case "H":
+				return "Hoogsteen";
+			case "S":
+				return "Sugar";
+			case "W":
+				return "Watson-Crick";
+			case "+":
+				return "Watson-Crick";
+			case "-":
+				return "Watson-Crick";
+			default:
+				return "???";
+		}
 	}
 
 	public String getBaseOf(int index){
@@ -71,13 +100,12 @@ public class RnaChain {
 		return ribo==null ? "N" : "" + RnaBase.getBaseLetter(ribo.getBase());
 	}
 
-	public String getBond(int i1, int i2){
+	public boolean isCanonical(int i1, int i2){
 		RnaRibonucleotide ribo1 = this.chain.get(i1);
 		RnaRibonucleotide ribo2 = this.chain.get(i2);
 		if(ribo1 == null || ribo2 == null)
-			return "Not-canonical";
-		return RnaBase.canonicalPair(ribo1.getBase(), ribo2.getBase())
-					? "Canonical" : "Not-canonical";
+			return false;
+		return RnaBase.canonicalPair(ribo1.getBase(), ribo2.getBase());
 	}
 	
 	public int getLength() {

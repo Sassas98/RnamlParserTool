@@ -48,22 +48,26 @@ public class RnamlPairsLoader {
         if(positions.getLength() == 2) {
 			String first = positions.item(0).getTextContent();
 			String second = positions.item(1).getTextContent();
-			addPair(first, second, chain, isCanonical);
+			int firstInt = Integer.parseInt( first );
+			int secondInt = Integer.parseInt( second );
+			String edge1 = getEdge(pair, 5);
+			String edge2 = getEdge(pair, 3);
+			if(isCanonical)
+				chain.addPair(firstInt, secondInt, edge1, edge2);
+			else {
+				chain.addTertiaryPair(firstInt, secondInt, false, edge1, edge2);
+			}
         }
 	}
-	
-	/**
-	 * aggiunge la coppia
-	 * @param a
-	 * @param b
-	 * @throws RnaParsingException
-	 */
-	private void addPair(String a, String b, RnaChain chain, boolean isCanonical) throws RnaParsingException {
-		int first = Integer.parseInt( a );
-    	int second = Integer.parseInt( b );
-		if(isCanonical)
-    		chain.addPair(first, second);
-		else chain.addTertiaryPair(first, second);
+
+	private String getEdge(Element pair, int num){
+		NodeList bol = pair.getElementsByTagName("edge-" + num + "p");
+		if(bol.getLength() == 0)
+			return "???";
+		Element bo = getElement(bol.item(0));
+		if(bo != null)
+			return bo.getTextContent();
+		return "???";
 	}
 
 	/**

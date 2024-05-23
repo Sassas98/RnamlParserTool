@@ -1,10 +1,10 @@
-base-id-5p, base-id-3p, bond-type
-G5, A38, Not-canonical
-A6, U37, Canonical
-U10, A33, Canonical
-G20, A23, Not-canonical
-C7, A36, Not-canonical
-G8, A35, Not-canonical
-A9, A34, Not-canonical
-A11, A32, Not-canonical
-A9, A35, Not-canonical
+base-id-5p base-id-3p canonical-bond bond-type cis-or-trans
+G5 A38 Not-Canonical-Pair Sugar-Hoogsteen trans
+A6 U37 Canonical-Pair Hoogsteen-Watson-Crick trans
+U10 A33 Canonical-Pair Watson-Crick-Hoogsteen trans
+G20 A23 Not-Canonical-Pair Sugar-Hoogsteen trans
+C7 A36 Not-Canonical-Pair ???-??? trans
+G8 A35 Not-Canonical-Pair ???-??? trans
+A9 A34 Not-Canonical-Pair ???-??? trans
+A11 A32 Not-Canonical-Pair ???-??? trans
+A9 A35 Not-Canonical-Pair ???-??? trans
