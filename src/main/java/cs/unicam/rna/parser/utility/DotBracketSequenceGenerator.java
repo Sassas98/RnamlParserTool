@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import cs.unicam.rna.parser.model.DbPair;
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * Classe per generare sequenze DB
@@ -18,14 +18,14 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
     private int [] array;
 
     /**
-     * Metodo per ricavare una sequenza da una molecola
-     * @param molecule molecola da analizzare
-     * @return la sequenza della molecola
+     * Metodo per ricavare una sequenza da una catena
+     * @param chain catena da analizzare
+     * @return la sequenza della catena
      */
-    public String writeSequence(RnaFileData molecule) {
-        if(molecule != null){
-            this.array = new int[molecule.getLength()];
-            analyze(molecule);
+    public String writeSequence(RnaMolecule chain) {
+        if(chain != null){
+            this.array = new int[chain.getLength()];
+            analyze(chain);
         }
         String data = "";
         for(int i : array) {
@@ -35,11 +35,11 @@ public class DotBracketSequenceGenerator extends DotBracketTranslator {
 	}
 
     /**
-     * Metodo per analizzare una molecola
-     * @param molecule molecola da analizzare
+     * Metodo per analizzare una catena
+     * @param chain catena da analizzare
      */
-    private void analyze(RnaFileData molecule) {
-		List<DbPair> pairs = molecule.getMolecules().stream().flatMap(x -> x.getPairMap().entrySet().stream())
+    private void analyze(RnaMolecule chain) {
+		List<DbPair> pairs = chain.getchains().stream().flatMap(x -> x.getPairMap().entrySet().stream())
 											.map(x -> x.getKey() < x.getValue() ? x : 
 											new SimpleEntry<Integer, Integer>(x.getValue(), x.getKey()))
 											.distinct().map(x -> new DbPair(x.getKey(), x.getValue()))

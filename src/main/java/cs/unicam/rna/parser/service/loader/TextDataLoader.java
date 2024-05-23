@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import cs.unicam.rna.parser.abstraction.RnaDataLoader;
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * classe astratta con metodi adeguati per operare su un file
@@ -35,7 +35,7 @@ public abstract class TextDataLoader implements RnaDataLoader {
      * @param file
      * @param lines
      */
-    protected void setFileInfo(RnaFileData file, List<List<String>> lines) {
+    protected void setFileInfo(RnaMolecule file, List<List<String>> lines) {
         boolean findOrganism = true, findNumber = true, findLink = true;
         for(List<String> line : lines) {
             if(line.size() > 1) {

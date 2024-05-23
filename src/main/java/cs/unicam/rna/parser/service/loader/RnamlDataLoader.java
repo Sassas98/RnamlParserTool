@@ -5,8 +5,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import cs.unicam.rna.parser.exception.RnaParsingException;
-import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
+import cs.unicam.rna.parser.model.RnaChain;
 import cs.unicam.rna.parser.utility.RnamlPairsLoader;
 
 /**
@@ -20,19 +20,19 @@ public final class RnamlDataLoader extends XmlDataLoader {
 	private RnamlPairsLoader pairsLoader = new RnamlPairsLoader();
 
 	@Override
-	public synchronized RnaFileData getData(String path) {
-		RnaFileData data = new RnaFileData();
+	public synchronized RnaMolecule getData(String path) {
+		RnaMolecule data = new RnaMolecule();
 		Document doc = loadXmlDocument(path, "/rnaml.dtd");
 		if(doc == null) {
 			return null;
 		}
-		NodeList moleculeList = doc.getElementsByTagName("molecule");
-		for (int i = 0; i < moleculeList.getLength(); i++) {
-            Element node = getElement(moleculeList.item(i));
-			RnaMolecule molecule = getMolecule(node, i);
-			if(molecule == null)
+		NodeList chainList = doc.getElementsByTagName("chain");
+		for (int i = 0; i < chainList.getLength(); i++) {
+            Element node = getElement(chainList.item(i));
+			RnaChain chain = getchain(node, i);
+			if(chain == null)
 				return null;
-			data.addMolecule(molecule);
+			data.addchain(chain);
 		}
 		checkInfoData(doc, data);
 		try {
@@ -45,18 +45,18 @@ public final class RnamlDataLoader extends XmlDataLoader {
 	}
 
 	/**
-	 * metodo per ottenere una molecola da un elemento
+	 * metodo per ottenere una catena da un elemento
 	 * di un xml e un indice
-	 * @param moleculeData elemento di xml
+	 * @param chainData elemento di xml
 	 * @param index indice
-	 * @return molecola se il parsing va correttamente, null altrimenti
+	 * @return catena se il parsing va correttamente, null altrimenti
 	 */
-	public RnaMolecule getMolecule(Element moleculeData, int index) {
-		RnaMolecule molecule = new RnaMolecule(index + 1);
+	public RnaChain getchain(Element chainData, int index) {
+		RnaChain chain = new RnaChain(index + 1);
 		try {
-			loadSequence(moleculeData, molecule);
-			this.pairsLoader.loadPairs(moleculeData, molecule);
-			return molecule;
+			loadSequence(chainData, chain);
+			this.pairsLoader.loadPairs(chainData, chain);
+			return chain;
 		}catch(Exception e) {
 			e.printStackTrace();
 			return null;
@@ -67,9 +67,9 @@ public final class RnamlDataLoader extends XmlDataLoader {
 	 * carica la sequenza
 	 * @throws RnaParsingException
 	 */
-	private void loadSequence(Element moleculeData, RnaMolecule molecule) throws RnaParsingException {
+	private void loadSequence(Element chainData, RnaChain chain) throws RnaParsingException {
 
-		Element sequenceNode = getElement(moleculeData.getElementsByTagName("sequence")
+		Element sequenceNode = getElement(chainData.getElementsByTagName("sequence")
 				.item(0));
 		NodeList list = sequenceNode.getElementsByTagName("seq-data");
 				
@@ -77,7 +77,7 @@ public final class RnamlDataLoader extends XmlDataLoader {
 							.replace(" ", "").replace("\n", "")
 							.replace("\t", "").replace("\r", "").toUpperCase();
 		for(char c : sequence.toCharArray()) {
-			molecule.addRibonucleotide(c);
+			chain.addRibonucleotide(c);
 		}
 	}
 
@@ -88,14 +88,14 @@ public final class RnamlDataLoader extends XmlDataLoader {
 	 * @param doc documento da controllare
 	 * @param data dati in cui salvare le informazioni
 	 */
-	private void checkInfoData(Document doc, RnaFileData data) {
+	private void checkInfoData(Document doc, RnaMolecule data) {
 		NodeList urls = doc.getElementsByTagName("url");
 		if(urls.getLength() > 0){
 			data.setReferenceLink(urls.item(0).getTextContent());
 		}
-		NodeList moleculeList = doc.getElementsByTagName("molecule");
-		if(moleculeList.getLength() > 0){
-        	Element mol = getElement(moleculeList.item(0));
+		NodeList chainList = doc.getElementsByTagName("chain");
+		if(chainList.getLength() > 0){
+        	Element mol = getElement(chainList.item(0));
 			String db = mol.getAttribute("database-ids");
 			if(!"".equals(db)){
 				data.setAccessionNumber(db);

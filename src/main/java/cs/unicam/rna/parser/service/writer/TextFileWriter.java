@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * Classe astratta con metodi di servizio utili
@@ -40,7 +40,7 @@ public abstract class TextFileWriter implements RnaFileWriter {
      * opzionali dell'rna, se presenti
      * @param rnaData dato dell'rna
      */
-    protected void setFileInfo(RnaFileData rnaData) {
+    protected void setFileInfo(RnaMolecule rnaData) {
         if(rnaData.getOrganism() != null) {
             data += "Organism: " + rnaData.getOrganism() + "\n";
         }

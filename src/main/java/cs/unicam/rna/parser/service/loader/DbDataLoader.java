@@ -3,8 +3,8 @@ package cs.unicam.rna.parser.service.loader;
 import java.util.List;
 
 import cs.unicam.rna.parser.exception.RnaParsingException;
-import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
+import cs.unicam.rna.parser.model.RnaChain;
 import cs.unicam.rna.parser.utility.DotBracketSequenceAnalyzator;
 
 /**
@@ -13,15 +13,15 @@ import cs.unicam.rna.parser.utility.DotBracketSequenceAnalyzator;
  */
 public final class DbDataLoader extends LineDataLoader {
 
-    private RnaFileData data;
+    private RnaMolecule data;
     /**
      * Analizzatore della struttura secondaria
      */
     private final DotBracketSequenceAnalyzator analyzator = new DotBracketSequenceAnalyzator();
 
     @Override
-    public synchronized RnaFileData getData(String path) {
-        this.data = new RnaFileData();
+    public synchronized RnaMolecule getData(String path) {
+        this.data = new RnaMolecule();
 		List<List<String>> lines = getLines(path);
         if(lines == null || lines.isEmpty())
             return null;
@@ -32,11 +32,11 @@ public final class DbDataLoader extends LineDataLoader {
         for(int i = 0; i < starts.size(); i++) {
             String sequence = lines.get(starts.get(i)).get(0);
             String pairs = lines.get(starts.get(i) + 1).get(0) ;
-            RnaMolecule molecule = getMolecule(i, sequence, pairs);
-            if(molecule == null) {
+            RnaChain chain = getchain(i, sequence, pairs);
+            if(chain == null) {
                 return null;
             }
-            data.addMolecule(molecule);
+            data.addchain(chain);
         }
         try {
 			data.checkSecondaryStructure();
@@ -48,23 +48,23 @@ public final class DbDataLoader extends LineDataLoader {
     }
 
     /**
-     * Metodo per ottenere una molecola
-     * @param index indice della molecola
-     * @param sequence sequenza primaria della molecola
-     * @param pairs sequenza secondaria della molecola
-     * @return molecola se il parsing è andato a buon fine, null altrimenti
+     * Metodo per ottenere una catena
+     * @param index indice della catena
+     * @param sequence sequenza primaria della catena
+     * @param pairs sequenza secondaria della catena
+     * @return catena se il parsing è andato a buon fine, null altrimenti
      */
-    private RnaMolecule getMolecule(int index, String sequence, String pairs) {
+    private RnaChain getchain(int index, String sequence, String pairs) {
         try {
-            RnaMolecule molecule = new RnaMolecule(index);
+            RnaChain chain = new RnaChain(index);
             for(char letter : sequence.toCharArray()) {
-                molecule.addRibonucleotide(letter);
+                chain.addRibonucleotide(letter);
             }
             List<Integer[]> pairData = analyzator.getPairs(pairs);
             for(Integer[] pair : pairData) {
-                molecule.addPair(pair[0], pair[1]);
+                chain.addPair(pair[0], pair[1]);
             }
-            return molecule;
+            return chain;
         } catch (RnaParsingException e) {
             e.printStackTrace();
             return null;

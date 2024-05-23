@@ -1,7 +1,7 @@
 package cs.unicam.rna.parser.service.loader;
 
 import cs.unicam.rna.parser.abstraction.RnaDataLoader;
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * Classe simbolica che indica che non è stato trovato
@@ -11,7 +11,7 @@ import cs.unicam.rna.parser.model.RnaFileData;
 public final class NullDataLoader implements RnaDataLoader {
 
     @Override
-    public RnaFileData getData(String path) {
+    public RnaMolecule getData(String path) {
         return null;
     }
 

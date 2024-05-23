@@ -1,6 +1,6 @@
 package cs.unicam.rna.parser.abstraction;
 
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * Interfaccia che definisce la responsabilità
@@ -14,6 +14,6 @@ public interface RnaDataLoader {
 	 * @param path path del file
 	 * @return il file contenente tutti i dati caricati
 	 */
-	public RnaFileData getData(String path);
+	public RnaMolecule getData(String path);
 
 }

@@ -6,18 +6,18 @@ package cs.unicam.rna.parser.model;
  */
 public class RnaRibonucleotide {
 	
-	private int moleculeId;
+	private int chainId;
 	private int position;
 	private RnaBase base;
 
-	public RnaRibonucleotide(int moleculeId, int position, RnaBase base) {
-		this.moleculeId = moleculeId;
+	public RnaRibonucleotide(int chainId, int position, RnaBase base) {
+		this.chainId = chainId;
 		this.position = position;
 		this.base = base;
 	}
 
-	public int getMoleculeId() {
-		return moleculeId;
+	public int getchainId() {
+		return chainId;
 	}
 	
 	public int getPosition() {

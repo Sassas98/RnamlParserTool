@@ -2,7 +2,7 @@ package cs.unicam.rna.parser.controller;
 
 import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.model.OperationResult;
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.service.comparator.RnaComparator;
 import cs.unicam.rna.parser.utility.RnaHandlerBuilder;
 
@@ -40,9 +40,9 @@ public class RnaParserAnalyzerController extends RnaParserController {
 		path1 = checkExt(path1, false);
 		path2= checkExt(path2, false);
 		RnaDataLoader loader = getBuilder().buildDataLoader(path1);
-		RnaFileData data1 = loader.getData(path1);
+		RnaMolecule data1 = loader.getData(path1);
 		loader = getBuilder().buildDataLoader(path2);
-		RnaFileData data2 = loader.getData(path2);
+		RnaMolecule data2 = loader.getData(path2);
 		return this.comparator.areEquals(data1, data2);
 	}
 

@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import cs.unicam.rna.parser.exception.RnaParsingException;
-import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
+import cs.unicam.rna.parser.model.RnaChain;
 
 /**
  * classe per caricare i dati contenuti in un file aas
@@ -16,14 +16,14 @@ public final class AasDataLoader extends LineDataLoader {
     /**
      * Dati salvati da caricare
      */
-    private RnaFileData data;
+    private RnaMolecule data;
 
     /**
      * metodo per ottenere i dati dal nome del file
      */
     @Override
-    public synchronized RnaFileData getData(String path) {
-        this.data = new RnaFileData();
+    public synchronized RnaMolecule getData(String path) {
+        this.data = new RnaMolecule();
 		List<List<String>> lines = getLines(path);
         if(lines == null || lines.isEmpty())
             return null;
@@ -35,11 +35,11 @@ public final class AasDataLoader extends LineDataLoader {
             String sequence = lines.get(starts.get(i)).get(0);
             String pairs = lines.size() > starts.get(i) + 1 && lines.get(starts.get(i) + 1).size() == 1 ? 
                            lines.get(starts.get(i) + 1).get(0) : "";
-            RnaMolecule molecule = getMolecule(i + 1, sequence, pairs);
-            if(molecule == null) {
+            RnaChain chain = getchain(i + 1, sequence, pairs);
+            if(chain == null) {
                 return null;
             }
-            data.addMolecule(molecule);
+            data.addchain(chain);
         }
         try {
 			data.checkSecondaryStructure();
@@ -51,18 +51,18 @@ public final class AasDataLoader extends LineDataLoader {
     }
 
     /**
-     * metodo per ottenere una molecola data una sequenza,
+     * metodo per ottenere una catena data una sequenza,
      * un indice e le coppie
-     * @param index numero della molecola
-     * @param sequence sequenza della molecola
-     * @param pairs coppie della molecola
-     * @return molecola
+     * @param index numero della catena
+     * @param sequence sequenza della catena
+     * @param pairs coppie della catena
+     * @return catena
      */
-    private RnaMolecule getMolecule(int index, String sequence, String pairs) {
+    private RnaChain getchain(int index, String sequence, String pairs) {
         try {
-            RnaMolecule molecule = new RnaMolecule(index);
+            RnaChain chain = new RnaChain(index);
             for(char letter : sequence.toCharArray()) {
-                molecule.addRibonucleotide(letter);
+                chain.addRibonucleotide(letter);
             }
             if(!(pairs == null || pairs.equals(""))) {
                 for(String pair : pairs.split(";")) {
@@ -70,11 +70,11 @@ public final class AasDataLoader extends LineDataLoader {
                         List<Integer> positions = Arrays.asList(pair.replace("(", "")
                                                     .replace(")", "").split(","))
                                                     .stream().map(s -> Integer.parseInt(s)).toList();
-                        molecule.addPair(positions.get(0), positions.get(1));
+                        chain.addPair(positions.get(0), positions.get(1));
                     }
                 }
             }
-            return molecule;
+            return chain;
         } catch (RnaParsingException e) {
             e.printStackTrace();
             return null;

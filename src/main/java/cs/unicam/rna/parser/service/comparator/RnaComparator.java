@@ -6,8 +6,8 @@ import java.util.Map.Entry;
 
 import cs.unicam.rna.parser.model.OperationResult;
 import cs.unicam.rna.parser.model.RnaBase;
-import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
+import cs.unicam.rna.parser.model.RnaChain;
 
 /**
  * Servizio di comparazione e analisi di due file di rna
@@ -29,13 +29,13 @@ public class RnaComparator {
      * @param data2 dati del secondo file
      * @return esito delle analisi
      */
-    public OperationResult areEquals(RnaFileData data1, RnaFileData data2) {
+    public OperationResult areEquals(RnaMolecule data1, RnaMolecule data2) {
         this.result = new OperationResult();
         if(data1 == null || data2 == null) {
 			result.addInfo("Failure to load data.");
 			return result;
 		}
-        result.result = compareChain(data1.getMolecules(), data2.getMolecules());
+        result.result = compareChain(data1.getchains(), data2.getchains());
         if(result.result)
             result.addInfo("RNAs are the same.");
         return result;
@@ -43,17 +43,17 @@ public class RnaComparator {
 
     /**
      * comparazione della struttura primaria e secondaria
-     * @param molecules1 prima lista di molecole
-     * @param molecules2 seconda lista di molecole
+     * @param chains1 prima lista di catene
+     * @param chains2 seconda lista di catene
      * @return true se contengono le stesse strutture, false altrimenti
      */
-    private boolean compareChain(List<RnaMolecule> molecules1, List<RnaMolecule> molecules2) {
-        boolean check = compareMoleculeNumber(molecules1, molecules2);
-        for(molN = 0; check && molN < molecules1.size(); molN++) {
-            String sequence1 = molecules1.get(molN).getSequence(),
-                   sequence2 = molecules2.get(molN).getSequence();
-            Map<Integer, Integer> pairs1 = molecules1.get(molN).getPairMap(),
-                                  pairs2 = molecules2.get(molN).getPairMap();
+    private boolean compareChain(List<RnaChain> chains1, List<RnaChain> chains2) {
+        boolean check = comparechainNumber(chains1, chains2);
+        for(molN = 0; check && molN < chains1.size(); molN++) {
+            String sequence1 = chains1.get(molN).getSequence(),
+                   sequence2 = chains2.get(molN).getSequence();
+            Map<Integer, Integer> pairs1 = chains1.get(molN).getPairMap(),
+                                  pairs2 = chains2.get(molN).getPairMap();
             check = compareSequence(sequence1, sequence2)
                  && comparePairs(pairs1, pairs2, "second") 
                  & comparePairs(pairs2, pairs1, "first");
@@ -62,14 +62,14 @@ public class RnaComparator {
     }
 
     /**
-     * Metodo per verificare semplicemente se hanno un diverso numero di molecole e segnalarlo
-     * @param molecules1 prima lista di molecole
-     * @param molecules2 seconda lista di molecole
+     * Metodo per verificare semplicemente se hanno un diverso numero di catene e segnalarlo
+     * @param chains1 prima lista di catene
+     * @param chains2 seconda lista di catene
      * @return esito del controllo
      */
-    private boolean compareMoleculeNumber(List<RnaMolecule> molecules1, List<RnaMolecule> molecules2) {
-        if(molecules1.size() != molecules2.size()) {
-            result.addInfo("Different number of molecules!");
+    private boolean comparechainNumber(List<RnaChain> chains1, List<RnaChain> chains2) {
+        if(chains1.size() != chains2.size()) {
+            result.addInfo("Different number of chains!");
             return false;
         } else {
             return true; 
@@ -77,7 +77,7 @@ public class RnaComparator {
     }
 
     /**
-     * Confronta le strutture primarie di due molecole,
+     * Confronta le strutture primarie di due catene,
      * considerando la terminologia imprecisa secondo cui
      * un ribonucleide potrebbe esserne un'altro
      * @param sequence1 prima sequenza
@@ -86,7 +86,7 @@ public class RnaComparator {
      */
     private boolean compareSequence(String sequence1, String sequence2) {
         if(!RnaBase.maybeEquals(sequence1, sequence2)) {
-            result.addInfo("Sequences not corresponding to molecule n." + molN );
+            result.addInfo("Sequences not corresponding to chain n." + molN );
             if(sequence1.length() != sequence2.length()) {
                 result.addInfo("The first sequence is long: " + sequence1.length());
                 result.addInfo("The second sequence is long: " + sequence2.length());
@@ -127,7 +127,7 @@ public class RnaComparator {
             if(!(pair.getValue().equals(pairs2.get(pair.getKey()))
             || pair.getKey().equals(pairs2.get(pair.getValue())))) {
                 result.addInfo("The " + pair.getKey() + " - " + pair.getValue()
-                    + " pair is not present in molecule n." + molN + " of the " + focus + " file.");
+                    + " pair is not present in chain n." + molN + " of the " + focus + " file.");
                 result.addInfo(pairs2.get(pair.getKey()) + "!=" + pair.getValue());
                 check = false;
             }

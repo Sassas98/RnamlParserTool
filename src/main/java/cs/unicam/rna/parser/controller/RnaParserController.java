@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import cs.unicam.rna.parser.abstraction.RnaDataLoader;
 import cs.unicam.rna.parser.abstraction.RnaFileWriter;
 import cs.unicam.rna.parser.model.OperationResult;
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 import cs.unicam.rna.parser.service.writer.TertiaryStructureWriter;
 import cs.unicam.rna.parser.utility.RnaFileNameHandler;
 import cs.unicam.rna.parser.utility.RnaHandlerBuilder;
@@ -23,7 +23,7 @@ public class RnaParserController {
 	/**
 	 * dati caricati pronti per essere scritti
 	 */
-	private RnaFileData molecules;
+	private RnaMolecule chains;
 	/**
 	 * costruttore di gestori di dati rna
 	 */
@@ -64,15 +64,15 @@ public class RnaParserController {
 	public synchronized OperationResult loadRna(String path) {
 		path = checkExt(path, false);
 		RnaDataLoader loader = builder.buildDataLoader(path);
-		molecules = loader.getData(path);
+		chains = loader.getData(path);
 		OperationResult result = new OperationResult();
 		if(isLoaded()) {
 			loadedPath = path;
 			result.result = true;
-			result.addInfo("Load " + molecules.getMolecules().size() + " molecules.");
-			for(int i = 0; i < molecules.getMolecules().size(); i++ ) {
-				result.addInfo("Molecule n." + i + " with " + 
-					molecules.getMolecules().get(i).getLength() + " ribonucleotides.");
+			result.addInfo("Load " + chains.getchains().size() + " chains.");
+			for(int i = 0; i < chains.getchains().size(); i++ ) {
+				result.addInfo("chain n." + i + " with " + 
+					chains.getchains().get(i).getLength() + " ribonucleotides.");
 			}
 		}else {
 			result.addInfo("Failure to load data.");
@@ -85,14 +85,14 @@ public class RnaParserController {
 	 * @return true se caricati, false altrimenti
 	 */
 	public boolean isLoaded() {
-		return molecules != null;
+		return chains != null;
 	}
 	
 	/**
 	 * Metodo per cancellare i dati caricati
 	 */
 	public void clean() {
-		this.molecules = null;
+		this.chains = null;
 	}
 	
 	/**
@@ -108,11 +108,11 @@ public class RnaParserController {
 		}
 		path = checkExt(path, true);
 		RnaFileWriter writer = this.builder.buildFileWriter(path);
-		result.result = writer.writeAndSave(molecules, path);
+		result.result = writer.writeAndSave(chains, path);
 		result.addInfo(result.result ? "Saving to file " + path + " was successful."
 			: "Failed to save data in " + path + " file.");
-		if(result.result && molecules.haveTertiaryData() && (!Files.exists(Paths.get(loadedPath + ".csv")))){
-			result.result = this.tertiaryWriter.writeAndSave(molecules, loadedPath + ".csv");
+		if(result.result && chains.haveTertiaryData() && (!Files.exists(Paths.get(loadedPath + ".csv")))){
+			result.result = this.tertiaryWriter.writeAndSave(chains, loadedPath + ".csv");
 			result.addInfo(result.result ? "Saving to tertiary structure was successful."
 				: "Saving to tertiary structure was failed.");
 		}

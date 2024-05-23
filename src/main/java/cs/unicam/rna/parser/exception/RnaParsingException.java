@@ -10,22 +10,22 @@ public class RnaParsingException extends Exception {
 	
 	/**
 	 * costruttore nel caso l'errore coinvolga un ribonucleide
-	 * @param molecule
+	 * @param chain
 	 * @param ribonucleotide
 	 */
-	public RnaParsingException(int molecule, int ribonucleotide) {
-        super("Error in molecule n." + molecule 
+	public RnaParsingException(int chain, int ribonucleotide) {
+        super("Error in chain n." + chain 
         		+ " and ribonucleotide in pos." + ribonucleotide);
     }
 	
 	/**
 	 * ccostruttore nel caso l'eccezione coinvolga due ribonucleidi
-	 * @param molecule
+	 * @param chain
 	 * @param ribonucleotide1
 	 * @param ribonucleotide2
 	 */
-	public RnaParsingException(int molecule, int ribonucleotide1, int ribonucleotide2) {
-        super("Error in molecule n." + molecule 
+	public RnaParsingException(int chain, int ribonucleotide1, int ribonucleotide2) {
+        super("Error in chain n." + chain 
 		+ ", ribonucleotide in pos." + ribonucleotide1
 		+ " and ribonucleotide in pos." + ribonucleotide2);
     }

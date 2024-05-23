@@ -1,6 +1,6 @@
 package cs.unicam.rna.parser.abstraction;
 
-import cs.unicam.rna.parser.model.RnaFileData;
+import cs.unicam.rna.parser.model.RnaMolecule;
 
 /**
  * classe con la responsabilità di salvare dei dati 
@@ -11,10 +11,10 @@ public interface RnaFileWriter {
 	
 	/**
 	 * Metodo per la scrittura di un nuovo file contenente le informazioni
-	 * @param molecules infomrazioni da scrivere
+	 * @param chains infomrazioni da scrivere
 	 * @param path file in cui scriverle
 	 * @return true se la scrittura del file è andata a buon fine, false, altrimenti
 	 */
-	public boolean writeAndSave(RnaFileData molecules, String path);
+	public boolean writeAndSave(RnaMolecule chains, String path);
 	
 }

@@ -2,8 +2,8 @@ package cs.unicam.rna.parser.service.writer;
 
 import java.util.Map;
 
-import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
+import cs.unicam.rna.parser.model.RnaChain;
 
 /**
  * Classe per scrivere dai dati in formato BPSEQ
@@ -12,18 +12,18 @@ import cs.unicam.rna.parser.model.RnaMolecule;
 public final class BpseqFileWriter extends TextFileWriter {
 
 	@Override
-	public synchronized boolean writeAndSave(RnaFileData molecules, String path) {
+	public synchronized boolean writeAndSave(RnaMolecule chains, String path) {
 		data = "";
-		setFileInfo(molecules);
-		molecules.getMolecules().stream().forEach( m -> writeMolecule(m));
+		setFileInfo(chains);
+		chains.getchains().stream().forEach( m -> writechain(m));
 		return save(path);
 	}
 
 	/**
-	 * Scrive i dati contenuti nella molecola nel formato BPSEQ
-	 * @param m molecola da scrivere
+	 * Scrive i dati contenuti nella catena nel formato BPSEQ
+	 * @param m catena da scrivere
 	 */
-	private void writeMolecule(RnaMolecule m) {
+	private void writechain(RnaChain m) {
 		char[] array = m.getSequence().toCharArray();
 		Map<Integer, Integer> pairs = m.getPairMap();
 		for(int i = 1; i <= array.length; i++) {

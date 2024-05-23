@@ -3,8 +3,8 @@ package cs.unicam.rna.parser.service.loader;
 import java.util.ArrayList;
 import java.util.List;
 
-import cs.unicam.rna.parser.model.RnaFileData;
 import cs.unicam.rna.parser.model.RnaMolecule;
+import cs.unicam.rna.parser.model.RnaChain;
 
 /**
  * classe astratta per il caricamento di dati da un file con i valori
@@ -17,7 +17,7 @@ public abstract class TableDataLoader extends TextDataLoader {
     /**
      * Dati da caricare
      */
-    private RnaFileData data;
+    private RnaMolecule data;
     /**
      * Indici da riempire con la concretizzazione della classe
      */
@@ -25,8 +25,8 @@ public abstract class TableDataLoader extends TextDataLoader {
                   pairTwoPosition, basePosition;
 
     @Override
-    public synchronized RnaFileData getData(String path) {
-        this.data = new RnaFileData();
+    public synchronized RnaMolecule getData(String path) {
+        this.data = new RnaMolecule();
 		List<List<String>> lines = getLines(path);
         if(lines == null || lines.isEmpty())
             return null;
@@ -36,12 +36,12 @@ public abstract class TableDataLoader extends TextDataLoader {
             return null;
         for(int i = 0; i < starts.size(); i++) {
             int until = i + 1 == starts.size() ? lines.size() : starts.get(i + 1);
-            List<List<String>> moleculeList = lines.subList(starts.get(i), until).stream()
+            List<List<String>> chainList = lines.subList(starts.get(i), until).stream()
                                                    .filter(l -> l.size() == dimension).toList();
-            RnaMolecule molecule = getMolecule(moleculeList, new RnaMolecule(i + 1));
-            if(molecule == null)
+            RnaChain chain = getchain(chainList, new RnaChain(i + 1));
+            if(chain == null)
                 return null; 
-            data.addMolecule(molecule);
+            data.addchain(chain);
         }
         try {
 			data.checkSecondaryStructure();
@@ -68,26 +68,26 @@ public abstract class TableDataLoader extends TextDataLoader {
     }
 
     /**
-     * metodo per scrivere su una molecola dato un insieme di linee
+     * metodo per scrivere su una catena dato un insieme di linee
      * @param lines linee in cui scrivere
-     * @param molecule molecola in cui scrivere
-     * @return la molecola inserita, con tutti i nuovi dati, o null in caso di errore
+     * @param chain catena in cui scrivere
+     * @return la catena inserita, con tutti i nuovi dati, o null in caso di errore
      */
-    private RnaMolecule getMolecule(List<List<String>> lines, RnaMolecule molecule) {
+    private RnaChain getchain(List<List<String>> lines, RnaChain chain) {
         try {
             for(List<String> line : lines) {
-                molecule.addRibonucleotide(line.get(basePosition).charAt(0));
+                chain.addRibonucleotide(line.get(basePosition).charAt(0));
             }
             List<Integer> toSkip = new ArrayList<>();
             for(List<String> line : lines) {
                 int pair1 = Integer.parseInt(line.get(pairOnePosition)),
                     pair2 = Integer.parseInt(line.get(pairTwoPosition));
                 if(!(pair2 == 0 || toSkip.contains(pair1))) {
-                    molecule.addPair(pair1, pair2);
+                    chain.addPair(pair1, pair2);
                     toSkip.add(pair2);
                 }
             }
-            return molecule;
+            return chain;
         } catch (Exception e) {
             e.printStackTrace();
             return null;
