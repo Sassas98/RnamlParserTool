@@ -15,8 +15,8 @@ public final class AasFileWriter extends TextFileWriter {
 	
 	@Override
 	public synchronized boolean writeAndSave(RnaMolecule chains, String path) {
-		data = chains.getchains().stream().map(x -> x.getSequence()).reduce("", (a,b) -> a + b) + "\n";
 		setFileInfo(chains);
+		data += chains.getchains().stream().map(x -> x.getSequence()).reduce("", (a,b) -> a + b) + "\n";
 		chains.getchains().stream().forEach( m -> writechain(m));
 		return save(path);
 	}

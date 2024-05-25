@@ -42,13 +42,13 @@ public abstract class TextFileWriter implements RnaFileWriter {
      */
     protected void setFileInfo(RnaMolecule rnaData) {
         if(rnaData.getOrganism() != null) {
-            data += "Organism: " + rnaData.getOrganism() + "\n";
+            data += "# Organism: " + rnaData.getOrganism() + "\n";
         }
         if(rnaData.getAccessionNumber() != null) {
-            data += "Accession Number: " + rnaData.getAccessionNumber() + "\n";
+            data += "# Accession Number: " + rnaData.getAccessionNumber() + "\n";
         }
         if(rnaData.getReferenceLink() != null) {
-            data += "Citation and related information available at " + rnaData.getReferenceLink() + "\n";
+            data += "# Citation and related information available at " + rnaData.getReferenceLink() + "\n";
         }
     }
 
